@@ -1,0 +1,70 @@
+name: Deploy public website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Verify and stage the published files
+        env:
+          SITE_DIR: ${{ runner.temp }}/benchmark-pages
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          import shutil
+          from pathlib import Path
+
+          manifest = json.loads(Path('manifest.json').read_text())
+          if manifest['schema_version'] != 1:
+              raise SystemExit('Unsupported publication manifest')
+          output = Path(os.environ['SITE_DIR'])
+          output.mkdir()
+          seen = set()
+          for item in manifest['files']:
+              relative = item['path']
+              path = Path(relative)
+              if path.is_absolute() or '..' in path.parts or relative in seen:
+                  raise SystemExit('Unsafe or duplicate publication path')
+              seen.add(relative)
+              if any(Path(*path.parts[:n]).is_symlink() for n in range(1, len(path.parts) + 1)):
+                  raise SystemExit('Publication source cannot be a symlink')
+              data = path.read_bytes()
+              if len(data) != item['size'] or hashlib.sha256(data).hexdigest() != item['sha256']:
+                  raise SystemExit('Publication file differs from the approved manifest')
+              if relative == '.github/workflows/pages.yml':
+                  continue
+              if relative not in {'index.html', 'README.md', '.nojekyll'} and not relative.startswith(('explorer/', 'views/explorer/')):
+                  raise SystemExit('Unexpected website path')
+              destination = output / relative
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(path, destination)
+          shutil.copyfile('manifest.json', output / 'manifest.json')
+          PY
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ${{ runner.temp }}/benchmark-pages
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
