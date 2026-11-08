@@ -11,12 +11,17 @@
  * @typedef {import('./data.mjs').Component} Component
  */
 import {
-  readState, stateHash, repositoryUrl, viewUrl, validateCatalog, selectRows, summarize,
+  repositoryUrl, viewUrl, validateCatalog, selectRows, summarize,
   comparisonRows, selectCohortIds, compareCohorts, compareTaskRuns, conversationTurns, argumentPayload, taskMatrix, groupTaskRuns, matrixColumns, summarizeChecks, runDisplayStatus, checkSummary,
 } from './data.mjs';
 import {automationBenchPaper} from './paper-results.mjs';
+import {createRouter, emptyState} from './routes.mjs';
 
 const root = new URL('../', import.meta.url);
+const appBase = new URL('./', document.baseURI);
+/** @type {HTMLBaseElement} */
+const baseElement = /** @type {HTMLBaseElement} */ (document.querySelector('base'));
+baseElement.href = appBase.href;
 const pageSize = 50;
 /** @type {Record<string, HTMLInputElement | HTMLSelectElement>} */
 const controls = Object.fromEntries([
@@ -30,7 +35,9 @@ const browse = element('browse');
 const inspection = element('inspection');
 /** @type {Map<HTMLAnchorElement, {patch: Partial<State>, anchor: string | null}>} */
 const navigationLinks = new Map();
-let state = readState(location.hash);
+let state = emptyState();
+/** @type {ReturnType<typeof createRouter>} */
+let routes;
 /** @type {Catalog} */
 let catalog;
 /** @type {Map<string, Row>} */
@@ -187,8 +194,8 @@ function sourceReference(source) {
 }
 
 /** @param {Partial<State>} patch @param {string | null} [anchor] */
-function linkHash(patch, anchor) {
-  return stateHash({...state, ...patch, ...(anchor ? {anchor} : {})});
+function linkUrl(patch, anchor) {
+  return routes.href({...state, ...patch, ...(anchor ? {anchor} : {})});
 }
 
 /** @param {string} label @param {Partial<State>} patch @param {string | null} [anchor] */
@@ -196,7 +203,7 @@ function navigationLink(label, patch, anchor = null) {
   if (patch.task_run) patch = {task: '', record: '', ...patch};
   if (patch.task !== undefined && patch.task !== state.task) patch = {record: '', ...patch};
   const result = node('a', label);
-  result.href = linkHash(patch, anchor);
+  result.href = linkUrl(patch, anchor);
   navigationLinks.set(result, {patch, anchor});
   result.addEventListener('click', event => {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -209,7 +216,7 @@ function navigationLink(label, patch, anchor = null) {
 function refreshNavigationLinks() {
   for (const [link, target] of navigationLinks) {
     if (!link.isConnected) navigationLinks.delete(link);
-    else link.href = linkHash(target.patch, target.anchor);
+    else link.href = linkUrl(target.patch, target.anchor);
   }
 }
 
@@ -219,10 +226,10 @@ function navigate(patch, {focus = false, anchor = null, replace = false} = {}) {
   if (patch.task !== undefined && patch.task !== state.task) patch = {record: '', ...patch};
   if (patch.task_run !== undefined && patch.task_run !== state.task_run) patch = {m: '', anchor: '', ...patch};
   const next = {...state, ...patch, ...(anchor ? {anchor} : {})};
-  const hash = linkHash(patch, anchor);
-  if (location.hash !== hash) {
-    if (replace) history.replaceState(null, '', hash);
-    else history.pushState(null, '', hash);
+  const url = linkUrl(patch, anchor);
+  if (location.pathname + location.search !== url || location.hash) {
+    if (replace) history.replaceState(null, '', url);
+    else history.pushState(null, '', url);
   }
   state = next;
   render({focus, anchor});
@@ -400,7 +407,7 @@ function revealCurrentTab(strip) {
 function renderFrame() {
   if (!state.benchmark && !state.task_run && !state.task) {
     state = {...state, benchmark: catalog.rows[0]?.benchmark ?? ''};
-    history.replaceState(null, '', stateHash(state));
+    history.replaceState(null, '', routes.href(state));
   }
   const selectedRow = rowsById.get(state.task_run);
   const selectedTask = catalog.rows.find(row => row.task_key === state.task);
@@ -619,7 +626,7 @@ function renderTasks(selected) {
   paperToggle.setAttribute('aria-expanded', String(expanded));
   if (paper.length) heading.insertBefore(paperToggle, sources);
   const pages = Math.max(1, Math.ceil(groups.length / pageSize));
-  if (state.page > pages) { state.page = pages; history.replaceState(null, '', stateHash(state)); }
+  if (state.page > pages) { state.page = pages; history.replaceState(null, '', routes.href(state)); }
   const page = groups.slice((state.page - 1) * pageSize, state.page * pageSize);
   const showDomain = !state.domain;
   const matrix = table(['Task', ...(showDomain ? ['Domain'] : []), 'Checks', ...columns.map(column => {
@@ -902,7 +909,7 @@ function renderBrowse() {
   const pages = Math.max(1, Math.ceil(selected.length / pageSize));
   if (state.page > pages) {
     state = {...state, page: pages};
-    history.replaceState(null, '', stateHash(state));
+    history.replaceState(null, '', routes.href(state));
   }
   const start = (state.page - 1) * pageSize;
   const body = element('result-rows');
@@ -1129,7 +1136,7 @@ function activateComparisonDimension(dimension, persist = true) {
   if (align instanceof HTMLElement) align.hidden = dimension !== 'conversation';
   const tab = dimension === 'checks' ? 'verdict' : dimension === 'setup' ? 'provenance' : 'transcript';
   for (const id of [state.task_run, state.compare]) if (rowsById.has(id)) activateRail(tab, rowFor(id), false);
-  if (persist) { state = {...state, dimension}; history.replaceState(null, '', stateHash(state)); refreshNavigationLinks(); }
+  if (persist) { state = {...state, dimension}; history.replaceState(null, '', routes.href(state)); refreshNavigationLinks(); }
 }
 
 /** @param {unknown} value @param {string} key */
@@ -1328,7 +1335,7 @@ function renderTrajectory(record, row, signal) {
     if (region.hidden) activateRail('transcript', row);
     if (persist) {
       state = {...state, m: String(sequence), anchor: ''};
-      history.replaceState(null, '', stateHash(state));
+      history.replaceState(null, '', routes.href(state));
       refreshNavigationLinks();
     }
     revealAnchor(target.id);
@@ -1799,7 +1806,7 @@ function activateRail(tab, row, persist = true) {
     if (details instanceof HTMLDetailsElement) details.open = true;
   }
   const strip = article.querySelector('.rail-tabs'); if (strip instanceof HTMLElement) revealCurrentTab(strip);
-  if (persist) { state = {...state, tab}; history.replaceState(null, '', stateHash(state)); refreshNavigationLinks(); }
+  if (persist) { state = {...state, tab}; history.replaceState(null, '', routes.href(state)); refreshNavigationLinks(); }
 }
 
 /** @param {RunView} record @param {Row} row @param {AbortSignal} signal */
@@ -1946,7 +1953,7 @@ function renderTaskRun(record, row, signal) {
   trajectory.setAttribute('role', 'tabpanel');
   trajectory.setAttribute('aria-labelledby', anchorId(row, 'tab', 'transcript'));
   layout.append(renderEvidence(record, row, signal), trajectory);
-  const initialTab = state.compare ? state.dimension === 'checks' ? 'verdict' : state.dimension === 'setup' ? 'provenance' : 'transcript' : /[?&]tab=/.test(location.hash) ? state.tab : matchMedia('(max-width: 1023px)').matches ? 'transcript' : 'verdict';
+  const initialTab = state.compare ? state.dimension === 'checks' ? 'verdict' : state.dimension === 'setup' ? 'provenance' : 'transcript' : state.tab ? state.tab : matchMedia('(max-width: 1023px)').matches ? 'transcript' : 'verdict';
   article.dataset.activeTab = initialTab;
   article.append(header, layout);
   queueMicrotask(() => activateRail(initialTab, row, false));
@@ -2066,14 +2073,15 @@ async function loadCatalog() {
   clearError();
   for (const control of Object.values(controls)) control.disabled = true;
   try {
-    if (location.protocol === 'file:') throw new Error('Serve this repository over HTTP. From benchmark-results, run python3 -m http.server 8000, then open http://localhost:8000/explorer/.');
+    if (location.protocol === 'file:') throw new Error('Serve the generated website over HTTP, then open its root URL.');
     catalog = validateCatalog(/** @type {Catalog} */ (await fetchJson('views/explorer/catalog.json')), root);
+    routes = createRouter(catalog.rows, appBase);
+    state = routes.read(location.href);
     rowsById = new Map(catalog.rows.map(row => [row.task_run_id, row]));
     populateFilters();
     loading.hidden = true;
     for (const control of Object.values(controls)) control.disabled = false;
-    const hash = stateHash(state);
-    if (!state.task_run && location.hash && location.hash !== hash) history.replaceState(null, '', hash);
+    history.replaceState(null, '', routes.href(state));
     render({anchor: state.anchor || (state.m !== '' && rowsById.has(state.task_run) ? anchorId(rowFor(state.task_run), 'message', state.m) : null)});
   } catch (error) {
     loading.hidden = true;
@@ -2096,15 +2104,15 @@ for (const [key, control] of Object.entries(controls)) {
   });
 }
 element('reset').addEventListener('click', () => {
-  const clean = readState('');
+  const clean = emptyState();
   navigate({...clean, benchmark: state.benchmark, domain: state.domain, view: state.view});
 });
 function restoreLocation() {
-  const next = readState(location.hash);
-  const hash = stateHash(next);
-  if (!next.task_run && location.hash !== hash) history.replaceState(null, '', hash);
+  const next = routes.read(location.href);
+  const url = routes.href(next);
+  if (location.pathname + location.search !== url || location.hash) history.replaceState(null, '', url);
   const anchor = next.anchor || (next.m !== '' && rowsById.has(next.task_run) ? anchorId(rowFor(next.task_run), 'message', next.m) : null);
-  if (hash === stateHash(state)) {
+  if (url === routes.href(state)) {
     if (anchor) revealAnchor(anchor);
     return;
   }
@@ -2117,5 +2125,4 @@ const navigationObserver = new ResizeObserver(() => {
 });
 navigationObserver.observe(element('view-tabs'));
 window.addEventListener('popstate', restoreLocation);
-window.addEventListener('hashchange', restoreLocation);
 loadCatalog();

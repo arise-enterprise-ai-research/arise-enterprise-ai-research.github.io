@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="../../">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Inspect benchmark task runs, native evaluation evidence, and historical analysis.">
+    <meta name="color-scheme" content="light">
+    <title>Benchmark Explorer</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234c50b8'/%3E%3Cpath d='M9 10h14M9 16h9M9 22h12' stroke='white' stroke-width='2.5'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="explorer/styles.css?v=20261108.11">
+    <script type="importmap">{"imports":{"./explorer/data.mjs":"./explorer/data.mjs?v=20261108.11","./explorer/paper-results.mjs":"./explorer/paper-results.mjs?v=20261108.11","./explorer/routes.mjs":"./explorer/routes.mjs?v=20261108.11"}}</script>
+    <script type="module" src="explorer/app.mjs?v=20261108.11"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <aside class="sidebar" aria-label="Explorer navigation">
+      <a class="workspace-brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v5H4zM14 5h6M14 9h6M4 14h7v5H4zM14 14h6M14 18h6"/></svg><span>Benchmark <span class="brand-secondary">Explorer</span></span></a>
+      <div class="sidebar-section benchmark-section">
+        <h2 class="sidebar-label">Benchmarks</h2>
+        <nav id="benchmark-tabs" aria-label="Benchmarks"></nav>
+      </div>
+      <div class="sidebar-section domain-section">
+        <h2 class="sidebar-label">Domains</h2>
+        <nav id="domain-tabs" aria-label="Domains"></nav>
+        <label class="mobile-domain-control"><span class="sr-only">Domain</span><select id="domain" name="domain" aria-label="Domain"><option value="">All domains</option></select></label>
+      </div>
+      <div class="sidebar-footer">
+        <nav class="documentation" aria-label="Documentation">
+          <a href="https://github.com/arise-enterprise-ai-research/benchmark-explorer">About</a>
+        </nav>
+      </div>
+    </aside>
+    <div class="workspace-content">
+      <header class="page-header">
+        <div class="page-heading">
+          <div><h1 id="benchmark-heading">Benchmark Explorer</h1><p id="benchmark-description" class="muted">Native results and complete conversations.</p></div>
+        </div>
+        <nav id="view-tabs" class="tabs" aria-label="Benchmark views"></nav>
+      </header>
+
+    <main id="main-content" class="page-main" tabindex="-1">
+      <form id="filters" class="toolbar" aria-label="Filter task runs">
+        <div class="filter-field" hidden>
+          <label for="benchmark">Benchmark</label>
+          <select id="benchmark" name="benchmark"><option value="">All benchmarks</option></select>
+        </div>
+        <div class="filter-field filter-task-search">
+          <label class="sr-only" for="query">Task or recorded description</label>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
+          <input id="query" name="query" type="search" placeholder="Search tasks and descriptions…" autocomplete="off">
+        </div>
+        <div class="filter-field">
+          <label for="model">Local model</label>
+          <select id="model" name="model"><option value="">All models</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="outcome">Native outcome</label>
+          <select id="outcome" name="outcome">
+            <option value="">All outcomes</option>
+            <option value="success">Success</option>
+            <option value="failure">Failure</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="group">Group by</label>
+          <select id="group" name="group"><option value="">No grouping</option><option value="model">Model</option><option value="task">Task</option><option value="domain">Domain</option><option value="outcome">Native outcome</option></select>
+        </div>
+        <details id="advanced-filters" class="advanced-filters">
+          <summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>More filters<span id="advanced-filter-count"></span></summary>
+          <div class="advanced-fields">
+            <div class="filter-field">
+              <label for="sort">Order tasks</label>
+              <select id="sort"><option value="">Task ID</option><option value="failed">Most failed task runs</option><option value="disagree">Models disagree</option></select>
+            </div>
+            <div class="filter-field">
+              <label for="version">Release</label>
+              <select id="version" name="version"><option value="">All releases</option></select>
+            </div>
+            <div class="filter-field">
+              <label for="scope">Source scope</label>
+              <select id="scope" name="scope"><option value="reported">Reported primary results</option><option value="all">All sources, including checkpoints</option></select>
+            </div>
+            <div class="filter-field filter-analysis-search">
+              <label for="analysis-query">Historical analysis only</label>
+              <input id="analysis-query" name="analysis-query" type="search" placeholder="Search analysis text and labels" autocomplete="off">
+            </div>
+          </div>
+        </details>
+        <button id="reset" type="button">Reset filters</button>
+      </form>
+
+      <noscript>
+        <p class="notice">This explorer needs JavaScript to load and filter task runs. Enable JavaScript, or use the linked documentation.</p>
+      </noscript>
+      <div id="error" class="notice error" role="alert" hidden></div>
+      <p id="loading" class="muted" role="status">Loading the task-run catalog…</p>
+      <div id="summary" aria-live="polite" aria-atomic="true"></div>
+      <section id="tasks" aria-label="Task matrix" hidden></section>
+      <section id="task-detail" aria-label="Task details" tabindex="-1" hidden></section>
+      <section id="comparison-summary" aria-label="Cohort comparison"></section>
+
+      <section id="browse" aria-labelledby="task-runs-heading">
+        <div class="section-heading"><h2 id="task-runs-heading">Task runs</h2><p class="muted">Select a run to inspect its conversation and evidence.</p></div>
+        <div class="table-scroll" role="region" aria-label="Task-run table" tabindex="0">
+          <table>
+            <caption class="sr-only">Selected task runs and their native outcomes</caption>
+            <thead>
+              <tr>
+                <th scope="col">Task</th>
+                <th scope="col">Model</th>
+                <th scope="col">Native result</th>
+                <th scope="col">Conversation / checks</th>
+                <th scope="col">Analysis</th>
+                <th scope="col">Open</th>
+              </tr>
+            </thead>
+            <tbody id="result-rows"></tbody>
+          </table>
+        </div>
+        <nav id="pagination" class="pagination" aria-label="Task-run pages"></nav>
+      </section>
+
+      <div id="record-workspace" class="record-workspace" hidden>
+        <aside id="run-browser" class="run-browser" aria-label="Browse task runs"></aside>
+        <section id="inspection" tabindex="-1" aria-label="Task-run inspection" hidden></section>
+      </div>
+    </main>
+    </div>
+  </body>
+</html>

@@ -32,6 +32,7 @@ jobs:
           import hashlib
           import json
           import os
+          import re
           import shutil
           from pathlib import Path
 
@@ -54,7 +55,8 @@ jobs:
                   raise SystemExit('Publication file differs from the approved manifest')
               if relative == '.github/workflows/pages.yml':
                   continue
-              if relative not in {'index.html', 'README.md', '.nojekyll'} and not relative.startswith(('explorer/', 'views/explorer/')):
+              page = re.fullmatch(r'(?:compare|(?:task|run)/[0-9a-f]{16}|(?:automationbench|tau2)(?:/[a-z][a-z0-9-]*){0,2})/index\.html', relative)
+              if relative not in {'index.html', '404.html', 'README.md', '.nojekyll'} and not relative.startswith(('explorer/', 'views/explorer/')) and not page:
                   raise SystemExit('Unexpected website path')
               destination = output / relative
               destination.parent.mkdir(parents=True, exist_ok=True)

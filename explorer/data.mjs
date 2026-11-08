@@ -41,61 +41,6 @@
  * m: string, sort: string, group: string, anchor: string, dimension: string, paper: string, record: string}} State
  */
 
-/** @type {(keyof State)[]} */
-const stateKeys = ['domain', 'benchmark', 'version', 'model', 'outcome', 'scope', 'q', 'analysis', 'cohorts', 'task', 'task_run', 'compare', 'page', 'view', 'tab', 'm', 'sort', 'group', 'anchor', 'dimension', 'paper', 'record'];
-
-/** @param {string} hash @returns {State} */
-export function readState(hash) {
-  const [path, query = ''] = hash.replace(/^#/, '').split('?');
-  const params = new URLSearchParams(path.startsWith('/') ? query : path);
-  if (path.startsWith('/')) {
-    const parts = path.slice(1).split('/').map(part => { try { return decodeURIComponent(part); } catch { return part; } });
-    if (parts[0] === 'task') params.set('task', parts[1] ?? '');
-    else if (parts[0] === 'run') params.set('task_run', parts[1] ?? '');
-    else if (parts[0] === 'compare') {
-      params.set('task_run', params.get('a') ?? '');
-      params.set('compare', params.get('b') ?? '');
-    } else {
-      const viewOnly = ['tasks', 'runs', 'models'].includes(parts[1]);
-      params.set('benchmark', parts[0] === 'tau2' ? 'tau2-bench' : parts[0] ?? '');
-      params.set('domain', viewOnly || parts[1] === 'all' ? '' : parts[1] ?? '');
-      params.set('view', viewOnly ? parts[1] : parts[2] ?? 'tasks');
-    }
-  }
-  const state = /** @type {State} */ (/** @type {unknown} */ (Object.fromEntries(stateKeys.map(key => [key, params.get(key) ?? '']))));
-  state.scope = state.scope === 'all' ? 'all' : 'reported';
-  const page = Number(state.page);
-  state.page = Number.isSafeInteger(page) && page > 0 ? page : 1;
-  state.view = ['tasks', 'runs', 'models'].includes(state.view) ? state.view : 'tasks';
-  if (state.tab === 'task') state.tab = 'prompts';
-  state.tab = ['transcript', 'verdict', 'prompts', 'analysis', 'provenance'].includes(state.tab) ? state.tab : 'verdict';
-  state.group = ['model', 'task', 'domain', 'outcome'].includes(state.group) ? state.group : '';
-  state.dimension = ['overview', 'checks', 'conversation', 'tools', 'resources', 'setup'].includes(state.dimension) ? state.dimension : 'overview';
-  state.paper = state.paper === 'expanded' ? 'expanded' : '';
-  return state;
-}
-
-/** @param {Partial<State>} state */
-export function stateHash(state) {
-  const params = new URLSearchParams();
-  const encode = encodeURIComponent;
-  let path = state.benchmark ? `/${encode(state.benchmark === 'tau2-bench' ? 'tau2' : state.benchmark)}` : '';
-  if (path && state.domain) path += `/${encode(state.domain)}`;
-  if (path && state.view && state.view !== 'tasks') path += `/${state.view}`;
-  if (state.task && !state.task_run) path = `/task/${encode(state.task)}`;
-  if (state.task_run) {
-    path = state.compare ? '/compare' : `/run/${encode(state.task_run)}`;
-    if (state.compare) { params.set('a', state.task_run); params.set('b', state.compare); }
-  }
-  for (const key of stateKeys) {
-    const value = state[key];
-    if (['task_run', 'compare'].includes(key) || (key === 'task' && !state.task_run && state.task) || (path && !state.task_run && !state.task && ['benchmark', 'domain', 'view'].includes(key))) continue;
-    if (value === undefined || value === '' || (key === 'page' && value === 1) || (key === 'scope' && value === 'reported') || (key === 'view' && value === 'tasks') || (key === 'tab' && value === 'verdict' && !state.task_run) || (key === 'dimension' && value === 'overview')) continue;
-    params.set(key, String(value));
-  }
-  return `#${path}${path && params.size ? '?' : ''}${params}`;
-}
-
 /** @param {string} path @param {string | URL} root */
 export function repositoryUrl(path, root) {
   if (typeof path !== 'string' || !path || /[\\%:?#]/.test(path) || path.split('/').some(part => !part || part === '.' || part === '..')) {
