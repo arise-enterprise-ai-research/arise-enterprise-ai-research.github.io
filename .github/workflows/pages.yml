@@ -55,7 +55,7 @@ jobs:
                   raise SystemExit('Publication file differs from the approved manifest')
               if relative == '.github/workflows/pages.yml':
                   continue
-              page = re.fullmatch(r'(?:compare|(?:task|run)/[0-9a-f]{16}|(?:automationbench|tau2)(?:/[a-z][a-z0-9-]*){0,2})/index\.html', relative)
+              page = re.fullmatch(r'(?:home|compare|(?:task|run)/[0-9a-f]{16}|(?:automationbench|tau2)(?:/[a-z][a-z0-9-]*){0,2})/index\.html', relative)
               if relative not in {'index.html', '404.html', 'README.md', '.nojekyll'} and not relative.startswith(('explorer/', 'views/explorer/')) and not page:
                   raise SystemExit('Unexpected website path')
               destination = output / relative

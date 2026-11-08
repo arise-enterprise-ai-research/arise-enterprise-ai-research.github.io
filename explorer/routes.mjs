@@ -59,7 +59,9 @@ export function createRouter(rows, root) {
     const parts = path.split('/').filter(Boolean).map(part => {
       try { return decodeURIComponent(part); } catch { return part; }
     });
-    if (parts[0] === 'task') params.set('task', tasks.get(parts[1]) ?? parts[1] ?? '');
+    if (!parts.length || parts[0] === 'home') {
+      params.set('benchmark', parts[0] === 'home' ? 'automationbench' : params.get('benchmark') || 'automationbench');
+    } else if (parts[0] === 'task') params.set('task', tasks.get(parts[1]) ?? parts[1] ?? '');
     else if (parts[0] === 'run') params.set('task_run', runs.get(parts[1]) ?? parts[1] ?? '');
     else if (parts[0] === 'compare') {
       params.set('task_run', runs.get(params.get('a') ?? '') ?? params.get('a') ?? '');
@@ -89,6 +91,7 @@ export function createRouter(rows, root) {
     let path = state.benchmark ? `${encode(state.benchmark === 'tau2-bench' ? 'tau2' : state.benchmark)}/` : '';
     if (state.domain) path += `${encode(state.domain)}/`;
     if (state.view !== 'tasks') path += `${state.view}/`;
+    if (state.benchmark === 'automationbench' && !state.domain && state.view === 'tasks') path = 'home/';
     if (state.task && !state.task_run) path = `task/${encode(taskIds.get(state.task) ?? state.task)}/`;
     const params = new URLSearchParams();
     if (state.task_run) {

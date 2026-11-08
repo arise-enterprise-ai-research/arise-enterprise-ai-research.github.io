@@ -1,6 +1,6 @@
 # Benchmark Explorer
 
-[Open the website](https://arise-enterprise-ai-research.github.io/benchmark-explorer/).
+[Open the website](https://arise-enterprise-ai-research.github.io/).
 
 This repository contains the public website and generated UI views.
 
