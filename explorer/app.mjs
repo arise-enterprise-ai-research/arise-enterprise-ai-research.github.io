@@ -2072,6 +2072,8 @@ async function loadCatalog() {
     populateFilters();
     loading.hidden = true;
     for (const control of Object.values(controls)) control.disabled = false;
+    const hash = stateHash(state);
+    if (!state.task_run && location.hash && location.hash !== hash) history.replaceState(null, '', hash);
     render({anchor: state.anchor || (state.m !== '' && rowsById.has(state.task_run) ? anchorId(rowFor(state.task_run), 'message', state.m) : null)});
   } catch (error) {
     loading.hidden = true;
@@ -2099,8 +2101,10 @@ element('reset').addEventListener('click', () => {
 });
 function restoreLocation() {
   const next = readState(location.hash);
+  const hash = stateHash(next);
+  if (!next.task_run && location.hash !== hash) history.replaceState(null, '', hash);
   const anchor = next.anchor || (next.m !== '' && rowsById.has(next.task_run) ? anchorId(rowFor(next.task_run), 'message', next.m) : null);
-  if (stateHash(next) === stateHash(state)) {
+  if (hash === stateHash(state)) {
     if (anchor) revealAnchor(anchor);
     return;
   }
