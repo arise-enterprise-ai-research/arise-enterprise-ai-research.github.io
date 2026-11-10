@@ -10,6 +10,21 @@
       "path": "result-bundles/tau2-bench/telecom/v0.1.3/gpt-4.1/2026-10-20/results.json",
       "sha256": "28aa8728547442c392fe1c45e03c9c4f249cfe1912acf4ddc302feab2b02caae",
       "pointer": "/info/environment_info/policy"
+    },
+    {
+      "path": "result-bundles/tau2-bench/telecom/v1.0.1/claude-sonnet-5.5/2026-10-20/parts/claude55_telecom_batch1/results.json",
+      "sha256": "cab78becdb6f9d10a664a190a1c76ffe9f52b2d43a202602c4237b1eebc6e9f5",
+      "pointer": "/info/environment_info/policy"
+    },
+    {
+      "path": "result-bundles/tau2-bench/telecom/v1.0.1/claude-sonnet-5.5/2026-10-20/parts/claude55_telecom_batch2/results.json",
+      "sha256": "5e36676c24d2465179e0e6718ad6bdb6f8b03ed74e216b96aba1a862c7f451f1",
+      "pointer": "/info/environment_info/policy"
+    },
+    {
+      "path": "result-bundles/tau2-bench/telecom/v1.0.1/claude-sonnet-5.5/2026-10-20/parts/claude55_telecom_batch3/results.json",
+      "sha256": "7e0be9dd67dd24df708d1cfa808a345706c14f920532a021ec55bb783a2533c9",
+      "pointer": "/info/environment_info/policy"
     }
   ]
 }

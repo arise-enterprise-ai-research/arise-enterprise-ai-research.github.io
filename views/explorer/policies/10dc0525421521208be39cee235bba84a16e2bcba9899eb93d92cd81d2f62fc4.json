@@ -10,6 +10,16 @@
       "path": "result-bundles/tau2-bench/airline/v0.1.3/gpt-4.1/2026-10-19/results.json",
       "sha256": "fd92d019919c03ea39732910e3ab35381aae9f1c29c32e9714bf2c5814d8f055",
       "pointer": "/info/environment_info/policy"
+    },
+    {
+      "path": "result-bundles/tau2-bench/airline/v1.0.1/claude-sonnet-5.5/2026-10-20/parts/claude55_airline_pilot5/results.json",
+      "sha256": "7019ef9dc796b3aea3761f9bb93af93b0767dc5fa32dcb71176fdb714fc75dc4",
+      "pointer": "/info/environment_info/policy"
+    },
+    {
+      "path": "result-bundles/tau2-bench/airline/v1.0.1/claude-sonnet-5.5/2026-10-20/parts/claude55_airline_remaining45/results.json",
+      "sha256": "99986db97a78de3d32dd916b4df09f0469168af258742ffc0ac864926a6ab41a",
+      "pointer": "/info/environment_info/policy"
     }
   ]
 }
