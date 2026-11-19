@@ -1,0 +1,10 @@
+{
+  "aspm_identifier": "4abe85c9705b81c81907be5ac0f766a68d436b6f4839132fb9c77840070e29ee",
+  "aspm_identifier_after_expert_review": "290d60efbc0897e781b9ef877ded3f717aa6836f8015faf5616623690bb1708e",
+  "aspm_identifier_after_ltl_rule_extraction": "dd5304a43c1215b39c58f5d91f7ed3cb9a1548a2984eadc84c41667bdaf4b11e",
+  "aspm_identifier_after_structure_optimization": "290d60efbc0897e781b9ef877ded3f717aa6836f8015faf5616623690bb1708e",
+  "expert_review_applied": false,
+  "policies": 8,
+  "policies_without_rule": [],
+  "weight_status": "partially_trained"
+}

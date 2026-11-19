@@ -1,0 +1,500 @@
+{
+  "format": "shieldagent.training_dataset/1",
+  "origin": "simulated_pseudo_learning",
+  "source": "GPT4oSimulatedPseudoLearning: scenarios written from the source policies, grounded and label-checked in separate calls. A reconstruction recipe, not a published generator.",
+  "trajectories": [
+    {
+      "action_predicate_id": "engage_in_spam.59fb1b9d",
+      "action_timestep": 1,
+      "id": "engage_in_spam.59fb1b9d.g0003.v1",
+      "instruction_group_id": "engage_in_spam.59fb1b9d.g0003",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:engage_in_spam.59fb1b9d.g0003/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "engage_in_content_manipulation.f4db380f": false,
+          "engage_in_disruptive_behavior.f570183f": false,
+          "engage_in_spam.59fb1b9d": false
+        },
+        {
+          "engage_in_content_manipulation.f4db380f": false,
+          "engage_in_disruptive_behavior.f570183f": true,
+          "engage_in_spam.59fb1b9d": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "engage_in_content_manipulation.f4db380f",
+      "action_timestep": 0,
+      "id": "engage_in_content_manipulation.f4db380f.g0000.v1",
+      "instruction_group_id": "engage_in_content_manipulation.f4db380f.g0000",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:engage_in_content_manipulation.f4db380f.g0000/variant_1",
+      "split": "validation",
+      "states": [
+        {
+          "engage_in_content_manipulation.f4db380f": true,
+          "engage_in_disruptive_behavior.f570183f": true,
+          "engage_in_spam.59fb1b9d": false
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "engage_in_content_manipulation.f4db380f",
+      "action_timestep": 0,
+      "id": "engage_in_content_manipulation.f4db380f.g0001.v1",
+      "instruction_group_id": "engage_in_content_manipulation.f4db380f.g0001",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:engage_in_content_manipulation.f4db380f.g0001/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "engage_in_content_manipulation.f4db380f": true,
+          "engage_in_disruptive_behavior.f570183f": true,
+          "engage_in_spam.59fb1b9d": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "engage_in_content_manipulation.f4db380f",
+      "action_timestep": 0,
+      "id": "engage_in_content_manipulation.f4db380f.g0002.v1",
+      "instruction_group_id": "engage_in_content_manipulation.f4db380f.g0002",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:engage_in_content_manipulation.f4db380f.g0002/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "engage_in_content_manipulation.f4db380f": true,
+          "engage_in_disruptive_behavior.f570183f": true,
+          "engage_in_spam.59fb1b9d": false
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "reveal_personal_info.e1661515",
+      "action_timestep": 0,
+      "id": "reveal_personal_info.e1661515.g0001.v0",
+      "instruction_group_id": "reveal_personal_info.e1661515.g0001",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:reveal_personal_info.e1661515.g0001/variant_0",
+      "split": "train",
+      "states": [
+        {
+          "instigate_harassment.c43b50f2": false,
+          "reveal_personal_info.e1661515": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "engage_predatory_behavior.16bd686a",
+      "action_timestep": 0,
+      "id": "engage_predatory_behavior.16bd686a.g0000.v1",
+      "instruction_group_id": "engage_predatory_behavior.16bd686a.g0000",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:engage_predatory_behavior.16bd686a.g0000/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "engage_predatory_behavior.16bd686a": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "engage_predatory_behavior.16bd686a",
+      "action_timestep": 0,
+      "id": "engage_predatory_behavior.16bd686a.g0001.v1",
+      "instruction_group_id": "engage_predatory_behavior.16bd686a.g0001",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:engage_predatory_behavior.16bd686a.g0001/variant_1",
+      "split": "validation",
+      "states": [
+        {
+          "engage_predatory_behavior.16bd686a": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "engage_predatory_behavior.16bd686a",
+      "action_timestep": 0,
+      "id": "engage_predatory_behavior.16bd686a.g0002.v1",
+      "instruction_group_id": "engage_predatory_behavior.16bd686a.g0002",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:engage_predatory_behavior.16bd686a.g0002/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "engage_predatory_behavior.16bd686a": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "intentionally_mislead.d1fc1a98",
+      "action_timestep": 0,
+      "id": "intentionally_mislead.d1fc1a98.g0000.v1",
+      "instruction_group_id": "intentionally_mislead.d1fc1a98.g0000",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:intentionally_mislead.d1fc1a98.g0000/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "impersonate_entity.1246f277": false,
+          "intentionally_mislead.d1fc1a98": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "intentionally_mislead.d1fc1a98",
+      "action_timestep": 0,
+      "id": "intentionally_mislead.d1fc1a98.g0001.v1",
+      "instruction_group_id": "intentionally_mislead.d1fc1a98.g0001",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:intentionally_mislead.d1fc1a98.g0001/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "impersonate_entity.1246f277": false,
+          "intentionally_mislead.d1fc1a98": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "intentionally_mislead.d1fc1a98",
+      "action_timestep": 0,
+      "id": "intentionally_mislead.d1fc1a98.g0002.v1",
+      "instruction_group_id": "intentionally_mislead.d1fc1a98.g0002",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:intentionally_mislead.d1fc1a98.g0002/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "impersonate_entity.1246f277": false,
+          "intentionally_mislead.d1fc1a98": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "intentionally_mislead.d1fc1a98",
+      "action_timestep": 0,
+      "id": "intentionally_mislead.d1fc1a98.g0003.v1",
+      "instruction_group_id": "intentionally_mislead.d1fc1a98.g0003",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:intentionally_mislead.d1fc1a98.g0003/variant_1",
+      "split": "test",
+      "states": [
+        {
+          "impersonate_entity.1246f277": true,
+          "intentionally_mislead.d1fc1a98": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "impersonate_entity.1246f277",
+      "action_timestep": 0,
+      "id": "impersonate_entity.1246f277.g0000.v1",
+      "instruction_group_id": "impersonate_entity.1246f277.g0000",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:impersonate_entity.1246f277.g0000/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "impersonate_entity.1246f277": true,
+          "intentionally_mislead.d1fc1a98": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "impersonate_entity.1246f277",
+      "action_timestep": 0,
+      "id": "impersonate_entity.1246f277.g0001.v1",
+      "instruction_group_id": "impersonate_entity.1246f277.g0001",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:impersonate_entity.1246f277.g0001/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "impersonate_entity.1246f277": true,
+          "intentionally_mislead.d1fc1a98": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "impersonate_entity.1246f277",
+      "action_timestep": 0,
+      "id": "impersonate_entity.1246f277.g0002.v1",
+      "instruction_group_id": "impersonate_entity.1246f277.g0002",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:impersonate_entity.1246f277.g0002/variant_1",
+      "split": "test",
+      "states": [
+        {
+          "impersonate_entity.1246f277": true,
+          "intentionally_mislead.d1fc1a98": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "impersonate_entity.1246f277",
+      "action_timestep": 0,
+      "id": "impersonate_entity.1246f277.g0003.v1",
+      "instruction_group_id": "impersonate_entity.1246f277.g0003",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:impersonate_entity.1246f277.g0003/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "impersonate_entity.1246f277": true,
+          "intentionally_mislead.d1fc1a98": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "facilitate_transaction.07d054e6",
+      "action_timestep": 0,
+      "id": "facilitate_transaction.07d054e6.g0003.v1",
+      "instruction_group_id": "facilitate_transaction.07d054e6.g0003",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:facilitate_transaction.07d054e6.g0003/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "community_contains_graphic_content.5d53d0ea": false,
+          "community_contains_offensive_content.e76a15ba": false,
+          "community_contains_sexually_explicit_content.37043415": false,
+          "content_involves_minors.a994294b": false,
+          "content_is_abusive.ed9155d9": false,
+          "content_is_sexually_explicit.91dccacd": false,
+          "content_is_suggestive.8a3c7542": false,
+          "facilitate_transaction.07d054e6": true,
+          "has_consent.0ca579d7": false,
+          "is_graphic.012b2eca": false,
+          "is_illegal_content.02441bdc": false,
+          "is_offensive.b14be022": false,
+          "is_prohibited_transaction.aae3912c": false,
+          "label_community.edfa82ad": false,
+          "label_content.1ab5bcfc": false,
+          "post_content.5d43f06f": false,
+          "post_intimate_media.003415a6": false,
+          "report_harassment.40aa2577": false,
+          "share_content.0582158e": false,
+          "solicit_transaction.f60efb4e": false,
+          "take_action_against_harassment.abe19749": false,
+          "threaten_to_post_media.98c3c806": false,
+          "user_experiences_harassment.7c307279": false
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "action_timestep": 0,
+      "id": "user_action.2aa9f62c.g0000.v0",
+      "instruction_group_id": "user_action.2aa9f62c.g0000",
+      "label": 1,
+      "provenance": "simulated_pseudo_learning:user_action.2aa9f62c.g0000/variant_0",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": false,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "action_timestep": 0,
+      "id": "user_action.2aa9f62c.g0000.v1",
+      "instruction_group_id": "user_action.2aa9f62c.g0000",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:user_action.2aa9f62c.g0000/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": true,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "action_timestep": 0,
+      "id": "user_action.2aa9f62c.g0001.v0",
+      "instruction_group_id": "user_action.2aa9f62c.g0001",
+      "label": 1,
+      "provenance": "simulated_pseudo_learning:user_action.2aa9f62c.g0001/variant_0",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": false,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "action_timestep": 0,
+      "id": "user_action.2aa9f62c.g0001.v1",
+      "instruction_group_id": "user_action.2aa9f62c.g0001",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:user_action.2aa9f62c.g0001/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": true,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "action_timestep": 0,
+      "id": "user_action.2aa9f62c.g0002.v0",
+      "instruction_group_id": "user_action.2aa9f62c.g0002",
+      "label": 1,
+      "provenance": "simulated_pseudo_learning:user_action.2aa9f62c.g0002/variant_0",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": false,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "action_timestep": 0,
+      "id": "user_action.2aa9f62c.g0002.v1",
+      "instruction_group_id": "user_action.2aa9f62c.g0002",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:user_action.2aa9f62c.g0002/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": true,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "action_timestep": 0,
+      "id": "user_action.2aa9f62c.g0003.v0",
+      "instruction_group_id": "user_action.2aa9f62c.g0003",
+      "label": 1,
+      "provenance": "simulated_pseudo_learning:user_action.2aa9f62c.g0003/variant_0",
+      "split": "test",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": false,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "action_timestep": 0,
+      "id": "user_action.2aa9f62c.g0003.v1",
+      "instruction_group_id": "user_action.2aa9f62c.g0003",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:user_action.2aa9f62c.g0003/variant_1",
+      "split": "test",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": true,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "interfere_accessibility.f98d5ade",
+      "action_timestep": 0,
+      "id": "interfere_accessibility.f98d5ade.g0000.v1",
+      "instruction_group_id": "interfere_accessibility.f98d5ade.g0000",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:interfere_accessibility.f98d5ade.g0000/variant_1",
+      "split": "test",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": true,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "interfere_accessibility.f98d5ade",
+      "action_timestep": 0,
+      "id": "interfere_accessibility.f98d5ade.g0001.v1",
+      "instruction_group_id": "interfere_accessibility.f98d5ade.g0001",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:interfere_accessibility.f98d5ade.g0001/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": true,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "interfere_accessibility.f98d5ade",
+      "action_timestep": 0,
+      "id": "interfere_accessibility.f98d5ade.g0002.v1",
+      "instruction_group_id": "interfere_accessibility.f98d5ade.g0002",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:interfere_accessibility.f98d5ade.g0002/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": true,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "interfere_accessibility.f98d5ade",
+      "action_timestep": 0,
+      "id": "interfere_accessibility.f98d5ade.g0003.v1",
+      "instruction_group_id": "interfere_accessibility.f98d5ade.g0003",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:interfere_accessibility.f98d5ade.g0003/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "interfere_accessibility.f98d5ade": true,
+          "user_action.2aa9f62c": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "instigate_harassment.c43b50f2",
+      "action_timestep": 0,
+      "id": "instigate_harassment.c43b50f2.g0000.v1",
+      "instruction_group_id": "instigate_harassment.c43b50f2.g0000",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:instigate_harassment.c43b50f2.g0000/variant_1",
+      "split": "train",
+      "states": [
+        {
+          "instigate_harassment.c43b50f2": true,
+          "reveal_personal_info.e1661515": true
+        }
+      ]
+    },
+    {
+      "action_predicate_id": "instigate_harassment.c43b50f2",
+      "action_timestep": 0,
+      "id": "instigate_harassment.c43b50f2.g0001.v1",
+      "instruction_group_id": "instigate_harassment.c43b50f2.g0001",
+      "label": -1,
+      "provenance": "simulated_pseudo_learning:instigate_harassment.c43b50f2.g0001/variant_1",
+      "split": "validation",
+      "states": [
+        {
+          "instigate_harassment.c43b50f2": true,
+          "reveal_personal_info.e1661515": false
+        }
+      ]
+    }
+  ],
+  "vocabulary_identifier": "ae8549ee887019fa719960af500b28bbc0ad48b2eebc5bf1489855ee9b793acd"
+}

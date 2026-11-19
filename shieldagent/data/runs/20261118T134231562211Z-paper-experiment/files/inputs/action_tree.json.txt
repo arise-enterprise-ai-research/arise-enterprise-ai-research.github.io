@@ -1,0 +1,181 @@
+{
+  "nodes": [
+    {
+      "description": "A community is banned by Reddit.",
+      "id": "action_001",
+      "label": "ban_community",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "ban_community.7c7f6afb"
+    },
+    {
+      "description": "A user is banned by Reddit.",
+      "id": "action_002",
+      "label": "ban_user",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "ban_user.505ad330"
+    },
+    {
+      "description": "A user reports harassment, bullying, or threats of violence.",
+      "id": "action_003",
+      "label": "report_harassment",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "report_harassment.40aa2577"
+    },
+    {
+      "description": "Reddit takes action to address reported harassment.",
+      "id": "action_004",
+      "label": "take_action_against_harassment",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "take_action_against_harassment.abe19749"
+    },
+    {
+      "description": "The user engages in spamming activities within a community.",
+      "id": "action_005",
+      "label": "engage_in_spam",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "engage_in_spam.59fb1b9d"
+    },
+    {
+      "description": "The user engages in behaviors that disrupt the integrity of a community.",
+      "id": "action_006",
+      "label": "engage_in_disruptive_behavior",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "engage_in_disruptive_behavior.f570183f"
+    },
+    {
+      "description": "The user manipulates content in a way that disrupts the integrity of a community.",
+      "id": "action_007",
+      "label": "engage_in_content_manipulation",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "engage_in_content_manipulation.f4db380f"
+    },
+    {
+      "description": "An action that discloses someone's personal or confidential information.",
+      "id": "action_008",
+      "label": "reveal_personal_info",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "reveal_personal_info.e1661515"
+    },
+    {
+      "description": "An action of posting intimate or sexually-explicit media of someone.",
+      "id": "action_009",
+      "label": "post_intimate_media",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "post_intimate_media.003415a6"
+    },
+    {
+      "description": "An action of threatening to post intimate or sexually-explicit media of someone.",
+      "id": "action_010",
+      "label": "threaten_to_post_media",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "threaten_to_post_media.98c3c806"
+    },
+    {
+      "description": "The action of sharing any content on the platform.",
+      "id": "action_011",
+      "label": "share_content",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "share_content.0582158e"
+    },
+    {
+      "description": "The user engages in predatory or harmful behavior towards minors.",
+      "id": "action_012",
+      "label": "engage_predatory_behavior",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "engage_predatory_behavior.16bd686a"
+    },
+    {
+      "description": "The user intentionally misleads others.",
+      "id": "action_013",
+      "label": "intentionally_mislead",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "intentionally_mislead.d1fc1a98"
+    },
+    {
+      "description": "The user impersonates another individual or entity.",
+      "id": "action_014",
+      "label": "impersonate_entity",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "impersonate_entity.1246f277"
+    },
+    {
+      "description": "Content is labeled to indicate its nature.",
+      "id": "action_015",
+      "label": "label_content",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "label_content.1ab5bcfc"
+    },
+    {
+      "description": "Represents the action of posting content on Reddit.",
+      "id": "action_016",
+      "label": "post_content",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "post_content.5d43f06f"
+    },
+    {
+      "description": "Represents the action of soliciting a transaction.",
+      "id": "action_017",
+      "label": "solicit_transaction",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "solicit_transaction.f60efb4e"
+    },
+    {
+      "description": "Represents the action of facilitating a transaction.",
+      "id": "action_018",
+      "label": "facilitate_transaction",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "facilitate_transaction.07d054e6"
+    },
+    {
+      "description": "A community is labeled to indicate its nature, specifically whether it contains graphic, sexually explicit, or offensive content.",
+      "id": "action_019",
+      "label": "label_community",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "label_community.edfa82ad"
+    },
+    {
+      "description": "A user performs any observable action on Reddit, such as posting, commenting, voting, or interacting with the platform.",
+      "id": "action_020",
+      "label": "user_action",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "user_action.2aa9f62c"
+    },
+    {
+      "description": "An action that significantly hinders or prevents other users from accessing Reddit, such as spamming, DDoS attacks, or other activities that degrade the platform's availability.",
+      "id": "action_021",
+      "label": "interfere_accessibility",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "interfere_accessibility.f98d5ade"
+    },
+    {
+      "description": "An action that intentionally causes harm, distress, or intimidation to another individual through harassment, including but not limited to revealing personal information or posting intimate media without consent.",
+      "id": "action_022",
+      "label": "instigate_harassment",
+      "level": 1,
+      "parent_id": null,
+      "predicate_id": "instigate_harassment.c43b50f2"
+    }
+  ],
+  "provenance": "Reconstruction: one root for each constructed action predicate. The paper does not publish a complete action hierarchy. No action relationships or prebuilt predicate IDs are assumed."
+}

@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 1.3341859170177486,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n[\n  {\n    \"predicates\": [\n      [\"use_real_name\", \"The user uses their real name.\", [\"identity\", \"real_name\", \"user\"]],\n      [\"intentionally_mislead\", \"The user intentionally misleads others.\", [\"deception\", \"mislead\", \"intent\"]],\n      [\"impersonate_entity\", \"The user impersonates another individual or entity.\", [\"impersonation\", \"deception\", \"entity\"]]\n    ],\n    \"logic\": \"NOT intentionally_mislead AND NOT impersonate_entity\"\n  }\n]\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 116,
+    "prompt_tokens": 552,
+    "total_tokens": 668
+  }
+}

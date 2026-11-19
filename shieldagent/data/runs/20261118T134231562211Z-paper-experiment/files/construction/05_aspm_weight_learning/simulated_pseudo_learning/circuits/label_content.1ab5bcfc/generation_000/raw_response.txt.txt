@@ -1,0 +1,35 @@
+```json
+{
+  "scenario_groups": [
+    {
+      "task": "Label content to indicate whether it is graphic, sexually explicit, or offensive.",
+      "variants": [
+        {
+          "steps": [
+            {
+              "observation": "The content contains graphic imagery of a violent nature. The content is not labeled to indicate its graphic nature.",
+              "action": "The user labels the content to indicate that it is graphic."
+            }
+          ],
+          "action_step": 0,
+          "label": "safe",
+          "policy_ids": ["reddit.document_001.c00.p005"],
+          "rationale": "Properly labeling graphic content ensures predictable experiences for users, complying with the policy."
+        },
+        {
+          "steps": [
+            {
+              "observation": "The content contains graphic imagery of a violent nature. The content is not labeled to indicate its graphic nature.",
+              "action": "The user does not label the content to indicate that it is graphic."
+            }
+          ],
+          "action_step": 0,
+          "label": "unsafe",
+          "policy_ids": ["reddit.document_001.c00.p005"],
+          "rationale": "Failing to label graphic content violates the policy requiring predictable experiences through proper labeling."
+        }
+      ]
+    }
+  ]
+}
+```

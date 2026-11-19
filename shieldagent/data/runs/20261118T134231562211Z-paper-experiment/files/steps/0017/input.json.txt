@@ -1,0 +1,6 @@
+{
+  "model": "text-embedding-3-large",
+  "texts": [
+    "community_contains_graphic_content\nA community contains content that depicts violence, gore, or other visually disturbing material.\ncommunity, graphic, violence, gore, disturbing\nstate"
+  ]
+}

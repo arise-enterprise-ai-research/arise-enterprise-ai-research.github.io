@@ -1,0 +1,26 @@
+{
+  "artifact_id": "sha256:65c223a39d51a989a48b65bb3383bf84656771eb140228d28444df951dd7cee8",
+  "artifact_type": "Policies",
+  "contains_fabricated_inputs": true,
+  "content_origin": "model_output",
+  "execution_status": "completed",
+  "fabricated_content": false,
+  "fabrication_ids": [
+    "F-GPT4O-SNAPSHOT",
+    "F-LLM-SAMPLING",
+    "F-OUTPUT-VALIDATION",
+    "F-POLICY-CHUNKING",
+    "F-POLICY-NORMALIZATION",
+    "F-PROMPT-ENVELOPE",
+    "F-SOURCE-EU-AI-ACT-ARTICLE-5",
+    "F-SOURCE-REDDIT-RULES"
+  ],
+  "paper_correspondence": {
+    "exact_experiment_reproduction": false,
+    "location": "Sec. 3.2.2; App. C.2.1; App. H p.29"
+  },
+  "parents": [
+    "sha256:7d2fd26d4b83174eb736c5fba4b1d9731ac79b78020ee1eed6acc73b0a3291a9"
+  ],
+  "semantic_verification": "not_established"
+}

@@ -1,0 +1,11 @@
+{
+  "fine_tuned_for_shieldagent": false,
+  "local_kv_cache": false,
+  "original": "Two fine-tuned InternVL2-2B verifiers",
+  "performance_equivalence_established": false,
+  "replacement": "gpt-4o-mini-2024-07-18",
+  "roles": [
+    "search",
+    "binary_check"
+  ]
+}

@@ -1,0 +1,1 @@
+{"label": "unsafe", "policy_ids": ["reddit.document_001.c00.p004"], "reason": "The action violates the policy against impersonation by intentionally misleading others and pretending to be another individual in a deceptive manner."}

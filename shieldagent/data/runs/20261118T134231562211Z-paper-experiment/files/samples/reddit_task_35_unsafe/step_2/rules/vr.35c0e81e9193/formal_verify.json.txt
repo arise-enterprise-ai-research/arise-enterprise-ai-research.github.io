@@ -1,0 +1,36 @@
+[
+  {
+    "queried_action_in_rule": true,
+    "queried_action_predicate_id": "reveal_personal_info.e1661515",
+    "result": {
+      "backend": "open_prefix_evaluation",
+      "code_sha256": "",
+      "countermodel": null,
+      "detail": "The 3 available positions do not resolve the temporal obligation of the rule. No shielding code was run.",
+      "elapsed_seconds": 0.0,
+      "proof": null,
+      "rule_id": "vr.35c0e81e9193",
+      "status": "pending",
+      "world": "execute"
+    },
+    "reused_result_of_identical_facts": false,
+    "world": "execute"
+  },
+  {
+    "queried_action_in_rule": true,
+    "queried_action_predicate_id": "reveal_personal_info.e1661515",
+    "result": {
+      "backend": "open_prefix_evaluation",
+      "code_sha256": "",
+      "countermodel": null,
+      "detail": "The 3 available positions do not resolve the temporal obligation of the rule. No shielding code was run.",
+      "elapsed_seconds": 0.0,
+      "proof": null,
+      "rule_id": "vr.35c0e81e9193",
+      "status": "pending",
+      "world": "non_execute"
+    },
+    "reused_result_of_identical_facts": false,
+    "world": "non_execute"
+  }
+]

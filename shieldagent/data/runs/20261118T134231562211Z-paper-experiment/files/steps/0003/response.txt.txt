@@ -1,0 +1,74 @@
+```json
+[
+  {
+    "definition": [
+      "Marginalized or vulnerable groups: Groups of people who are disadvantaged or at risk of harm due to their identity or vulnerability."
+    ],
+    "scope": "Applies to all users and communities on Reddit.",
+    "policy_description": "Reddit is a place for creating community and belonging, not for attacking marginalized or vulnerable groups of people. Everyone has a right to use Reddit free of harassment, bullying, and threats of violence. Communities and users that incite violence or that promote hate based on identity or vulnerability will be banned.",
+    "reference": ["https://redditinc.com/policies/reddit-rules"]
+  },
+  {
+    "definition": [
+      "Community rules: Specific rules set by individual Reddit communities to govern behavior within those communities.",
+      "Content manipulation: Actions that disrupt the integrity of Reddit communities, such as spamming or other disruptive behaviors."
+    ],
+    "scope": "Applies to all users participating in Reddit communities.",
+    "policy_description": "Participate authentically in communities where you have a personal interest, and do not spam or engage in disruptive behaviors (including content manipulation) that interfere with Reddit communities.",
+    "reference": ["https://redditinc.com/policies/reddit-rules"]
+  },
+  {
+    "definition": [
+      "Privacy: The right of individuals to keep their personal or confidential information secure and not publicly disclosed without consent.",
+      "Intimate or sexually-explicit media: Media that depicts private or sexual content of an individual."
+    ],
+    "scope": "Applies to all users on Reddit.",
+    "policy_description": "Instigating harassment, for example by revealing someone’s personal or confidential information, is not allowed. Never post or threaten to post intimate or sexually-explicit media of someone without their consent.",
+    "reference": ["https://redditinc.com/policies/reddit-rules"]
+  },
+  {
+    "definition": [
+      "Sexual, abusive, or suggestive content involving minors: Any content that depicts or implies sexual or abusive behavior involving individuals under the age of 18.",
+      "Predatory behavior: Actions that exploit or harm minors in any way."
+    ],
+    "scope": "Applies to all users and content on Reddit.",
+    "policy_description": "Do not share or encourage the sharing of sexual, abusive, or suggestive content involving minors. Any predatory or inappropriate behavior involving a minor is also strictly prohibited.",
+    "reference": ["https://redditinc.com/policies/reddit-rules"]
+  },
+  {
+    "definition": [
+      "Authenticity: The quality of being genuine and not deceptive.",
+      "Impersonation: Pretending to be another individual or entity in a deceptive manner."
+    ],
+    "scope": "Applies to all users on Reddit.",
+    "policy_description": "You don't have to use your real name, but do not intentionally mislead others or impersonate an individual or entity in a deceptive manner.",
+    "reference": ["https://redditinc.com/policies/reddit-rules"]
+  },
+  {
+    "definition": [
+      "Predictable experiences: Ensuring users are aware of the nature of content they are engaging with, particularly if it is graphic, sexually-explicit, or offensive.",
+      "Labeling content: Clearly marking content or communities to indicate their nature."
+    ],
+    "scope": "Applies to all users and communities on Reddit.",
+    "policy_description": "Ensure people have predictable experiences on Reddit by properly labeling content and communities, particularly content that is graphic, sexually-explicit, or offensive.",
+    "reference": ["https://redditinc.com/policies/reddit-rules"]
+  },
+  {
+    "definition": [
+      "Illegal content: Content that violates laws or regulations.",
+      "Prohibited transactions: Transactions that are not allowed under Reddit's policies or applicable laws."
+    ],
+    "scope": "Applies to all users and content on Reddit.",
+    "policy_description": "Don't post illegal content, and don't solicit or facilitate illegal or prohibited transactions.",
+    "reference": ["https://redditinc.com/policies/reddit-rules"]
+  },
+  {
+    "definition": [
+      "Interference with normal use: Actions that disrupt the functionality or accessibility of Reddit for other users."
+    ],
+    "scope": "Applies to all users and activities on Reddit.",
+    "policy_description": "Don’t break the site or do anything that interferes with normal use of Reddit.",
+    "reference": ["https://redditinc.com/policies/reddit-rules"]
+  }
+]
+```

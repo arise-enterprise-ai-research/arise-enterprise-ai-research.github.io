@@ -1,0 +1,115 @@
+[
+  {
+    "chunk": 0,
+    "position": 0,
+    "record": {
+      "definition": [
+        "Subliminal techniques: Techniques beyond a person’s consciousness.",
+        "Manipulative or deceptive techniques: Techniques that materially distort behavior by impairing informed decision-making."
+      ],
+      "policy_description": "The placing on the market, the putting into service or the use of an AI system that deploys subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques, with the objective, or the effect of materially distorting the behaviour of a person or a group of persons by appreciably impairing their ability to make an informed decision, thereby causing them to take a decision that they would not have otherwise taken in a manner that causes or is reasonably likely to cause that person, another person or group of persons significant harm is prohibited.",
+      "reference": [
+        "Article 5, paragraph 1(a), Regulation 2024/1689"
+      ],
+      "scope": "AI systems placed on the market, put into service, or used with the objective or effect of materially distorting behavior and causing significant harm."
+    }
+  },
+  {
+    "chunk": 0,
+    "position": 1,
+    "record": {
+      "definition": [
+        "Vulnerabilities: Weaknesses due to age, disability, or specific social or economic situations."
+      ],
+      "policy_description": "The placing on the market, the putting into service or the use of an AI system that exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation, with the objective, or the effect, of materially distorting the behaviour of that person or a person belonging to that group in a manner that causes or is reasonably likely to cause that person or another person significant harm is prohibited.",
+      "reference": [
+        "Article 5, paragraph 1(b), Regulation 2024/1689"
+      ],
+      "scope": "AI systems placed on the market, put into service, or used to exploit vulnerabilities of individuals or groups, causing significant harm."
+    }
+  },
+  {
+    "chunk": 0,
+    "position": 2,
+    "record": {
+      "definition": [
+        "Social scoring: Evaluation or classification of individuals or groups based on social behavior or personal characteristics over time."
+      ],
+      "policy_description": "The placing on the market, the putting into service or the use of AI systems for the evaluation or classification of natural persons or groups of persons over a certain period of time based on their social behaviour or known, inferred or predicted personal or personality characteristics, with the social score leading to either detrimental or unfavourable treatment of certain natural persons or groups of persons in social contexts unrelated to the contexts in which the data was originally generated or collected, or detrimental or unfavourable treatment of certain natural persons or groups of persons that is unjustified or disproportionate to their social behaviour or its gravity is prohibited.",
+      "reference": [
+        "Article 5, paragraph 1(c), Regulation 2024/1689"
+      ],
+      "scope": "AI systems placed on the market, put into service, or used for social scoring leading to detrimental or unjustified treatment."
+    }
+  },
+  {
+    "chunk": 0,
+    "position": 3,
+    "record": {
+      "definition": [
+        "Risk assessments: Assessments predicting the likelihood of a person committing a criminal offence based on profiling or personality traits."
+      ],
+      "policy_description": "The placing on the market, the putting into service for this specific purpose, or the use of an AI system for making risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence, based solely on the profiling of a natural person or on assessing their personality traits and characteristics is prohibited. This prohibition shall not apply to AI systems used to support the human assessment of the involvement of a person in a criminal activity, which is already based on objective and verifiable facts directly linked to a criminal activity.",
+      "reference": [
+        "Article 5, paragraph 1(d), Regulation 2024/1689"
+      ],
+      "scope": "AI systems placed on the market, put into service, or used solely for criminal risk assessments, except for systems supporting human assessments based on objective and verifiable facts."
+    }
+  },
+  {
+    "chunk": 0,
+    "position": 4,
+    "record": {
+      "definition": [
+        "Facial recognition databases: Databases created or expanded using facial images from the internet or CCTV footage without targeting specific individuals."
+      ],
+      "policy_description": "The placing on the market, the putting into service for this specific purpose, or the use of AI systems that create or expand facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage is prohibited.",
+      "reference": [
+        "Article 5, paragraph 1(e), Regulation 2024/1689"
+      ],
+      "scope": "AI systems placed on the market, put into service, or used to create or expand facial recognition databases through untargeted scraping."
+    }
+  },
+  {
+    "chunk": 0,
+    "position": 5,
+    "record": {
+      "definition": [
+        "Emotion inference: AI systems deducing emotions of individuals in workplace or educational settings."
+      ],
+      "policy_description": "The placing on the market, the putting into service for this specific purpose, or the use of AI systems to infer emotions of a natural person in the areas of workplace and education institutions, except where the use of the AI system is intended to be put in place or into the market for medical or safety reasons, is prohibited.",
+      "reference": [
+        "Article 5, paragraph 1(f), Regulation 2024/1689"
+      ],
+      "scope": "AI systems placed on the market, put into service, or used to infer emotions in workplace or educational institutions, except for medical or safety purposes."
+    }
+  },
+  {
+    "chunk": 0,
+    "position": 6,
+    "record": {
+      "definition": [
+        "Biometric categorisation systems: Systems categorising individuals based on biometric data to infer sensitive attributes such as race, political opinions, or sexual orientation."
+      ],
+      "policy_description": "The placing on the market, the putting into service for this specific purpose, or the use of biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation is prohibited. This prohibition does not cover any labelling or filtering of lawfully acquired biometric datasets, such as images, based on biometric data or categorizing of biometric data in the area of law enforcement.",
+      "reference": [
+        "Article 5, paragraph 1(g), Regulation 2024/1689"
+      ],
+      "scope": "AI systems placed on the market, put into service, or used for biometric categorisation to deduce sensitive attributes, except for lawful labelling or filtering of biometric datasets."
+    }
+  },
+  {
+    "chunk": 0,
+    "position": 7,
+    "record": {
+      "definition": [
+        "Real-time remote biometric identification systems: Systems identifying individuals in real-time in publicly accessible spaces."
+      ],
+      "policy_description": "The use of ‘real-time’ remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement is prohibited, unless and in so far as such use is strictly necessary for one of the following objectives: the targeted search for specific victims of abduction, trafficking in human beings or sexual exploitation of human beings, as well as the search for missing persons; the prevention of a specific, substantial and imminent threat to the life or physical safety of natural persons or a genuine and present or genuine and foreseeable threat of a terrorist attack; or the localisation or identification of a person suspected of having committed a criminal offence, for the purpose of conducting a criminal investigation or prosecution or executing a criminal penalty for offences referred to in Annex II and punishable in the Member State concerned by a custodial sentence or a detention order for a maximum period of at least four years.",
+      "reference": [
+        "Article 5, paragraph 1(h), Regulation 2024/1689"
+      ],
+      "scope": "Use of real-time remote biometric identification systems in publicly accessible spaces for law enforcement purposes, except under strictly necessary conditions for specific objectives."
+    }
+  }
+]

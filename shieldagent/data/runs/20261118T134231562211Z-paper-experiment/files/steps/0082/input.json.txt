@@ -1,0 +1,6 @@
+{
+  "model": "text-embedding-3-large",
+  "texts": [
+    "instigate_harassment\nAn action that intentionally causes harm, distress, or intimidation to another individual through harassment, including but not limited to revealing personal information or posting intimate media without consent.\nharassment, intentional, harm, users\naction"
+  ]
+}

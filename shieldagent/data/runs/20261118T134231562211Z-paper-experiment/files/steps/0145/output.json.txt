@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 3.0000845419999678,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n{\"assignments\": [\n    {\n        \"user_experiences_harassment\": true,\n        \"report_harassment\": true,\n        \"take_action_against_harassment\": \"unknown\",\n        \"post_intimate_media\": false,\n        \"has_consent\": \"unknown\",\n        \"threaten_to_post_media\": false,\n        \"share_content\": false,\n        \"content_involves_minors\": \"unknown\",\n        \"label_content\": false,\n        \"community_contains_sexually_explicit_content\": false,\n        \"community_contains_offensive_content\": false,\n        \"post_content\": false,\n        \"solicit_transaction\": false,\n        \"is_prohibited_transaction\": \"unknown\",\n        \"facilitate_transaction\": false,\n        \"community_contains_graphic_content\": true,\n        \"is_offensive\": \"unknown\",\n        \"label_community\": false,\n        \"is_graphic\": \"unknown\",\n        \"content_is_abusive\": \"unknown\",\n        \"content_is_suggestive\": \"unknown\",\n        \"is_illegal_content\": \"unknown\",\n        \"content_is_sexually_explicit\": false\n    },\n    {\n        \"user_experiences_harassment\": true,\n        \"report_harassment\": false,\n        \"take_action_against_harassment\": \"unknown\",\n        \"post_intimate_media\": false,\n        \"has_consent\": \"unknown\",\n        \"threaten_to_post_media\": false,\n        \"share_content\": false,\n        \"content_involves_minors\": \"unknown\",\n        \"label_content\": false,\n        \"community_contains_sexually_explicit_content\": false,\n        \"community_contains_offensive_content\": false,\n        \"post_content\": false,\n        \"solicit_transaction\": false,\n        \"is_prohibited_transaction\": \"unknown\",\n        \"facilitate_transaction\": false,\n        \"community_contains_graphic_content\": true,\n        \"is_offensive\": \"unknown\",\n        \"label_community\": false,\n        \"is_graphic\": \"unknown\",\n        \"content_is_abusive\": \"unknown\",\n        \"content_is_suggestive\": \"unknown\",\n        \"is_illegal_content\": \"unknown\",\n        \"content_is_sexually_explicit\": false\n    }\n]}\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 468,
+    "prompt_tokens": 1195,
+    "total_tokens": 1663
+  }
+}

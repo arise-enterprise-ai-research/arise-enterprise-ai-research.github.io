@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 0.7110380830126815,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "{\"types\": [{\"id\": \"is_offensive.b14be022\", \"type\": \"state\", \"reason\": \"The predicate describes a condition of the content being offensive, not an action.\"}]}",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 42,
+    "prompt_tokens": 355,
+    "total_tokens": 397
+  }
+}

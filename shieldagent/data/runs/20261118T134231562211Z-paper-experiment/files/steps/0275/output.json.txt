@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 0.7785257500072476,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "{\"label\": \"unsafe\", \"policy_ids\": [\"reddit.document_001.c00.p004\"], \"reason\": \"The action of intentionally misleading others violates the policy that prohibits users from intentionally misleading others or impersonating an individual or entity in a deceptive manner.\"}",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 53,
+    "prompt_tokens": 439,
+    "total_tokens": 492
+  }
+}

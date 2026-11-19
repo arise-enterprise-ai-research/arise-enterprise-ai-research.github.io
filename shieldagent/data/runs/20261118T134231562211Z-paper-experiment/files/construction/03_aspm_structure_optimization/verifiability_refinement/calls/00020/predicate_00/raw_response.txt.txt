@@ -1,0 +1,11 @@
+Reasoning:
+1. **Verifiable**: The predicate `post_intimate_media` is verifiable as it refers to an observable action of posting intimate or sexually explicit media. This can be checked through the agent's action history or content moderation systems.
+2. **Concrete**: The predicate is specific and unambiguous, as it clearly defines the action of posting intimate or sexually explicit media.
+3. **Accurate**: The predicate accurately represents the intended condition of posting such media.
+4. **Atomic**: The predicate describes a single action (posting intimate or sexually explicit media) and does not combine multiple facts or conditions.
+5. **Necessary**: The predicate is necessary for the rule, as it directly addresses the prohibited action described in the rule source.
+6. **Unambiguous**: The predicate name is unique and does not conflict with other predicates in the provided context.
+
+Decision: No (The predicate is good and does not require refinement).
+
+No changes are needed as the predicate satisfies all the criteria.

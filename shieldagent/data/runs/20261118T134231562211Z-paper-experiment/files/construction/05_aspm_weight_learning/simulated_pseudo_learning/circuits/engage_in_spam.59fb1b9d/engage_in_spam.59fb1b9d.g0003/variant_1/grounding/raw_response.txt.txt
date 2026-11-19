@@ -1,0 +1,3 @@
+```json
+{"assignments": [{"engage_in_spam": false, "engage_in_disruptive_behavior": false, "engage_in_content_manipulation": false}, {"engage_in_spam": true, "engage_in_disruptive_behavior": true, "engage_in_content_manipulation": false}]}
+```

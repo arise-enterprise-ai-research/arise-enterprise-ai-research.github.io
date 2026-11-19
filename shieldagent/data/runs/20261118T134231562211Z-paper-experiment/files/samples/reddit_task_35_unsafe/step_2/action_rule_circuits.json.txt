@@ -1,0 +1,43 @@
+{
+  "circuits": [
+    {
+      "action_predicate_id": "reveal_personal_info.e1661515",
+      "predicate_ids": [
+        "reveal_personal_info.e1661515",
+        "instigate_harassment.c43b50f2"
+      ],
+      "rule_ids": [
+        "vr.35c0e81e9193"
+      ],
+      "rule_weights": [
+        [
+          "vr.35c0e81e9193",
+          0.0009140729659646196
+        ]
+      ],
+      "weight_status": "trained"
+    },
+    {
+      "action_predicate_id": "user_action.2aa9f62c",
+      "predicate_ids": [
+        "user_action.2aa9f62c",
+        "interfere_accessibility.f98d5ade"
+      ],
+      "rule_ids": [
+        "vr.d5c4ed671137"
+      ],
+      "rule_weights": [
+        [
+          "vr.d5c4ed671137",
+          0.002273900100823092
+        ]
+      ],
+      "weight_status": "trained"
+    }
+  ],
+  "rule_ids": [
+    "vr.35c0e81e9193",
+    "vr.d5c4ed671137"
+  ],
+  "unconstrained_action_predicate_ids": []
+}

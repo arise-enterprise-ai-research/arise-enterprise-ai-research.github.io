@@ -1,0 +1,13 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 2.08682216698071,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 341,
+    "prompt_tokens": 698,
+    "total_tokens": 1039
+  }
+}

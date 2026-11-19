@@ -1,0 +1,17 @@
+{
+  "action_predicate_id": "ban_community.7c7f6afb",
+  "eligible_examples": {
+    "test": 0,
+    "train": 0,
+    "validation": 0
+  },
+  "ineligible_examples": 0,
+  "reason": "no eligible training example",
+  "rule_ids": [
+    "reddit.document_001.c00.p000.r00"
+  ],
+  "status": "untrained",
+  "zero_influence_rules": [
+    "reddit.document_001.c00.p000.r00"
+  ]
+}

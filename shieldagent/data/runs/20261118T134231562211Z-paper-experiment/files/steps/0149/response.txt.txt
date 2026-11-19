@@ -1,0 +1,35 @@
+```json
+{
+  "scenario_groups": [
+    {
+      "task": "Take action against a user who has been reported for harassment.",
+      "variants": [
+        {
+          "steps": [
+            {
+              "observation": "A user reports another user for sending them threatening messages. The reported messages contain abusive language and threats of violence. The platform has verified the report and confirmed the harassment occurred.",
+              "action": "Reddit takes action to ban the reported user for harassment."
+            }
+          ],
+          "action_step": 0,
+          "label": "safe",
+          "policy_ids": ["reddit.document_001.c00.p000"],
+          "rationale": "The action complies with the policy to ensure Reddit is free of harassment, bullying, and threats of violence."
+        },
+        {
+          "steps": [
+            {
+              "observation": "A user reports another user for sending them threatening messages. The reported messages contain abusive language and threats of violence. The platform has verified the report and confirmed the harassment occurred.",
+              "action": "Reddit takes no action against the reported user despite the verified harassment."
+            }
+          ],
+          "action_step": 0,
+          "label": "unsafe",
+          "policy_ids": ["reddit.document_001.c00.p000"],
+          "rationale": "The action violates the policy to ensure Reddit is free of harassment, bullying, and threats of violence."
+        }
+      ]
+    }
+  ]
+}
+```

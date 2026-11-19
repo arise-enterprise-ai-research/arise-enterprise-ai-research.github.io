@@ -1,0 +1,3 @@
+```json
+{"assignments": [{"user_action": true, "interfere_accessibility": false}]}
+```

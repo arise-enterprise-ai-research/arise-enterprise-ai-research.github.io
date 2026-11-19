@@ -1,0 +1,14 @@
+{
+  "formal_verifications": 2,
+  "model_queries": {
+    "by_provider": {
+      "openai": 3
+    },
+    "total": 3
+  },
+  "operation_steps": 0,
+  "planning_rounds": 0,
+  "reused_formal_verifications": 0,
+  "stored_workflows": {},
+  "wall_seconds": 2.9657000419974793
+}

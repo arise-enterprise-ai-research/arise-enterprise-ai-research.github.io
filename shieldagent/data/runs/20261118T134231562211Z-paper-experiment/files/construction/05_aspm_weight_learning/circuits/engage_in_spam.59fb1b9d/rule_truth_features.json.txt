@@ -1,0 +1,21 @@
+{
+  "evaluation": "non-temporal rules at the action timestep; temporal rules from the initial state of the completed trace; the worlds differ only in the queried action at the action timestep",
+  "examples": [
+    {
+      "instruction_group_id": "engage_in_spam.59fb1b9d.g0003",
+      "label": -1,
+      "rule_execute": [
+        false
+      ],
+      "rule_non_execute": [
+        false
+      ],
+      "split": "train",
+      "trajectory_id": "engage_in_spam.59fb1b9d.g0003.v1"
+    }
+  ],
+  "ineligible": [],
+  "rule_ids": [
+    "vr.de9b80046b04"
+  ]
+}

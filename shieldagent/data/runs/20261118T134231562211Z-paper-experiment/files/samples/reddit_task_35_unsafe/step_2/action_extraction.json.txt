@@ -1,0 +1,51 @@
+{
+  "action_tree_identifier": "5dec1dae150030a7b1d527749fb0bdf4af3ab2b3084222e060961db15fc877ad",
+  "action_tree_provenance": "Reconstruction: one root for each constructed action predicate. The paper does not publish a complete action hierarchy. No action relationships or prebuilt predicate IDs are assumed.",
+  "added_by_ancestor_expansion": [],
+  "closed_world_assignment": "Every action predicate of the ASPM that is not queried here is assigned false for this step",
+  "excluded_action_tree_nodes": [
+    "action_001",
+    "action_002",
+    "action_003",
+    "action_004",
+    "action_005",
+    "action_006",
+    "action_007",
+    "action_009",
+    "action_010",
+    "action_011",
+    "action_012",
+    "action_013",
+    "action_014",
+    "action_015",
+    "action_016",
+    "action_017",
+    "action_018",
+    "action_019",
+    "action_021",
+    "action_022"
+  ],
+  "matched_action_tree_nodes": [
+    {
+      "ancestors": [],
+      "label": "reveal_personal_info",
+      "level": 1,
+      "node_id": "action_008"
+    },
+    {
+      "ancestors": [],
+      "label": "user_action",
+      "level": 1,
+      "node_id": "action_020"
+    }
+  ],
+  "not_in_action_tree": [],
+  "queried_action_predicate_ids": [
+    "reveal_personal_info.e1661515",
+    "user_action.2aa9f62c"
+  ],
+  "returned_by_action_extraction": [
+    "reveal_personal_info.e1661515",
+    "user_action.2aa9f62c"
+  ]
+}

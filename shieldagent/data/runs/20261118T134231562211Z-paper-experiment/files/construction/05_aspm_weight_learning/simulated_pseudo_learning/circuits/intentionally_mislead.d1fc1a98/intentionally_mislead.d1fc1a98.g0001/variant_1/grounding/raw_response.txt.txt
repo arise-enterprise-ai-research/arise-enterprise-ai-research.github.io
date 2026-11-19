@@ -1,0 +1,8 @@
+{
+  "assignments": [
+    {
+      "intentionally_mislead": true,
+      "impersonate_entity": false
+    }
+  ]
+}

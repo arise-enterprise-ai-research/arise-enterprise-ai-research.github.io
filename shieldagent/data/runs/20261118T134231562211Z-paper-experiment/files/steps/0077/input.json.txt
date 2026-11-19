@@ -1,0 +1,6 @@
+{
+  "model": "text-embedding-3-large",
+  "texts": [
+    "interfere_accessibility\nAn action that significantly hinders or prevents other users from accessing Reddit, such as spamming, DDoS attacks, or other activities that degrade the platform's availability.\ninterference, accessibility, users, hindrance, availability\naction"
+  ]
+}

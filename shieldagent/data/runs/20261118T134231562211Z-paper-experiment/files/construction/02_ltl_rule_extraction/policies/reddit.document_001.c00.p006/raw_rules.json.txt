@@ -1,0 +1,155 @@
+{
+  "invalid": [],
+  "rules": [
+    {
+      "logic": "ALWAYS (NOT (post_content AND is_illegal_content))",
+      "predicates": [
+        [
+          "post_content",
+          "Represents the action of posting content on Reddit.",
+          [
+            "action",
+            "content",
+            "post"
+          ]
+        ],
+        [
+          "is_illegal_content",
+          "Indicates that the content violates laws or regulations.",
+          [
+            "content",
+            "illegal",
+            "violation"
+          ]
+        ],
+        [
+          "solicit_transaction",
+          "Represents the action of soliciting a transaction.",
+          [
+            "action",
+            "transaction",
+            "solicit"
+          ]
+        ],
+        [
+          "facilitate_transaction",
+          "Represents the action of facilitating a transaction.",
+          [
+            "action",
+            "transaction",
+            "facilitate"
+          ]
+        ],
+        [
+          "is_prohibited_transaction",
+          "Indicates that the transaction is prohibited under Reddit's policies or applicable laws.",
+          [
+            "transaction",
+            "prohibited",
+            "policy"
+          ]
+        ]
+      ]
+    },
+    {
+      "logic": "ALWAYS (NOT (solicit_transaction AND is_prohibited_transaction))",
+      "predicates": [
+        [
+          "post_content",
+          "Represents the action of posting content on Reddit.",
+          [
+            "action",
+            "content",
+            "post"
+          ]
+        ],
+        [
+          "is_illegal_content",
+          "Indicates that the content violates laws or regulations.",
+          [
+            "content",
+            "illegal",
+            "violation"
+          ]
+        ],
+        [
+          "solicit_transaction",
+          "Represents the action of soliciting a transaction.",
+          [
+            "action",
+            "transaction",
+            "solicit"
+          ]
+        ],
+        [
+          "facilitate_transaction",
+          "Represents the action of facilitating a transaction.",
+          [
+            "action",
+            "transaction",
+            "facilitate"
+          ]
+        ],
+        [
+          "is_prohibited_transaction",
+          "Indicates that the transaction is prohibited under Reddit's policies or applicable laws.",
+          [
+            "transaction",
+            "prohibited",
+            "policy"
+          ]
+        ]
+      ]
+    },
+    {
+      "logic": "ALWAYS (NOT (facilitate_transaction AND is_prohibited_transaction))",
+      "predicates": [
+        [
+          "post_content",
+          "Represents the action of posting content on Reddit.",
+          [
+            "action",
+            "content",
+            "post"
+          ]
+        ],
+        [
+          "is_illegal_content",
+          "Indicates that the content violates laws or regulations.",
+          [
+            "content",
+            "illegal",
+            "violation"
+          ]
+        ],
+        [
+          "solicit_transaction",
+          "Represents the action of soliciting a transaction.",
+          [
+            "action",
+            "transaction",
+            "solicit"
+          ]
+        ],
+        [
+          "facilitate_transaction",
+          "Represents the action of facilitating a transaction.",
+          [
+            "action",
+            "transaction",
+            "facilitate"
+          ]
+        ],
+        [
+          "is_prohibited_transaction",
+          "Indicates that the transaction is prohibited under Reddit's policies or applicable laws.",
+          [
+            "transaction",
+            "prohibited",
+            "policy"
+          ]
+        ]
+      ]
+    }
+  ]
+}

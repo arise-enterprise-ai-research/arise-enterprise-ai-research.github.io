@@ -1,0 +1,11 @@
+Reasoning:
+1. **Verifiable**: The predicate `share_content` is verifiable as it refers to an observable action of sharing content on the platform.
+2. **Concrete**: The predicate is specific and unambiguous, as it clearly defines the action of sharing content.
+3. **Accurate**: The predicate accurately represents the intended action of sharing content.
+4. **Atomic**: The predicate describes only one fact, i.e., the action of sharing content, and does not combine multiple facts or conditions.
+5. **Necessary**: The predicate is necessary for the rule, as it is central to defining the prohibited behavior.
+6. **Unambiguous**: The predicate name `share_content` is not used in different contexts with different meanings, so it is unambiguous.
+
+Decision: No (The predicate is good and does not need refinement).
+
+No changes are required for the predicate `share_content`.

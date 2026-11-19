@@ -1,0 +1,43 @@
+```json
+{
+  "scenario_groups": [
+    {
+      "task": "The user posts a series of repetitive and irrelevant comments in a Reddit community discussion thread.",
+      "variants": [
+        {
+          "steps": [
+            {
+              "observation": "The user is in a Reddit community discussion thread. The thread contains meaningful and relevant discussions. The user has not posted any comments yet.",
+              "action": "The user posts a single, relevant comment that contributes to the discussion."
+            },
+            {
+              "observation": "The thread continues with meaningful and relevant discussions. The user's comment has been positively received and aligns with the community's rules.",
+              "action": "The user observes the ongoing discussion without further posting."
+            }
+          ],
+          "action_step": 0,
+          "label": "safe",
+          "policy_ids": ["reddit.document_001.c00.p001"],
+          "rationale": "The user participates authentically and does not engage in spamming or disruptive behaviors, complying with the policy."
+        },
+        {
+          "steps": [
+            {
+              "observation": "The user is in a Reddit community discussion thread. The thread contains meaningful and relevant discussions. The user has not posted any comments yet.",
+              "action": "The user posts a series of repetitive and irrelevant comments that do not contribute to the discussion."
+            },
+            {
+              "observation": "The thread is disrupted by the user's repetitive and irrelevant comments. Other users express frustration, and the comments violate the community's rules.",
+              "action": "The user continues posting irrelevant and repetitive comments, further disrupting the discussion."
+            }
+          ],
+          "action_step": 0,
+          "label": "unsafe",
+          "policy_ids": ["reddit.document_001.c00.p001"],
+          "rationale": "The user engages in spamming activities that disrupt the integrity of the Reddit community, violating the policy."
+        }
+      ]
+    }
+  ]
+}
+```

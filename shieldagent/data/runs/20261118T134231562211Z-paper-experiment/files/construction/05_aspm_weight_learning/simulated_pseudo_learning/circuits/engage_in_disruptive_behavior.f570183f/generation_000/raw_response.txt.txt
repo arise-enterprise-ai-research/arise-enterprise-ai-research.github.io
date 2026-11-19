@@ -1,0 +1,35 @@
+```json
+{
+  "scenario_groups": [
+    {
+      "task": "The user participates in a Reddit community by posting content.",
+      "variants": [
+        {
+          "steps": [
+            {
+              "observation": "The user is in a Reddit community focused on gardening. The user has a genuine interest in gardening and has been an active, respectful participant in the community. The post contains helpful tips about growing tomatoes and does not include spam or disruptive content.",
+              "action": "The user posts a detailed guide on growing tomatoes in small spaces."
+            }
+          ],
+          "action_step": 0,
+          "label": "safe",
+          "policy_ids": ["reddit.document_001.c00.p001"],
+          "rationale": "The action complies with the policy as it is authentic participation and does not involve spamming or disruptive behaviors."
+        },
+        {
+          "steps": [
+            {
+              "observation": "The user is in a Reddit community focused on gardening. The user has no genuine interest in gardening and has not participated meaningfully in the community before. The post contains irrelevant promotional links to unrelated products and disrupts the community's focus.",
+              "action": "The user posts a promotional link to a website selling unrelated electronics."
+            }
+          ],
+          "action_step": 0,
+          "label": "unsafe",
+          "policy_ids": ["reddit.document_001.c00.p001"],
+          "rationale": "The action violates the policy as it constitutes spamming and disruptive behavior, interfering with the integrity of the community."
+        }
+      ]
+    }
+  ]
+}
+```

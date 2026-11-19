@@ -1,0 +1,8 @@
+{
+  "model": "text-embedding-3-large",
+  "texts": [
+    "content_is_sexual\nThe content is sexual in nature, including explicit or pornographic material.\ncontent, sexual, explicit\nstate",
+    "content_is_abusive\nThe content contains abusive language, threats, or harmful behavior.\ncontent, abusive, threats, harmful\nstate",
+    "content_is_suggestive\nThe content is suggestive in nature, implying sexual or inappropriate behavior without being explicit.\ncontent, suggestive, inappropriate\nstate"
+  ]
+}

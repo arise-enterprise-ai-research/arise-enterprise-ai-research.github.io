@@ -1,0 +1,14 @@
+{
+  "messages": [
+    {
+      "content": "You assign a type to each predicate of a set of safety rules. The rules constrain the actions of an autonomous agent.\n\nThere are exactly two predicate types:\n- \"action\": the predicate states that the agent executes an action. Example: delete_data.\n- \"state\": the predicate describes a system state or an environmental condition under which an action may or may not be executed. Example: is_private.\n\nUse only the name, the description, the keywords, and the example logic of each predicate in the input. Do not use outside knowledge about any product or policy.\n\nIf the supplied information does not decide the type, answer \"ambiguous\". Do not guess from the name alone.\n\nDo not judge whether any action is safe. Do not change a predicate.\n\nInput: a JSON object with the key \"predicates\". Each entry has \"id\", \"name\", \"description\", \"keywords\", and \"example_logic\".\n\nOutput: only a JSON object in this form. Give one entry for each input predicate and copy its \"id\".\n\n{\"types\": [{\"id\": \"<id from the input>\", \"type\": \"action\" | \"state\" | \"ambiguous\", \"reason\": \"<one short sentence>\"}]}\n",
+      "images": [],
+      "role": "system"
+    },
+    {
+      "content": "{\"predicates\":[{\"description\":\"A community is labeled to indicate its nature, specifically whether it contains graphic, sexually explicit, or offensive content.\",\"example_logic\":[\"ALWAYS ((community_contains_graphic_content OR community_contains_sexually_explicit_content OR community_contains_offensive_content) IMPLIES label_community)\"],\"id\":\"label_community.edfa82ad\",\"keywords\":[\"community\",\"labeling\",\"classification\",\"graphic\",\"sexually explicit\",\"offensive\"],\"name\":\"label_community\"}]}",
+      "images": [],
+      "role": "user"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 0.7696494160045404,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n{\"assignments\": [{\"engage_in_spam\": false, \"engage_in_disruptive_behavior\": false, \"engage_in_content_manipulation\": false}, {\"engage_in_spam\": false, \"engage_in_disruptive_behavior\": false, \"engage_in_content_manipulation\": false}]}\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 413,
+    "total_tokens": 484
+  }
+}

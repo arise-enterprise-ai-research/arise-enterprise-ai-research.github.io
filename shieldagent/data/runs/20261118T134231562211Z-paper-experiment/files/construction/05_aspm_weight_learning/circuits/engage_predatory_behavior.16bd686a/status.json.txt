@@ -1,0 +1,169 @@
+{
+  "action_predicate_id": "engage_predatory_behavior.16bd686a",
+  "after_training": {
+    "test": {
+      "examples": 0,
+      "loss": null,
+      "margin": null,
+      "mean_probability_execute": null,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 0
+    },
+    "train": {
+      "examples": 2,
+      "loss": 0.0,
+      "margin": {
+        "maximum": -0.0022433846736607532,
+        "mean": -0.0022433846736607532,
+        "minimum": -0.0022433846736607532
+      },
+      "mean_probability_execute": 0.4988783076631696,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 2
+    },
+    "validation": {
+      "examples": 1,
+      "loss": 0.0,
+      "margin": {
+        "maximum": -0.0022433846736607532,
+        "mean": -0.0022433846736607532,
+        "minimum": -0.0022433846736607532
+      },
+      "mean_probability_execute": 0.4988783076631696,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 1
+    }
+  },
+  "before_training": {
+    "test": {
+      "examples": 0,
+      "loss": null,
+      "margin": null,
+      "mean_probability_execute": null,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 0
+    },
+    "train": {
+      "examples": 2,
+      "loss": 0.005256474911129461,
+      "margin": {
+        "maximum": 0.005256474911129461,
+        "mean": 0.005256474911129461,
+        "minimum": 0.005256474911129461
+      },
+      "mean_probability_execute": 0.5026282374555647,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 2
+    },
+    "validation": {
+      "examples": 1,
+      "loss": 0.005256474911129461,
+      "margin": {
+        "maximum": 0.005256474911129461,
+        "mean": 0.005256474911129461,
+        "minimum": 0.005256474911129461
+      },
+      "mean_probability_execute": 0.5026282374555647,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 1
+    }
+  },
+  "eligible_examples": {
+    "test": 0,
+    "train": 2,
+    "validation": 1
+  },
+  "epochs": 100,
+  "final_train_loss": 0.0,
+  "final_weight_norm": 0.004486776874310738,
+  "gradient_steps": 3,
+  "ineligible_examples": 0,
+  "initial_train_loss": 0.005256474911129461,
+  "initial_weight_norm": 0.01051304664998391,
+  "loss_at_zero_weights": 0.0,
+  "rule_ids": [
+    "reddit.document_001.c00.p003.r01"
+  ],
+  "seed": 129217494,
+  "status": "trained",
+  "weight_change_norm": 0.014999823524294648,
+  "zero_influence_rules": []
+}

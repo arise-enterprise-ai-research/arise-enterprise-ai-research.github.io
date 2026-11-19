@@ -1,0 +1,23 @@
+Reasoning:
+1. **Verifiable**: The predicate `content_involves_minors` is verifiable as it can be determined based on the content's context, metadata, or explicit indicators (e.g., age references, visual or textual cues).
+2. **Concrete**: The predicate is specific and unambiguous, as it clearly defines that the content involves individuals under the age of 18.
+3. **Accurate**: The definition aligns with the intended fact or condition, as it precisely identifies content involving minors.
+4. **Atomic**: The predicate describes only one fact (whether the content involves individuals under 18) and does not combine multiple conditions.
+5. **Necessary**: The predicate is essential for the rule, as it directly addresses the prohibition of sharing content involving minors.
+6. **Unambiguous**: The predicate name is unique and does not conflict with other predicates in the provided rules.
+
+Decision: No (The predicate is good and does not require refinement).
+
+Output JSON:
+```json
+{
+  "rules": [
+    {
+      "predicates": [
+        ["content_involves_minors", "The content involves individuals under the age of 18.", ["content", "minors", "age"]]
+      ],
+      "logic": "ALWAYS (NOT (share_content AND content_involves_minors AND content_is_sexual_or_abusive))"
+    }
+  ]
+}
+```

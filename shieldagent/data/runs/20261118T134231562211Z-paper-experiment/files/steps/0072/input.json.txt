@@ -1,0 +1,6 @@
+{
+  "model": "text-embedding-3-large",
+  "texts": [
+    "user_action\nA user performs any observable action on Reddit, such as posting, commenting, voting, or interacting with the platform.\naction, user, activity\naction"
+  ]
+}

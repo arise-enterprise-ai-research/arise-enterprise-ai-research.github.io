@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 2.1409658750053495,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n{\"assignments\": [\n    {\n        \"user_experiences_harassment\": false,\n        \"report_harassment\": false,\n        \"take_action_against_harassment\": false,\n        \"post_intimate_media\": false,\n        \"has_consent\": true,\n        \"threaten_to_post_media\": true,\n        \"share_content\": false,\n        \"content_involves_minors\": false,\n        \"label_content\": \"unknown\",\n        \"community_contains_sexually_explicit_content\": \"unknown\",\n        \"community_contains_offensive_content\": \"unknown\",\n        \"post_content\": false,\n        \"solicit_transaction\": false,\n        \"is_prohibited_transaction\": false,\n        \"facilitate_transaction\": false,\n        \"community_contains_graphic_content\": \"unknown\",\n        \"is_offensive\": false,\n        \"label_community\": \"unknown\",\n        \"is_graphic\": false,\n        \"content_is_abusive\": false,\n        \"content_is_suggestive\": false,\n        \"is_illegal_content\": false,\n        \"content_is_sexually_explicit\": \"unknown\"\n    },\n    {\n        \"user_experiences_harassment\": false,\n        \"report_harassment\": false,\n        \"take_action_against_harassment\": false,\n        \"post_intimate_media\": false,\n        \"has_consent\": true,\n        \"threaten_to_post_media\": false,\n        \"share_content\": false,\n        \"content_involves_minors\": false,\n        \"label_content\": \"unknown\",\n        \"community_contains_sexually_explicit_content\": \"unknown\",\n        \"community_contains_offensive_content\": \"unknown\",\n        \"post_content\": false,\n        \"solicit_transaction\": false,\n        \"is_prohibited_transaction\": false,\n        \"facilitate_transaction\": false,\n        \"community_contains_graphic_content\": \"unknown\",\n        \"is_offensive\": false,\n        \"label_community\": \"unknown\",\n        \"is_graphic\": false,\n        \"content_is_abusive\": false,\n        \"content_is_suggestive\": false,\n        \"is_illegal_content\": false,\n        \"content_is_sexually_explicit\": \"unknown\"\n    }\n]}\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 462,
+    "prompt_tokens": 1239,
+    "total_tokens": 1701
+  }
+}

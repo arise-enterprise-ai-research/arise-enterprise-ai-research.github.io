@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 1.555046499997843,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n{\"assignments\": [\n  {\n    \"user_experiences_harassment\": true,\n    \"report_harassment\": false,\n    \"take_action_against_harassment\": false,\n    \"post_intimate_media\": false,\n    \"has_consent\": \"unknown\",\n    \"threaten_to_post_media\": false,\n    \"share_content\": true,\n    \"content_involves_minors\": \"unknown\",\n    \"label_content\": false,\n    \"community_contains_sexually_explicit_content\": \"unknown\",\n    \"community_contains_offensive_content\": \"unknown\",\n    \"post_content\": false,\n    \"solicit_transaction\": false,\n    \"is_prohibited_transaction\": \"unknown\",\n    \"facilitate_transaction\": false,\n    \"community_contains_graphic_content\": \"unknown\",\n    \"is_offensive\": true,\n    \"label_community\": false,\n    \"is_graphic\": false,\n    \"content_is_abusive\": true,\n    \"content_is_suggestive\": false,\n    \"is_illegal_content\": \"unknown\",\n    \"content_is_sexually_explicit\": false\n  }\n]}\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 237,
+    "prompt_tokens": 1147,
+    "total_tokens": 1384
+  }
+}

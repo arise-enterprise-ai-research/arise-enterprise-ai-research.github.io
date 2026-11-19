@@ -1,0 +1,5 @@
+{
+  "selected_actions": [
+    {"node_id": "action_020", "justification": "The action involves clicking on a button (ID 68) to navigate to the user's profile or settings page, which is an observable interaction on Reddit."}
+  ]
+}

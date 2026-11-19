@@ -1,0 +1,19 @@
+{
+  "artifact_id": "sha256:7d2fd26d4b83174eb736c5fba4b1d9731ac79b78020ee1eed6acc73b0a3291a9",
+  "artifact_type": "PolicyDocuments",
+  "contains_fabricated_inputs": true,
+  "content_origin": "source_document",
+  "execution_status": "completed",
+  "fabricated_content": false,
+  "fabrication_ids": [
+    "F-POLICY-NORMALIZATION",
+    "F-SOURCE-EU-AI-ACT-ARTICLE-5",
+    "F-SOURCE-REDDIT-RULES"
+  ],
+  "paper_correspondence": {
+    "exact_experiment_reproduction": false,
+    "location": "Fig. 1 Policy Input; Sec. 3.2"
+  },
+  "parents": [],
+  "semantic_verification": "not_established"
+}

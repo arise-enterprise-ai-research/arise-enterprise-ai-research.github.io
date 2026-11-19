@@ -1,0 +1,14 @@
+{
+  "messages": [
+    {
+      "content": "You assign a type to each predicate of a set of safety rules. The rules constrain the actions of an autonomous agent.\n\nThere are exactly two predicate types:\n- \"action\": the predicate states that the agent executes an action. Example: delete_data.\n- \"state\": the predicate describes a system state or an environmental condition under which an action may or may not be executed. Example: is_private.\n\nUse only the name, the description, the keywords, and the example logic of each predicate in the input. Do not use outside knowledge about any product or policy.\n\nIf the supplied information does not decide the type, answer \"ambiguous\". Do not guess from the name alone.\n\nDo not judge whether any action is safe. Do not change a predicate.\n\nInput: a JSON object with the key \"predicates\". Each entry has \"id\", \"name\", \"description\", \"keywords\", and \"example_logic\".\n\nOutput: only a JSON object in this form. Give one entry for each input predicate and copy its \"id\".\n\n{\"types\": [{\"id\": \"<id from the input>\", \"type\": \"action\" | \"state\" | \"ambiguous\", \"reason\": \"<one short sentence>\"}]}\n",
+      "images": [],
+      "role": "system"
+    },
+    {
+      "content": "{\"predicates\":[{\"description\":\"An action that intentionally causes harm, distress, or intimidation to another individual through harassment, including but not limited to revealing personal information or posting intimate media without consent.\",\"example_logic\":[\"ALWAYS (NOT instigate_harassment)\",\"ALWAYS (reveal_personal_info IMPLIES NOT instigate_harassment)\"],\"id\":\"instigate_harassment.c43b50f2\",\"keywords\":[\"harassment\",\"intentional\",\"harm\",\"users\"],\"name\":\"instigate_harassment\"}]}",
+      "images": [],
+      "role": "user"
+    }
+  ]
+}

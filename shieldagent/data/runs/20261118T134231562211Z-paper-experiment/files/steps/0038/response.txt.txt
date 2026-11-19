@@ -1,0 +1,23 @@
+Reasoning:
+1. **Verifiable**: The predicate `is_offensive` is verifiable because it refers to observable characteristics of the content, such as language, imagery, or behavior that can be checked against predefined criteria (e.g., hate speech, slurs, derogatory remarks).
+2. **Concrete**: The predicate is specific and unambiguous, as it clearly defines what constitutes "offensive" content with examples like hate speech, slurs, and derogatory remarks.
+3. **Accurate**: The definition aligns with the intended fact or condition of identifying offensive content. It is precise and does not include unrelated concepts.
+4. **Atomic**: The predicate describes a single fact: whether the content is offensive. It does not combine multiple unrelated conditions.
+5. **Necessary**: The predicate is necessary for the rule, as it directly contributes to determining whether content should be labeled.
+6. **Unambiguous**: The predicate name `is_offensive` is not used in different contexts with different meanings, so there is no ambiguity.
+
+Decision: No refinement is needed.
+
+Output JSON:
+```json
+{
+  "rules": [
+    {
+      "predicates": [
+        ["is_offensive", "Content contains language, imagery, or behavior that is widely recognized as offensive, such as hate speech, slurs, or explicit derogatory remarks.", ["content", "offensive", "hate_speech", "slurs", "derogatory"]]
+      ],
+      "logic": "ALWAYS ((is_graphic OR is_sexually_explicit OR is_offensive) IMPLIES label_content)"
+    }
+  ]
+}
+```

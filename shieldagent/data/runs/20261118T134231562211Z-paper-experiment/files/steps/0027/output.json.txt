@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 0.8039411249919794,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "{\"types\": [{\"id\": \"label_community.edfa82ad\", \"type\": \"action\", \"reason\": \"The predicate describes the agent executing the action of labeling a community.\"}]}",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 40,
+    "prompt_tokens": 355,
+    "total_tokens": 395
+  }
+}

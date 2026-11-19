@@ -1,0 +1,14 @@
+{
+  "arguments": {
+    "aspm_identifier": "4abe85c9705b81c81907be5ac0f766a68d436b6f4839132fb9c77840070e29ee",
+    "keywords": [
+      "reveal_personal_info.e1661515",
+      "instigate_harassment.c43b50f2"
+    ],
+    "limit": 3,
+    "rule_context_sha256": "c49818989f06fb0ad11a7687688e69acbae1edef899b2ce18705227ee87e6213",
+    "target_action": "reveal_personal_info.e1661515",
+    "tool_schema_sha256": "14e0049537bf14ba73b583b69f4b35e0ba7b81b8397bf5c399d59517a0114808"
+  },
+  "name": "memory-db.retrieve_workflow"
+}

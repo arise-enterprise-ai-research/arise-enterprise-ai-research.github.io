@@ -1,0 +1,28 @@
+{
+  "artifact_id": "sha256:da4930e9681161f44a4730f78b9b5fd850dc3b0f827ea3014b49c3d5ecf108d9",
+  "artifact_type": "ASPM",
+  "contains_fabricated_inputs": true,
+  "content_origin": "model_output",
+  "execution_status": "completed",
+  "fabricated_content": false,
+  "fabrication_ids": [
+    "F-GPT4O-SNAPSHOT",
+    "F-LLM-SAMPLING",
+    "F-OUTPUT-VALIDATION",
+    "F-POLICY-CHUNKING",
+    "F-POLICY-NORMALIZATION",
+    "F-PREDICATE-TYPES",
+    "F-PROMPT-ENVELOPE",
+    "F-RULE-ENRICHMENT",
+    "F-SOURCE-EU-AI-ACT-ARTICLE-5",
+    "F-SOURCE-REDDIT-RULES"
+  ],
+  "paper_correspondence": {
+    "exact_experiment_reproduction": false,
+    "location": "Sec. 3.2.2; Eq. 2; App. H p.30"
+  },
+  "parents": [
+    "sha256:65c223a39d51a989a48b65bb3383bf84656771eb140228d28444df951dd7cee8"
+  ],
+  "semantic_verification": "not_established"
+}

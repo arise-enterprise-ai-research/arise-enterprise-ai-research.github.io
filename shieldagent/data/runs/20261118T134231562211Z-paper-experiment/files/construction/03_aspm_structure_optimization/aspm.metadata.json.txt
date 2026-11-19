@@ -1,0 +1,35 @@
+{
+  "artifact_id": "sha256:839316fee96f047af9230bcbce5d830200fffddbf1ef0d8284d219bd3885c903",
+  "artifact_type": "ASPM",
+  "contains_fabricated_inputs": true,
+  "content_origin": "model_output",
+  "execution_status": "completed",
+  "fabricated_content": false,
+  "fabrication_ids": [
+    "F-EMBEDDING-MODEL",
+    "F-GPT4O-SNAPSHOT",
+    "F-LLM-SAMPLING",
+    "F-OPTIMIZATION-PROCEDURE",
+    "F-OUTPUT-VALIDATION",
+    "F-POLICY-CHUNKING",
+    "F-POLICY-NORMALIZATION",
+    "F-PREDICATE-TYPES",
+    "F-PROMPT-ENVELOPE",
+    "F-REFINEMENT-BUDGET",
+    "F-RP-CANDIDATES",
+    "F-RULE-ENRICHMENT",
+    "F-SOURCE-EU-AI-ACT-ARTICLE-5",
+    "F-SOURCE-REDDIT-RULES",
+    "F-VAGUENESS",
+    "F-WEIGHT-BOUNDARY",
+    "P-MAX-ITERATIONS"
+  ],
+  "paper_correspondence": {
+    "exact_experiment_reproduction": false,
+    "location": "Sec. 3.2.3; Alg. 2"
+  },
+  "parents": [
+    "sha256:da4930e9681161f44a4730f78b9b5fd850dc3b0f827ea3014b49c3d5ecf108d9"
+  ],
+  "semantic_verification": "not_established"
+}

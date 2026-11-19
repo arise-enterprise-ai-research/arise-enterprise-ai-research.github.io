@@ -1,0 +1,41 @@
+{
+  "artifact_id": "sha256:9351642e4dcf65413fe0cffd9364280c5742fcc17d4232234af3798bd388a5d3",
+  "artifact_type": "TrainingDataset",
+  "contains_fabricated_inputs": true,
+  "content_origin": "simulated_pseudo_learning",
+  "execution_status": "completed",
+  "fabricated_content": true,
+  "fabrication_ids": [
+    "F-CLUSTERING",
+    "F-DATASET-SPLIT",
+    "F-EMBEDDING-MODEL",
+    "F-GPT4O-SNAPSHOT",
+    "F-LLM-SAMPLING",
+    "F-OPTIMIZATION-PROCEDURE",
+    "F-OUTPUT-VALIDATION",
+    "F-POLICY-CHUNKING",
+    "F-POLICY-NORMALIZATION",
+    "F-PREDICATE-TYPES",
+    "F-PROMPT-ENVELOPE",
+    "F-PSEUDO-LEARNING-BUDGET",
+    "F-PSEUDO-LEARNING-RECIPE",
+    "F-REFINEMENT-BUDGET",
+    "F-RP-CANDIDATES",
+    "F-RULE-ENRICHMENT",
+    "F-SOURCE-EU-AI-ACT-ARTICLE-5",
+    "F-SOURCE-REDDIT-RULES",
+    "F-VAGUENESS",
+    "F-WEIGHT-BOUNDARY",
+    "P-ADJACENCY-RULE",
+    "P-MAX-ITERATIONS"
+  ],
+  "paper_correspondence": {
+    "exact_experiment_reproduction": false,
+    "location": "Sec. 3.2.4; Eq. 6"
+  },
+  "parents": [
+    "sha256:aad37fe8854682424a9c91af705db22d77c2fc5e49e6fea8200a09e6d376ec6a",
+    "sha256:65c223a39d51a989a48b65bb3383bf84656771eb140228d28444df951dd7cee8"
+  ],
+  "semantic_verification": "not_established"
+}

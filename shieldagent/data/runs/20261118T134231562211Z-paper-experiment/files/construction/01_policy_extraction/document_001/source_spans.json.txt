@@ -1,0 +1,139 @@
+{
+  "note": "A span shows that a field was copied from the document. It does not prove that the extraction is complete. A null span marks a field that is not a verbatim copy.",
+  "spans": [
+    {
+      "definition": [
+        null
+      ],
+      "policy_description": {
+        "end": 1834,
+        "source_id": "document_001",
+        "start": 1511,
+        "text_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a"
+      },
+      "policy_id": "reddit.document_001.c00.p000",
+      "reference": [
+        null
+      ],
+      "scope": null
+    },
+    {
+      "definition": [
+        null,
+        null
+      ],
+      "policy_description": {
+        "end": 2075,
+        "source_id": "document_001",
+        "start": 1876,
+        "text_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a"
+      },
+      "policy_id": "reddit.document_001.c00.p001",
+      "reference": [
+        null
+      ],
+      "scope": null
+    },
+    {
+      "definition": [
+        null,
+        null
+      ],
+      "policy_description": {
+        "end": 2335,
+        "source_id": "document_001",
+        "start": 2122,
+        "text_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a"
+      },
+      "policy_id": "reddit.document_001.c00.p002",
+      "reference": [
+        null
+      ],
+      "scope": null
+    },
+    {
+      "definition": [
+        null,
+        null
+      ],
+      "policy_description": {
+        "end": 2535,
+        "source_id": "document_001",
+        "start": 2351,
+        "text_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a"
+      },
+      "policy_id": "reddit.document_001.c00.p003",
+      "reference": [
+        null
+      ],
+      "scope": null
+    },
+    {
+      "definition": [
+        null,
+        null
+      ],
+      "policy_description": {
+        "end": 2704,
+        "source_id": "document_001",
+        "start": 2565,
+        "text_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a"
+      },
+      "policy_id": "reddit.document_001.c00.p004",
+      "reference": [
+        null
+      ],
+      "scope": null
+    },
+    {
+      "definition": [
+        null,
+        null
+      ],
+      "policy_description": {
+        "end": 2889,
+        "source_id": "document_001",
+        "start": 2720,
+        "text_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a"
+      },
+      "policy_id": "reddit.document_001.c00.p005",
+      "reference": [
+        null
+      ],
+      "scope": null
+    },
+    {
+      "definition": [
+        null,
+        null
+      ],
+      "policy_description": {
+        "end": 3015,
+        "source_id": "document_001",
+        "start": 2920,
+        "text_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a"
+      },
+      "policy_id": "reddit.document_001.c00.p006",
+      "reference": [
+        null
+      ],
+      "scope": null
+    },
+    {
+      "definition": [
+        null
+      ],
+      "policy_description": {
+        "end": 3109,
+        "source_id": "document_001",
+        "start": 3031,
+        "text_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a"
+      },
+      "policy_id": "reddit.document_001.c00.p007",
+      "reference": [
+        null
+      ],
+      "scope": null
+    }
+  ]
+}

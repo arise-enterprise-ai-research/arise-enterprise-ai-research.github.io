@@ -1,0 +1,43 @@
+### Reasoning:
+1. **Verifiable**: The predicate `content_is_abusive` is verifiable as it refers to observable characteristics of the content, such as abusive language, threats, or harmful behavior. These can be detected through content analysis tools or manual review.
+2. **Concrete**: The predicate is specific and unambiguous, as it clearly defines what constitutes "abusive" content (language, threats, or harmful behavior).
+3. **Accurate**: The definition aligns with the intended meaning of abusive content in the context of the rule.
+4. **Atomic**: The predicate combines multiple conditions (abusive language, threats, harmful behavior). While these are related, they represent distinct aspects of abusive content and should be broken down into smaller atomic predicates.
+5. **Necessary**: The predicate is necessary for the rule, as it directly contributes to identifying prohibited content.
+6. **Unambiguous**: The predicate name is not reused in other contexts or rules, so there is no ambiguity.
+
+### Decision: **Yes**, refinement is needed.
+
+The predicate `content_is_abusive` should be broken down into smaller atomic predicates to ensure clarity and precision. Each aspect of abusive content (language, threats, harmful behavior) should be represented as a separate predicate.
+
+---
+
+### Output JSON:
+```json
+{
+  "rules": [
+    {
+      "predicates": [
+        ["content_contains_abusive_language", "The content contains language that is offensive, insulting, or demeaning.", ["content", "abusive", "language"]],
+        ["content_contains_threats", "The content includes explicit or implicit threats of harm or violence.", ["content", "threats", "harm"]],
+        ["content_contains_harmful_behavior", "The content promotes or encourages harmful behavior, such as self-harm or violence.", ["content", "harmful", "behavior"]]
+      ],
+      "logic": "ALWAYS NOT ((share_content AND content_involves_minors) AND ((content_is_sexually_explicit OR (content_contains_abusive_language OR content_contains_threats OR content_contains_harmful_behavior)) OR content_is_suggestive))"
+    }
+  ]
+}
+```
+
+### Definitions of Updated Predicates:
+1. **content_contains_abusive_language**: The content contains language that is offensive, insulting, or demeaning.
+   - **Keywords**: content, abusive, language.
+2. **content_contains_threats**: The content includes explicit or implicit threats of harm or violence.
+   - **Keywords**: content, threats, harm.
+3. **content_contains_harmful_behavior**: The content promotes or encourages harmful behavior, such as self-harm or violence.
+   - **Keywords**: content, harmful, behavior.
+
+### Updated Rule Logic:
+The original logic is updated to replace `content_is_abusive` with the three new atomic predicates:
+- `(content_contains_abusive_language OR content_contains_threats OR content_contains_harmful_behavior)`.
+
+This ensures that each aspect of abusive content is evaluated independently, improving clarity and precision.

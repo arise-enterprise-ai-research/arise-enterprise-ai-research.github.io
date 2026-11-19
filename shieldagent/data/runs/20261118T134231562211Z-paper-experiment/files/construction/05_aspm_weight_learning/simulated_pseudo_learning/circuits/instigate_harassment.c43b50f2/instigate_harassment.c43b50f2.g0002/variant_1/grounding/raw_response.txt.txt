@@ -1,0 +1,3 @@
+```json
+{"assignments": [{"reveal_personal_info": "unknown", "instigate_harassment": true}]}
+```

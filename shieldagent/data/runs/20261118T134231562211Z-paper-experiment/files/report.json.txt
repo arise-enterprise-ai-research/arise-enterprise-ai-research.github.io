@@ -1,0 +1,7 @@
+{
+  "error": "error.json",
+  "events": "events.jsonl",
+  "run_id": "20261118T134231562211Z-paper-experiment",
+  "status": "error",
+  "steps": 402
+}

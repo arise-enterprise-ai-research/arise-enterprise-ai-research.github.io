@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 0.8002512499806471,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "{\"types\": [{\"id\": \"is_illegal_content.02441bdc\", \"type\": \"state\", \"reason\": \"The predicate describes a condition (content being illegal) rather than an action.\"}]}",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 343,
+    "total_tokens": 387
+  }
+}

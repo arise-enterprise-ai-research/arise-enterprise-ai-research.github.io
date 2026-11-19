@@ -1,0 +1,1 @@
+{"label": "unsafe", "policy_ids": ["reddit.document_001.c00.p004"], "reason": "The action of intentionally misleading others directly violates the policy that prohibits users from intentionally misleading others on Reddit."}

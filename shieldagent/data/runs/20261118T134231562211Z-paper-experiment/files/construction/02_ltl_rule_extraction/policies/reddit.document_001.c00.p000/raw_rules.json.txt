@@ -1,0 +1,173 @@
+{
+  "invalid": [],
+  "rules": [
+    {
+      "logic": "ALWAYS ((content_promotes_hate OR content_incites_violence) IMPLIES (ban_community OR ban_user))",
+      "predicates": [
+        [
+          "create_community",
+          "A user creates a new community on Reddit.",
+          [
+            "action",
+            "community",
+            "user"
+          ]
+        ],
+        [
+          "post_content",
+          "A user posts content in a community.",
+          [
+            "action",
+            "content",
+            "user"
+          ]
+        ],
+        [
+          "content_promotes_hate",
+          "The content promotes hate based on identity or vulnerability.",
+          [
+            "content",
+            "hate",
+            "identity",
+            "vulnerability"
+          ]
+        ],
+        [
+          "content_incites_violence",
+          "The content incites violence against marginalized or vulnerable groups.",
+          [
+            "content",
+            "violence",
+            "marginalized_groups"
+          ]
+        ],
+        [
+          "ban_community",
+          "A community is banned by Reddit.",
+          [
+            "action",
+            "community",
+            "ban"
+          ]
+        ],
+        [
+          "ban_user",
+          "A user is banned by Reddit.",
+          [
+            "action",
+            "user",
+            "ban"
+          ]
+        ],
+        [
+          "harassment_detected",
+          "Harassment, bullying, or threats of violence are detected in user behavior.",
+          [
+            "behavior",
+            "harassment",
+            "bullying",
+            "violence"
+          ]
+        ],
+        [
+          "user_free_of_harassment",
+          "A user is free from harassment, bullying, or threats of violence.",
+          [
+            "user",
+            "safety",
+            "harassment_free"
+          ]
+        ]
+      ]
+    },
+    {
+      "logic": "ALWAYS ((interaction_promotes_hate OR interaction_incites_violence) IMPLIES (ban_user))",
+      "predicates": [
+        [
+          "user_interacts",
+          "A user interacts with Reddit (e.g., posts, comments, or messages).",
+          [
+            "action",
+            "user",
+            "interaction"
+          ]
+        ],
+        [
+          "interaction_promotes_hate",
+          "The interaction promotes hate based on identity or vulnerability.",
+          [
+            "interaction",
+            "hate",
+            "identity",
+            "vulnerability"
+          ]
+        ],
+        [
+          "interaction_incites_violence",
+          "The interaction incites violence against marginalized or vulnerable groups.",
+          [
+            "interaction",
+            "violence",
+            "marginalized_groups"
+          ]
+        ]
+      ]
+    },
+    {
+      "logic": "ALWAYS (user_experiences_harassment IMPLIES EVENTUALLY (report_harassment AND take_action_against_harassment))",
+      "predicates": [
+        [
+          "user_experiences_harassment",
+          "A user experiences harassment, bullying, or threats of violence.",
+          [
+            "user",
+            "harassment",
+            "bullying",
+            "violence"
+          ]
+        ],
+        [
+          "report_harassment",
+          "A user reports harassment, bullying, or threats of violence.",
+          [
+            "action",
+            "user",
+            "report"
+          ]
+        ],
+        [
+          "take_action_against_harassment",
+          "Reddit takes action to address reported harassment.",
+          [
+            "action",
+            "platform",
+            "harassment_response"
+          ]
+        ]
+      ]
+    },
+    {
+      "logic": "ALWAYS (user_uses_reddit IMPLIES user_safe_from_harassment)",
+      "predicates": [
+        [
+          "user_uses_reddit",
+          "A user uses Reddit.",
+          [
+            "user",
+            "platform",
+            "usage"
+          ]
+        ],
+        [
+          "user_safe_from_harassment",
+          "A user is safe from harassment, bullying, or threats of violence while using Reddit.",
+          [
+            "user",
+            "safety",
+            "harassment_free"
+          ]
+        ]
+      ]
+    }
+  ]
+}

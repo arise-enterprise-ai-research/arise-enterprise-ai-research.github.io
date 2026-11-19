@@ -1,0 +1,29 @@
+```json
+{"assignments": [
+  {
+    "user_experiences_harassment": false,
+    "report_harassment": false,
+    "take_action_against_harassment": false,
+    "post_intimate_media": "unknown",
+    "has_consent": "unknown",
+    "threaten_to_post_media": "unknown",
+    "share_content": "unknown",
+    "content_involves_minors": "unknown",
+    "label_content": false,
+    "community_contains_sexually_explicit_content": true,
+    "community_contains_offensive_content": false,
+    "post_content": "unknown",
+    "solicit_transaction": "unknown",
+    "is_prohibited_transaction": "unknown",
+    "facilitate_transaction": "unknown",
+    "community_contains_graphic_content": "unknown",
+    "is_offensive": false,
+    "label_community": false,
+    "is_graphic": "unknown",
+    "content_is_abusive": false,
+    "content_is_suggestive": "unknown",
+    "is_illegal_content": "unknown",
+    "content_is_sexually_explicit": "unknown"
+  }
+]}
+```

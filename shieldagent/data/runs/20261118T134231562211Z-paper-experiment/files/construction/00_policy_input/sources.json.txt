@@ -1,0 +1,84 @@
+{
+  "documents": [
+    {
+      "actor": "Providers and deployers of AI systems within the scope of Article 2",
+      "category": "government_regulation",
+      "document_id": "document_000",
+      "evidence": "Official text of Article 5 only. The definitions of Article 3 that Article 5 relies on are not included.",
+      "format": "html",
+      "license": "Reuse is governed by the EUR-Lex legal notice: https://eur-lex.europa.eu/content/legal-notice/legal-notice.html",
+      "normalized_artifact": "normalized/document_000.md",
+      "normalized_characters": 11151,
+      "normalized_sha256": "e49f3e508c32a29ddc4cc3449f00ca31fdeb210d26aa6e2d7123f350d9008700",
+      "organization": "European Union",
+      "raw_artifact": "raw/document_000.html",
+      "raw_bytes": 1263936,
+      "raw_sha256": "242b88140ecf85d87fe1f64f8acea82e21b0008e5025825a62114da637d403bb",
+      "retrieval": {
+        "mode": "preserved_copy",
+        "note": "The Official Journal HTML page as an earlier session saved it. Whether the file holds the exact response bytes was not recorded.",
+        "path": "examples/paper/eu_ai_act_2024_1689.html",
+        "retrieved": "2026-11-17"
+      },
+      "source_fields": {},
+      "source_id": "eu_ai_act_2024_1689_article_5",
+      "substitution": {
+        "fabrication_id": "F-SOURCE-EU-AI-ACT-ARTICLE-5",
+        "reason": "The official Article 5 stands in for the unstated EU AI Act input of the paper. The author repository demonstrates extraction from Article 5.",
+        "replaces_missing": "The EU AI Act text or excerpt that the authors used"
+      },
+      "transformations": [
+        "html: kept only the elements art_5",
+        "html: decoded character references",
+        "html: removed button, footer, form, head, header, iframe, nav, noscript, script, select, style, svg, template elements with their content",
+        "html: h1-h6 became Markdown headings",
+        "html: each table row became one block with its cells separated by spaces",
+        "html: each list item became a block that starts with '- '",
+        "whitespace: collapsed white space inside each block; blocks separated by a blank line",
+        "html: elements with these classes became headings: oj-sti-art=4, oj-ti-art=3"
+      ],
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "version": "Official Journal L series 2024/1689 of 12 July 2024. Original act, element art_5 only."
+    },
+    {
+      "actor": "Reddit users and communities",
+      "category": "platform_policy",
+      "document_id": "document_001",
+      "evidence": "The author repository README demonstrates extraction from this URL. Paper identifiers such as reddit.policies.reddit_rules.21 do not map to a published rule numbering.",
+      "format": "html",
+      "license": "Not recorded. Reddit, Inc. publishes this page; check its terms before redistribution.",
+      "normalized_artifact": "normalized/document_001.md",
+      "normalized_characters": 3530,
+      "normalized_sha256": "5c18c022bb6de16b5636bfd9587a8bcd96372980a87caf69edf74f2848cc541a",
+      "organization": "Reddit",
+      "raw_artifact": "raw/document_001.html",
+      "raw_bytes": 5346,
+      "raw_sha256": "f33b786ab42cdf6a9ad9aa8ad0bd813239375b35542776591c69ea834250dbba",
+      "retrieval": {
+        "mode": "preserved_copy",
+        "note": "The article HTML of the page without site navigation, as an earlier session saved it. These are derived bytes, not the raw response. The extraction procedure was not recorded.",
+        "path": "examples/paper/reddit_rules.html",
+        "retrieved": "2026-11-17"
+      },
+      "source_fields": {},
+      "source_id": "reddit_rules",
+      "substitution": {
+        "fabrication_id": "F-SOURCE-REDDIT-RULES",
+        "reason": "The current Reddit Rules page stands in for the unpublished snapshot of the paper's Reddit corpus.",
+        "replaces_missing": "The Reddit policy corpus behind Table 8"
+      },
+      "transformations": [
+        "html: decoded character references",
+        "html: removed button, footer, form, head, header, iframe, nav, noscript, script, select, style, svg, template elements with their content",
+        "html: h1-h6 became Markdown headings",
+        "html: each table row became one block with its cells separated by spaces",
+        "html: each list item became a block that starts with '- '",
+        "whitespace: collapsed white space inside each block; blocks separated by a blank line"
+      ],
+      "url": "https://redditinc.com/policies/reddit-rules",
+      "version": "Current page, retrieved 2026-11-17. Not established as the paper's snapshot."
+    }
+  ],
+  "missing": [],
+  "note": "Raw bytes are saved before normalization. A current page is a current input, not the authors' snapshot."
+}

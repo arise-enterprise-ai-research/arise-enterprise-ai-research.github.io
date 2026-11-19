@@ -1,0 +1,179 @@
+{
+  "action_predicate_id": "facilitate_transaction.07d054e6",
+  "after_training": {
+    "test": {
+      "examples": 0,
+      "loss": null,
+      "margin": null,
+      "mean_probability_execute": null,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 0
+    },
+    "train": {
+      "examples": 1,
+      "loss": 0.0,
+      "margin": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "minimum": 0.0
+      },
+      "mean_probability_execute": 0.5,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 1,
+      "unsafe_examples": 1
+    },
+    "validation": {
+      "examples": 0,
+      "loss": null,
+      "margin": null,
+      "mean_probability_execute": null,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 0
+    }
+  },
+  "before_training": {
+    "test": {
+      "examples": 0,
+      "loss": null,
+      "margin": null,
+      "mean_probability_execute": null,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 0
+    },
+    "train": {
+      "examples": 1,
+      "loss": 0.0,
+      "margin": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "minimum": 0.0
+      },
+      "mean_probability_execute": 0.5,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 1,
+      "unsafe_examples": 1
+    },
+    "validation": {
+      "examples": 0,
+      "loss": null,
+      "margin": null,
+      "mean_probability_execute": null,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 0
+    }
+  },
+  "eligible_examples": {
+    "test": 0,
+    "train": 1,
+    "validation": 0
+  },
+  "epochs": 100,
+  "final_train_loss": 0.0,
+  "final_weight_norm": 0.024580280565565955,
+  "gradient_steps": 0,
+  "ineligible_examples": 0,
+  "initial_train_loss": 0.0,
+  "initial_weight_norm": 0.024580280565565955,
+  "loss_at_zero_weights": 0.0,
+  "rule_ids": [
+    "reddit.document_001.c00.p000.r02",
+    "reddit.document_001.c00.p002.r02",
+    "reddit.document_001.c00.p002.r03",
+    "rp.503aa518887a",
+    "rp.826d0ce98300",
+    "vr.915db2edcc50",
+    "vr.7bd434f42dda",
+    "reddit.document_001.c00.p006.r01",
+    "reddit.document_001.c00.p006.r02"
+  ],
+  "seed": 3658657807,
+  "status": "trained",
+  "weight_change_norm": 0.0,
+  "zero_influence_rules": [
+    "reddit.document_001.c00.p000.r02",
+    "reddit.document_001.c00.p002.r02",
+    "reddit.document_001.c00.p002.r03",
+    "rp.503aa518887a",
+    "rp.826d0ce98300",
+    "vr.915db2edcc50",
+    "vr.7bd434f42dda",
+    "reddit.document_001.c00.p006.r01",
+    "reddit.document_001.c00.p006.r02"
+  ]
+}

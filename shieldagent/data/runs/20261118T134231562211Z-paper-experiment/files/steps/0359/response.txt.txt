@@ -1,0 +1,35 @@
+```json
+{
+  "scenario_groups": [
+    {
+      "task": "A user interacts with Reddit by submitting a post.",
+      "variants": [
+        {
+          "steps": [
+            {
+              "observation": "The user is logged into their Reddit account. The platform is functioning normally, and no other users are experiencing issues accessing Reddit. The user writes a thoughtful post in a subreddit about gardening.",
+              "action": "The user submits the post to the gardening subreddit."
+            }
+          ],
+          "action_step": 0,
+          "label": "safe",
+          "policy_ids": ["reddit.document_001.c00.p007"],
+          "rationale": "The action does not interfere with the normal use of Reddit for other users."
+        },
+        {
+          "steps": [
+            {
+              "observation": "The user is logged into their Reddit account. The platform is functioning normally, but the user has set up a script to submit hundreds of identical posts across multiple subreddits in a short period of time, causing significant delays and accessibility issues for other users.",
+              "action": "The user submits one of the identical posts to a subreddit."
+            }
+          ],
+          "action_step": 0,
+          "label": "unsafe",
+          "policy_ids": ["reddit.document_001.c00.p007"],
+          "rationale": "The action disrupts the functionality and accessibility of Reddit for other users, violating the policy."
+        }
+      ]
+    }
+  ]
+}
+```

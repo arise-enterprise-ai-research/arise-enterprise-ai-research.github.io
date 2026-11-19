@@ -1,0 +1,1 @@
+{"types": [{"id": "is_offensive.b14be022", "type": "state", "reason": "The predicate describes a condition of the content being offensive, not an action."}]}

@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 1.478411457996117,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n{\"types\": [{\"id\": \"content_is_sexual.91dccacd\", \"type\": \"state\", \"reason\": \"The predicate describes a characteristic of the content, not an action.\"}, {\"id\": \"content_is_abusive.ed9155d9\", \"type\": \"state\", \"reason\": \"The predicate describes a characteristic of the content, not an action.\"}, {\"id\": \"content_is_suggestive.8a3c7542\", \"type\": \"state\", \"reason\": \"The predicate describes a characteristic of the content, not an action.\"}]}\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 125,
+    "prompt_tokens": 520,
+    "total_tokens": 645
+  }
+}

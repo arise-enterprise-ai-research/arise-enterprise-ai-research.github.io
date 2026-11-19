@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 0.707397708989447,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "{\n  \"assignments\": [\n    {\n      \"intentionally_mislead\": true,\n      \"impersonate_entity\": false\n    }\n  ]\n}",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 33,
+    "prompt_tokens": 329,
+    "total_tokens": 362
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 1.8545587090193294,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n{\"assignments\": [{\"user_experiences_harassment\": false, \"report_harassment\": false, \"take_action_against_harassment\": false, \"post_intimate_media\": false, \"has_consent\": \"unknown\", \"threaten_to_post_media\": false, \"share_content\": false, \"content_involves_minors\": false, \"label_content\": false, \"community_contains_sexually_explicit_content\": false, \"community_contains_offensive_content\": false, \"post_content\": false, \"solicit_transaction\": true, \"is_prohibited_transaction\": false, \"facilitate_transaction\": false, \"community_contains_graphic_content\": false, \"is_offensive\": false, \"label_community\": false, \"is_graphic\": false, \"content_is_abusive\": false, \"content_is_suggestive\": false, \"is_illegal_content\": false, \"content_is_sexually_explicit\": false}]}\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 203,
+    "prompt_tokens": 1180,
+    "total_tokens": 1383
+  }
+}

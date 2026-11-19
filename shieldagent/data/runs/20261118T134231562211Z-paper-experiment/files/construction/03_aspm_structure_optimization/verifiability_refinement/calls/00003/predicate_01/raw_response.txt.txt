@@ -1,0 +1,11 @@
+Reasoning:
+1. **Verifiable**: The predicate `community_contains_sexually_explicit_content` is verifiable as it can be determined by reviewing the content of the community.
+2. **Concrete**: The predicate is specific and unambiguous, as it clearly refers to sexually explicit content within a community.
+3. **Accurate**: The definition aligns with the intended fact or condition, which is to identify communities containing sexually explicit content.
+4. **Atomic**: The predicate describes only one fact (the presence of sexually explicit content in a community) and does not combine multiple facts.
+5. **Necessary**: The predicate is necessary for the rule, as it is part of the logic that determines whether a community should be labeled.
+6. **Unambiguous**: The predicate name is not reused in different contexts or with different meanings.
+
+Decision: No (The predicate is good and does not require refinement).
+
+No changes are needed for this predicate.

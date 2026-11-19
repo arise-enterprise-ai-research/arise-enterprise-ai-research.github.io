@@ -71,7 +71,7 @@ function node(tag, text = null, className = '') {
   return result;
 }
 
-/** @param {'check' | 'close' | 'partial' | 'agent' | 'user' | 'document' | 'tool' | 'unknown' | 'folder' | 'grid' | 'list' | 'compare' | 'models'} name */
+/** @param {'check' | 'close' | 'partial' | 'agent' | 'user' | 'document' | 'tool' | 'unknown' | 'folder' | 'grid' | 'list' | 'compare' | 'models' | 'shield'} name */
 function icon(name) {
   const paths = {
     check: 'M5 12l4 4L19 6', close: 'M6 6l12 12M18 6 6 18', unknown: 'M12 6v7M12 17h.01',
@@ -82,6 +82,7 @@ function icon(name) {
     folder: 'M3 7V5h7l2 2h9v13H3V7Z', grid: 'M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z',
     list: 'M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01',
     compare: 'M4 4h6v16H4zM14 4h6v16h-6z', models: 'm12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5',
+    shield: 'M12 3 5 6v6c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6l-7-3Z',
   };
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('aria-hidden', 'true');
@@ -425,6 +426,11 @@ function renderFrame() {
     if (benchmark === activeBenchmark) link.setAttribute('aria-current', 'page');
     benchmarks.append(link);
   }
+  // The ShieldAgent viewer is a separate page with its own runs, not a benchmark view.
+  const shieldAgent = node('a');
+  shieldAgent.href = 'shieldagent/';
+  shieldAgent.append(icon('shield'), node('span', 'ShieldAgent'));
+  benchmarks.append(shieldAgent);
   const pageHeader = element('benchmark-heading').closest('.page-header');
   if (pageHeader instanceof HTMLElement) { pageHeader.hidden = false; pageHeader.classList.toggle('inspection-header', inspecting); }
   element('benchmark-heading').textContent = benchmarkNames[state.benchmark] ?? state.benchmark;

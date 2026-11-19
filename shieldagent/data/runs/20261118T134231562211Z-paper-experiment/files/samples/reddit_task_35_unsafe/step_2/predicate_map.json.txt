@@ -1,0 +1,665 @@
+{
+  "contexts": [],
+  "values": [
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "ban_community.7c7f6afb",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "ban_user.505ad330",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "report_harassment.40aa2577",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "take_action_against_harassment.abe19749",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "engage_in_spam.59fb1b9d",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "engage_in_disruptive_behavior.f570183f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "engage_in_content_manipulation.f4db380f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: extracted for step 2"
+      ],
+      "position": 2,
+      "predicate_id": "reveal_personal_info.e1661515",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": true
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "post_intimate_media.003415a6",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "threaten_to_post_media.98c3c806",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "share_content.0582158e",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "engage_predatory_behavior.16bd686a",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "intentionally_mislead.d1fc1a98",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "impersonate_entity.1246f277",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "label_content.1ab5bcfc",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "post_content.5d43f06f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "solicit_transaction.f60efb4e",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "facilitate_transaction.07d054e6",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "label_community.edfa82ad",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: extracted for step 2"
+      ],
+      "position": 2,
+      "predicate_id": "user_action.2aa9f62c",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": true
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "interfere_accessibility.f98d5ade",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "instigate_harassment.c43b50f2",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "ban_community.7c7f6afb",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "ban_user.505ad330",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "report_harassment.40aa2577",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "take_action_against_harassment.abe19749",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "engage_in_spam.59fb1b9d",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "engage_in_disruptive_behavior.f570183f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "engage_in_content_manipulation.f4db380f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "reveal_personal_info.e1661515",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "post_intimate_media.003415a6",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "threaten_to_post_media.98c3c806",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "share_content.0582158e",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "engage_predatory_behavior.16bd686a",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "intentionally_mislead.d1fc1a98",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "impersonate_entity.1246f277",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "label_content.1ab5bcfc",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "post_content.5d43f06f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "solicit_transaction.f60efb4e",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "facilitate_transaction.07d054e6",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "label_community.edfa82ad",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: extracted for step 0"
+      ],
+      "position": 0,
+      "predicate_id": "user_action.2aa9f62c",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": true
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "interfere_accessibility.f98d5ade",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "instigate_harassment.c43b50f2",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "ban_community.7c7f6afb",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "ban_user.505ad330",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "report_harassment.40aa2577",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "take_action_against_harassment.abe19749",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "engage_in_spam.59fb1b9d",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "engage_in_disruptive_behavior.f570183f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "engage_in_content_manipulation.f4db380f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "reveal_personal_info.e1661515",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "post_intimate_media.003415a6",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "threaten_to_post_media.98c3c806",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "share_content.0582158e",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "engage_predatory_behavior.16bd686a",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "intentionally_mislead.d1fc1a98",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "impersonate_entity.1246f277",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "label_content.1ab5bcfc",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "post_content.5d43f06f",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "solicit_transaction.f60efb4e",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "facilitate_transaction.07d054e6",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "label_community.edfa82ad",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: extracted for step 1"
+      ],
+      "position": 1,
+      "predicate_id": "user_action.2aa9f62c",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": true
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "interfere_accessibility.f98d5ade",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "instigate_harassment.c43b50f2",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    }
+  ]
+}

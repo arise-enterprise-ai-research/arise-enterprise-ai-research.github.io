@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 1.7526494589983486,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n[\n  {\n    \"predicates\": [\n      [\"participate_authentically\", \"The user participates in a community with genuine personal interest.\", [\"participation\", \"authenticity\", \"community\"]],\n      [\"engage_in_spam\", \"The user engages in spamming activities within a community.\", [\"spam\", \"disruption\", \"behavior\"]],\n      [\"engage_in_disruptive_behavior\", \"The user engages in behaviors that disrupt the integrity of a community.\", [\"disruption\", \"behavior\", \"community\"]],\n      [\"engage_in_content_manipulation\", \"The user manipulates content in a way that disrupts the integrity of a community.\", [\"content\", \"manipulation\", \"disruption\"]]\n    ],\n    \"logic\": \"ALWAYS (participate_authentically AND NOT (engage_in_spam OR engage_in_disruptive_behavior OR engage_in_content_manipulation))\"\n  }\n]\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 192,
+    "prompt_tokens": 568,
+    "total_tokens": 760
+  }
+}

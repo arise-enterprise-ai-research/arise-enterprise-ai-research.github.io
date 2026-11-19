@@ -1,0 +1,18 @@
+[
+  {
+    "predicate_ids": [
+      "is_sexually_explicit.a8e34a31",
+      "content_is_sexual.91dccacd"
+    ],
+    "similarities": [
+      [
+        1.0,
+        0.906294895303
+      ],
+      [
+        0.906294895303,
+        1.0
+      ]
+    ]
+  }
+]

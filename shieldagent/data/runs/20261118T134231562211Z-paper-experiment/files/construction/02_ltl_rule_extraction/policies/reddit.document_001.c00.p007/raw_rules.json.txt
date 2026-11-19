@@ -1,0 +1,37 @@
+{
+  "invalid": [],
+  "rules": [
+    {
+      "logic": "ALWAYS (perform_action IMPLIES NOT (disrupt_functionality OR interfere_accessibility))",
+      "predicates": [
+        [
+          "disrupt_functionality",
+          "An action that disrupts the functionality of Reddit.",
+          [
+            "disruption",
+            "functionality",
+            "site"
+          ]
+        ],
+        [
+          "interfere_accessibility",
+          "An action that interferes with the accessibility of Reddit for other users.",
+          [
+            "interference",
+            "accessibility",
+            "users"
+          ]
+        ],
+        [
+          "perform_action",
+          "A user performs an action on Reddit.",
+          [
+            "action",
+            "user",
+            "activity"
+          ]
+        ]
+      ]
+    }
+  ]
+}

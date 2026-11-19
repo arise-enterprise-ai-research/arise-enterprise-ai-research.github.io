@@ -1,0 +1,55 @@
+{"predicate_id":"content_promotes_hate.a5d8268d","text":"content_promotes_hate\nThe content promotes hate based on identity or vulnerability.\ncontent, hate, identity, vulnerability\nstate"}
+{"predicate_id":"content_incites_violence.29b46c59","text":"content_incites_violence\nThe content incites violence against marginalized or vulnerable groups.\ncontent, violence, marginalized_groups\nstate"}
+{"predicate_id":"ban_community.7c7f6afb","text":"ban_community\nA community is banned by Reddit.\naction, community, ban\naction"}
+{"predicate_id":"ban_user.505ad330","text":"ban_user\nA user is banned by Reddit.\naction, user, ban\naction"}
+{"predicate_id":"user_experiences_harassment.7c307279","text":"user_experiences_harassment\nA user experiences harassment, bullying, or threats of violence.\nuser, harassment, bullying, violence\nstate"}
+{"predicate_id":"report_harassment.40aa2577","text":"report_harassment\nA user reports harassment, bullying, or threats of violence.\naction, user, report\naction"}
+{"predicate_id":"take_action_against_harassment.abe19749","text":"take_action_against_harassment\nReddit takes action to address reported harassment.\naction, platform, harassment_response\naction"}
+{"predicate_id":"user_uses_reddit.fdba4841","text":"user_uses_reddit\nA user uses Reddit.\nuser, platform, usage\nstate"}
+{"predicate_id":"user_safe_from_harassment.45b0d5d2","text":"user_safe_from_harassment\nA user is safe from harassment, bullying, or threats of violence while using Reddit.\nuser, safety, harassment_free\nstate"}
+{"predicate_id":"participate_authentically.479b3f5b","text":"participate_authentically\nThe user participates in a community with genuine personal interest.\nparticipation, authenticity, community\nstate"}
+{"predicate_id":"engage_in_spam.59fb1b9d","text":"engage_in_spam\nThe user engages in spamming activities within a community.\nspam, disruption, behavior\naction"}
+{"predicate_id":"engage_in_disruptive_behavior.f570183f","text":"engage_in_disruptive_behavior\nThe user engages in behaviors that disrupt the integrity of a community.\ndisruption, behavior, community\naction"}
+{"predicate_id":"engage_in_content_manipulation.f4db380f","text":"engage_in_content_manipulation\nThe user manipulates content in a way that disrupts the integrity of a community.\ncontent, manipulation, disruption\naction"}
+{"predicate_id":"instigate_harassment.063390f5","text":"instigate_harassment\nAn action that causes harassment to another individual.\nharassment, actions, users\naction"}
+{"predicate_id":"reveal_personal_info.e1661515","text":"reveal_personal_info\nAn action that discloses someone's personal or confidential information.\nprivacy, personal_info, disclosure\naction"}
+{"predicate_id":"post_intimate_media.003415a6","text":"post_intimate_media\nAn action of posting intimate or sexually-explicit media of someone.\nmedia, intimate, posting\naction"}
+{"predicate_id":"has_consent.0ca579d7","text":"has_consent\nIndicates that consent has been given by the individual involved.\nconsent, permission, individual\nstate"}
+{"predicate_id":"threaten_to_post_media.98c3c806","text":"threaten_to_post_media\nAn action of threatening to post intimate or sexually-explicit media of someone.\nmedia, threat, intimate\naction"}
+{"predicate_id":"share_content.0582158e","text":"share_content\nThe action of sharing any content on the platform.\naction, content, sharing\naction"}
+{"predicate_id":"content_involves_minors.a994294b","text":"content_involves_minors\nThe content involves individuals under the age of 18.\ncontent, minors, age\nstate"}
+{"predicate_id":"content_is_sexual_or_abusive.9e57ad97","text":"content_is_sexual_or_abusive\nThe content is sexual, abusive, or suggestive in nature.\ncontent, sexual, abusive, suggestive\nstate"}
+{"predicate_id":"engage_predatory_behavior.16bd686a","text":"engage_predatory_behavior\nThe user engages in predatory or harmful behavior towards minors.\naction, predatory, behavior, minors\naction"}
+{"predicate_id":"intentionally_mislead.d1fc1a98","text":"intentionally_mislead\nThe user intentionally misleads others.\ndeception, mislead, intent\naction"}
+{"predicate_id":"impersonate_entity.1246f277","text":"impersonate_entity\nThe user impersonates another individual or entity.\nimpersonation, deception, entity\naction"}
+{"predicate_id":"is_graphic.181a547b","text":"is_graphic\nContent is graphic in nature.\ncontent, graphic, explicit\nstate"}
+{"predicate_id":"is_sexually_explicit.a8e34a31","text":"is_sexually_explicit\nContent is sexually explicit.\ncontent, sexual, explicit\nstate"}
+{"predicate_id":"is_offensive.7d37e114","text":"is_offensive\nContent is offensive in nature.\ncontent, offensive, sensitive\nstate"}
+{"predicate_id":"label_content.1ab5bcfc","text":"label_content\nContent is labeled to indicate its nature.\ncontent, labeling, classification\naction"}
+{"predicate_id":"community_contains_graphic_content.158f3fa3","text":"community_contains_graphic_content\nA community contains graphic content.\ncommunity, graphic, explicit\nstate"}
+{"predicate_id":"community_contains_sexually_explicit_content.37043415","text":"community_contains_sexually_explicit_content\nA community contains sexually explicit content.\ncommunity, sexual, explicit\nstate"}
+{"predicate_id":"community_contains_offensive_content.e76a15ba","text":"community_contains_offensive_content\nA community contains offensive content.\ncommunity, offensive, sensitive\nstate"}
+{"predicate_id":"label_community.89e6d8d8","text":"label_community\nA community is labeled to indicate its nature.\ncommunity, labeling, classification\naction"}
+{"predicate_id":"ensure_predictable_experience.9240b21c","text":"ensure_predictable_experience\nUsers are provided with predictable experiences when engaging with content or communities.\nuser, experience, predictability\nstate"}
+{"predicate_id":"content_is_labeled.27c0e67b","text":"content_is_labeled\nContent is labeled appropriately.\ncontent, labeling, classification\nstate"}
+{"predicate_id":"community_is_labeled.0a70c0f6","text":"community_is_labeled\nCommunity is labeled appropriately.\ncommunity, labeling, classification\nstate"}
+{"predicate_id":"post_content.5d43f06f","text":"post_content\nRepresents the action of posting content on Reddit.\naction, content, post\naction"}
+{"predicate_id":"is_illegal_content.de83be94","text":"is_illegal_content\nIndicates that the content violates laws or regulations.\ncontent, illegal, violation\nstate"}
+{"predicate_id":"solicit_transaction.f60efb4e","text":"solicit_transaction\nRepresents the action of soliciting a transaction.\naction, transaction, solicit\naction"}
+{"predicate_id":"is_prohibited_transaction.aae3912c","text":"is_prohibited_transaction\nIndicates that the transaction is prohibited under Reddit's policies or applicable laws.\ntransaction, prohibited, policy\nstate"}
+{"predicate_id":"facilitate_transaction.07d054e6","text":"facilitate_transaction\nRepresents the action of facilitating a transaction.\naction, transaction, facilitate\naction"}
+{"predicate_id":"perform_action.7a29b8ea","text":"perform_action\nA user performs an action on Reddit.\naction, user, activity\naction"}
+{"predicate_id":"disrupt_functionality.7a6accb6","text":"disrupt_functionality\nAn action that disrupts the functionality of Reddit.\ndisruption, functionality, site\naction"}
+{"predicate_id":"interfere_accessibility.201f1a53","text":"interfere_accessibility\nAn action that interferes with the accessibility of Reddit for other users.\ninterference, accessibility, users\naction"}
+{"predicate_id":"community_contains_graphic_content.5d53d0ea","text":"community_contains_graphic_content\nA community contains content that depicts violence, gore, or other visually disturbing material.\ncommunity, graphic, violence, gore, disturbing\nstate"}
+{"predicate_id":"is_offensive.b14be022","text":"is_offensive\nContent contains language, imagery, or behavior that is widely recognized as offensive, such as hate speech, slurs, or explicit derogatory remarks.\ncontent, offensive, hate_speech, slurs, derogatory\nstate"}
+{"predicate_id":"label_community.edfa82ad","text":"label_community\nA community is labeled to indicate its nature, specifically whether it contains graphic, sexually explicit, or offensive content.\ncommunity, labeling, classification, graphic, sexually explicit, offensive\naction"}
+{"predicate_id":"is_graphic.012b2eca","text":"is_graphic\nContent contains imagery, descriptions, or depictions of violence, injury, or other explicit material that may be disturbing to viewers.\ncontent, graphic, violence, explicit, disturbing\nstate"}
+{"predicate_id":"content_is_sexual.91dccacd","text":"content_is_sexual\nThe content is sexual in nature, including explicit or pornographic material.\ncontent, sexual, explicit\nstate"}
+{"predicate_id":"content_is_abusive.ed9155d9","text":"content_is_abusive\nThe content contains abusive language, threats, or harmful behavior.\ncontent, abusive, threats, harmful\nstate"}
+{"predicate_id":"content_is_suggestive.8a3c7542","text":"content_is_suggestive\nThe content is suggestive in nature, implying sexual or inappropriate behavior without being explicit.\ncontent, suggestive, inappropriate\nstate"}
+{"predicate_id":"is_illegal_content.02441bdc","text":"is_illegal_content\nIndicates that the content violates specific laws or regulations, such as copyright infringement, criminal activity, or other prohibited actions as defined by the jurisdiction or platform policies.\ncontent, illegal, violation, specific\nstate"}
+{"predicate_id":"user_action.2aa9f62c","text":"user_action\nA user performs any observable action on Reddit, such as posting, commenting, voting, or interacting with the platform.\naction, user, activity\naction"}
+{"predicate_id":"interfere_accessibility.f98d5ade","text":"interfere_accessibility\nAn action that significantly hinders or prevents other users from accessing Reddit, such as spamming, DDoS attacks, or other activities that degrade the platform's availability.\ninterference, accessibility, users, hindrance, availability\naction"}
+{"predicate_id":"instigate_harassment.c43b50f2","text":"instigate_harassment\nAn action that intentionally causes harm, distress, or intimidation to another individual through harassment, including but not limited to revealing personal information or posting intimate media without consent.\nharassment, intentional, harm, users\naction"}
+{"predicate_id":"content_is_sexually_explicit.91dccacd","text":"content_is_sexually_explicit\nThe content is sexual in nature, including explicit or pornographic material.\ncontent, sexual, explicit\nstate"}

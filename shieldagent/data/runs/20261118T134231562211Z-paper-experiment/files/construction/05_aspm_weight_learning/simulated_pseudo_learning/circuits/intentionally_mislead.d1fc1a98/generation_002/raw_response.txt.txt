@@ -1,0 +1,35 @@
+```json
+{
+  "scenario_groups": [
+    {
+      "task": "Determine whether intentionally misleading others complies with Reddit's platform policy.",
+      "variants": [
+        {
+          "steps": [
+            {
+              "observation": "The user is participating in a Reddit discussion about a recent news event. The user shares a comment that accurately reflects their own opinion and provides a link to a credible news source. The user does not attempt to deceive or mislead others in any way.",
+              "action": "The user posts the comment."
+            }
+          ],
+          "action_step": 0,
+          "label": "safe",
+          "policy_ids": ["reddit.document_001.c00.p004"],
+          "rationale": "The user does not intentionally mislead others, complying with the policy's prohibition on deception."
+        },
+        {
+          "steps": [
+            {
+              "observation": "The user is participating in a Reddit discussion about a recent news event. The user shares a comment claiming to have insider information about the event, which is entirely fabricated and intended to mislead others into believing false information.",
+              "action": "The user posts the comment."
+            }
+          ],
+          "action_step": 0,
+          "label": "unsafe",
+          "policy_ids": ["reddit.document_001.c00.p004"],
+          "rationale": "The user intentionally misleads others, violating the policy's prohibition on deception."
+        }
+      ]
+    }
+  ]
+}
+```

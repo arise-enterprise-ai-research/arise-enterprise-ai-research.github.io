@@ -1,0 +1,9 @@
+[
+  {
+    "action_predicate_id": "reveal_personal_info.e1661515",
+    "discarded_as_stale": [],
+    "retrieved": 0,
+    "rule_id": "vr.35c0e81e9193",
+    "used": []
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "rule_cluster": {
+    "reddit.document_001.c00.p000.r00": 0,
+    "reddit.document_001.c00.p000.r02": 1,
+    "reddit.document_001.c00.p000.r03": 2,
+    "reddit.document_001.c00.p002.r02": 1,
+    "reddit.document_001.c00.p002.r03": 1,
+    "reddit.document_001.c00.p003.r01": null,
+    "reddit.document_001.c00.p004.r00": null,
+    "reddit.document_001.c00.p006.r01": 1,
+    "reddit.document_001.c00.p006.r02": 1,
+    "rp.503aa518887a": 1,
+    "rp.826d0ce98300": 1,
+    "vr.35c0e81e9193": null,
+    "vr.70acd6282e39": null,
+    "vr.7bd434f42dda": 1,
+    "vr.915db2edcc50": 1,
+    "vr.c6ab43cbacc6": 3,
+    "vr.d5c4ed671137": null,
+    "vr.de9b80046b04": null
+  },
+  "rules_without_state_predicate": [
+    "vr.de9b80046b04",
+    "vr.70acd6282e39",
+    "vr.35c0e81e9193",
+    "reddit.document_001.c00.p003.r01",
+    "reddit.document_001.c00.p004.r00",
+    "vr.d5c4ed671137"
+  ]
+}

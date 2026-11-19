@@ -1,0 +1,126 @@
+[
+  {
+    "component": "Policy Input",
+    "description": "The policy documents behind Table 8 are not published.",
+    "evidence_checked": [
+      "chen25ae.pdf: Table 8 p.13",
+      "AutoPolicy 7f02c71: README examples only"
+    ],
+    "id": "M-ORIGINAL-POLICY-CORPUS",
+    "replaced_by": [
+      "F-SOURCE-EU-AI-ACT-ARTICLE-5",
+      "F-SOURCE-REDDIT-RULES",
+      "F-POLICY-NORMALIZATION"
+    ],
+    "status": "missing"
+  },
+  {
+    "component": "Policy Input",
+    "description": "Identifiers such as reddit.policies.reddit_rules.21 do not map to a published clause numbering.",
+    "evidence_checked": [
+      "chen25ae.pdf: Figs. 7, 11, 13 pp.17-22"
+    ],
+    "id": "M-PAPER-POLICY-IDENTIFIERS",
+    "replaced_by": [],
+    "status": "missing"
+  },
+  {
+    "component": "Policy Extraction",
+    "description": "The GPT-4o snapshot, sampling settings, and request payloads are not published.",
+    "evidence_checked": [
+      "chen25ae.pdf: App. H pp.29-32"
+    ],
+    "id": "M-REQUEST-ENVELOPES",
+    "replaced_by": [
+      "F-GPT4O-SNAPSHOT",
+      "F-LLM-SAMPLING",
+      "F-PROMPT-ENVELOPE"
+    ],
+    "status": "missing"
+  },
+  {
+    "component": "ASPM Structure Optimization",
+    "description": "The few-shot examples of the VR and RP templates are not printed. Nothing replaces them.",
+    "evidence_checked": [
+      "chen25ae.pdf: App. H pp.31-32"
+    ],
+    "id": "M-FEW-SHOT-EXAMPLES",
+    "replaced_by": [],
+    "status": "missing"
+  },
+  {
+    "component": "ASPM Structure Optimization",
+    "description": "The refinement budget, k, the embedding configuration, and the RP clustering are not published.",
+    "evidence_checked": [
+      "chen25ae.pdf: Alg. 2 p.14",
+      "chen25ae.pdf: Eq. 3 p.4"
+    ],
+    "id": "M-OPTIMIZATION-SETTINGS",
+    "replaced_by": [
+      "F-REFINEMENT-BUDGET",
+      "F-VAGUENESS",
+      "F-EMBEDDING-MODEL",
+      "F-RP-CANDIDATES"
+    ],
+    "status": "missing"
+  },
+  {
+    "component": "ASPM Structure Optimization",
+    "description": "The GPT-4o judge prompt and scale of Fig. 6 are not published.",
+    "evidence_checked": [
+      "chen25ae.pdf: Fig. 6 p.15"
+    ],
+    "id": "M-VAGUENESS-JUDGE-PROMPT",
+    "replaced_by": [],
+    "status": "missing"
+  },
+  {
+    "component": "Action-based ASPM Clustering",
+    "description": "The threshold theta and the cluster count k of Algorithm 3 are not published.",
+    "evidence_checked": [
+      "chen25ae.pdf: Alg. 3 p.16"
+    ],
+    "id": "M-CLUSTERING-SETTINGS",
+    "replaced_by": [
+      "F-CLUSTERING"
+    ],
+    "status": "missing"
+  },
+  {
+    "component": "Training Dataset",
+    "description": "The safety-labeled trajectories and the pseudo-learning generator are not published.",
+    "evidence_checked": [
+      "chen25ae.pdf: Sec. 3.2.4 p.5",
+      "chen25ae.pdf: App. C.5 p.13 (heading without text)"
+    ],
+    "id": "M-TRAINING-DATA",
+    "replaced_by": [
+      "F-PSEUDO-LEARNING-RECIPE",
+      "F-PSEUDO-LEARNING-BUDGET",
+      "F-DATASET-SPLIT"
+    ],
+    "status": "missing"
+  },
+  {
+    "component": "ASPM Weight Learning",
+    "description": "The learned rule weights are not published. Weights of this run are not author weights.",
+    "evidence_checked": [
+      "chen25ae.pdf: Sec. 3.2.4 p.5"
+    ],
+    "id": "M-LEARNED-WEIGHTS",
+    "replaced_by": [],
+    "status": "missing"
+  },
+  {
+    "component": "ASPM Weight Learning",
+    "description": "The initialization, learning rate, epochs, and example order are not published.",
+    "evidence_checked": [
+      "chen25ae.pdf: Alg. 3 p.16"
+    ],
+    "id": "M-TRAINING-SETTINGS",
+    "replaced_by": [
+      "F-WEIGHT-LEARNING"
+    ],
+    "status": "missing"
+  }
+]

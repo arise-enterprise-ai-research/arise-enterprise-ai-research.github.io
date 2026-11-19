@@ -1,0 +1,13 @@
+{"event":"started","stage":"sources"}
+{"artifact":"sha256:7d2fd26d4b83174eb736c5fba4b1d9731ac79b78020ee1eed6acc73b0a3291a9","event":"completed","stage":"sources"}
+{"event":"started","stage":"policy_extraction"}
+{"artifact":"sha256:65c223a39d51a989a48b65bb3383bf84656771eb140228d28444df951dd7cee8","event":"completed","stage":"policy_extraction"}
+{"event":"started","stage":"ltl_rule_extraction"}
+{"artifact":"sha256:da4930e9681161f44a4730f78b9b5fd850dc3b0f827ea3014b49c3d5ecf108d9","event":"completed","stage":"ltl_rule_extraction"}
+{"event":"started","stage":"aspm_structure_optimization"}
+{"artifact":"sha256:839316fee96f047af9230bcbce5d830200fffddbf1ef0d8284d219bd3885c903","event":"completed","stage":"aspm_structure_optimization"}
+{"event":"skipped","reason":"no expert review was supplied","stage":"expert_review"}
+{"event":"started","stage":"action_based_aspm_clustering"}
+{"artifact":"sha256:aad37fe8854682424a9c91af705db22d77c2fc5e49e6fea8200a09e6d376ec6a","event":"completed","stage":"action_based_aspm_clustering"}
+{"event":"started","stage":"aspm_weight_learning"}
+{"artifact":"sha256:066005f3d8617d142d4abcadda81f7bf1e2a2d724e999cbd0ac5b57ccc30fd31","event":"completed","stage":"aspm_weight_learning"}

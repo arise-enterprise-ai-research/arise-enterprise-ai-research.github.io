@@ -1,0 +1,1182 @@
+[
+  {
+    "description": "Initialize the predicate truth table of one verification step: the names, the meanings, and the rule contexts of the predicates. The new map holds no truth value. [P Fig. 15] The argument schema is reconstruction-authored.",
+    "input_schema": {
+      "$defs": {
+        "PredicateDeclaration": {
+          "additionalProperties": false,
+          "description": "One row of the predicate truth table.\n\n``name`` is the handle that later calls use. Without ``rule_ids`` the row is\nthe shared assignment of ``predicate_id``. With ``rule_ids`` the row is a\nrule context: ``alias`` (by default the name) is the context of the\npredicate in those rules, as in the two consent contexts of Fig. 15.",
+          "properties": {
+            "alias": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Alias"
+            },
+            "meaning": {
+              "title": "Meaning",
+              "type": "string"
+            },
+            "name": {
+              "minLength": 1,
+              "title": "Name",
+              "type": "string"
+            },
+            "position": {
+              "title": "Position",
+              "type": "integer"
+            },
+            "predicate_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Predicate Id"
+            },
+            "rule_ids": {
+              "default": [],
+              "items": {
+                "type": "string"
+              },
+              "title": "Rule Ids",
+              "type": "array"
+            },
+            "target": {
+              "default": "current_action",
+              "title": "Target",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "meaning",
+            "position"
+          ],
+          "title": "PredicateDeclaration",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "predicates": {
+          "items": {
+            "$ref": "#/$defs/PredicateDeclaration"
+          },
+          "minItems": 1,
+          "title": "Predicates",
+          "type": "array"
+        },
+        "session": {
+          "minLength": 1,
+          "title": "Session",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session",
+        "predicates"
+      ],
+      "title": "CreatePredicateMapArguments",
+      "type": "object"
+    },
+    "name": "verification_tool.create_predicate_map"
+  },
+  {
+    "description": "Assign Boolean truth values to rows of the predicate truth table. Each value needs evidence. A value that conflicts with an earlier value fails the whole call. [P Figs. 16-17] The argument schema is reconstruction-authored.",
+    "input_schema": {
+      "$defs": {
+        "PredicateAssignment": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "title": "Evidence",
+              "type": "array"
+            },
+            "name": {
+              "title": "Name",
+              "type": "string"
+            },
+            "value": {
+              "title": "Value",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "value",
+            "evidence"
+          ],
+          "title": "PredicateAssignment",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "session": {
+          "minLength": 1,
+          "title": "Session",
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "$ref": "#/$defs/PredicateAssignment"
+          },
+          "minItems": 1,
+          "title": "Values",
+          "type": "array"
+        }
+      },
+      "required": [
+        "session",
+        "values"
+      ],
+      "title": "AssignPredicateValuesArguments",
+      "type": "object"
+    },
+    "name": "verification_tool.assign_predicate_values"
+  },
+  {
+    "description": "Report exactly which rows of the predicate truth table have no truth value. The result has the printed fields unassigned and unassigned_list. [P Fig. 17]",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "session": {
+          "minLength": 1,
+          "title": "Session",
+          "type": "string"
+        }
+      },
+      "required": [
+        "session"
+      ],
+      "title": "CheckUnassignedArguments",
+      "type": "object"
+    },
+    "name": "verification_tool.check_unassigned"
+  },
+  {
+    "description": "Formal Verify for one rule in one world of Eq. 5: validate generated shielding code against its request and run it through the formal backend 'prover9_mace4'. The result is accepted with a rule verification, or rejected with the reason and without execution. A rejected program, a timeout, and a solver error never count as a satisfied rule. [P Sec. 3.3; Fig. 18] The argument schema is reconstruction-authored.",
+    "input_schema": {
+      "$defs": {
+        "GroundedFactWire": {
+          "additionalProperties": false,
+          "description": "The tool-wire form of ``GroundedFact``.",
+          "properties": {
+            "position": {
+              "title": "Position",
+              "type": "integer"
+            },
+            "predicate_id": {
+              "title": "Predicate Id",
+              "type": "string"
+            },
+            "rule_context": {
+              "title": "Rule Context",
+              "type": "string"
+            },
+            "symbol": {
+              "title": "Symbol",
+              "type": "string"
+            },
+            "target": {
+              "title": "Target",
+              "type": "string"
+            },
+            "value": {
+              "title": "Value",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "symbol",
+            "value",
+            "predicate_id",
+            "rule_context",
+            "target",
+            "position"
+          ],
+          "title": "GroundedFactWire",
+          "type": "object"
+        },
+        "ShieldingCodeRequestWire": {
+          "additionalProperties": false,
+          "description": "The tool-wire form of ``ShieldingCodeRequest``.\n\n``goal`` is a nested object with the keys ``operator``, ``operands``, and\n``symbol``, as ``artifacts.to_json`` writes a ``PropositionalFormula``.",
+          "properties": {
+            "facts": {
+              "items": {
+                "$ref": "#/$defs/GroundedFactWire"
+              },
+              "title": "Facts",
+              "type": "array"
+            },
+            "goal": {
+              "additionalProperties": true,
+              "title": "Goal",
+              "type": "object"
+            },
+            "language": {
+              "title": "Language",
+              "type": "string"
+            },
+            "logic": {
+              "title": "Logic",
+              "type": "string"
+            },
+            "rule_id": {
+              "title": "Rule Id",
+              "type": "string"
+            },
+            "symbol_meanings": {
+              "items": {
+                "maxItems": 2,
+                "minItems": 2,
+                "prefixItems": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "type": "array"
+              },
+              "title": "Symbol Meanings",
+              "type": "array"
+            },
+            "world": {
+              "$ref": "#/$defs/World"
+            }
+          },
+          "required": [
+            "rule_id",
+            "world",
+            "logic",
+            "symbol_meanings",
+            "goal",
+            "facts",
+            "language"
+          ],
+          "title": "ShieldingCodeRequestWire",
+          "type": "object"
+        },
+        "ShieldingCodeWire": {
+          "additionalProperties": false,
+          "description": "The tool-wire form of ``ShieldingCode``.",
+          "properties": {
+            "language": {
+              "title": "Language",
+              "type": "string"
+            },
+            "origin": {
+              "title": "Origin",
+              "type": "string"
+            },
+            "rule_id": {
+              "title": "Rule Id",
+              "type": "string"
+            },
+            "text": {
+              "title": "Text",
+              "type": "string"
+            },
+            "world": {
+              "$ref": "#/$defs/World"
+            }
+          },
+          "required": [
+            "rule_id",
+            "world",
+            "language",
+            "text",
+            "origin"
+          ],
+          "title": "ShieldingCodeWire",
+          "type": "object"
+        },
+        "World": {
+          "description": "The two worlds of Eq. 5.",
+          "enum": [
+            "execute",
+            "non_execute"
+          ],
+          "title": "World",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/ShieldingCodeWire"
+        },
+        "request": {
+          "$ref": "#/$defs/ShieldingCodeRequestWire"
+        }
+      },
+      "required": [
+        "code",
+        "request"
+      ],
+      "title": "VerifyRuleArguments",
+      "type": "object"
+    },
+    "name": "verification_tool.verify_rule"
+  },
+  {
+    "description": "Detect: establish privacy and personal-information predicates for the analyzed content. [P Sec. 3.3; Fig. 16] This tool analyzes text content only. Provider: pattern-privacy. Provider modalities: text.",
+    "input_schema": {
+      "$defs": {
+        "Modality": {
+          "enum": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "title": "Modality",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "The arguments of a ``content_analysis`` tool. [P Fig. 16]\n\n``target_predicates``, ``descriptions``, and ``source`` are the printed\nargument names. The printed ``observation`` argument is the\npseudo-expression \"Interaction_History + [thought_text, action_text]\". Its\nexecutable form is ``verification_input``. ``predicate_ids`` and\n``modality`` are reconstruction-authored.",
+      "properties": {
+        "descriptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Descriptions",
+          "type": "array"
+        },
+        "modality": {
+          "$ref": "#/$defs/Modality",
+          "default": "text"
+        },
+        "predicate_ids": {
+          "anyOf": [
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predicate Ids"
+        },
+        "source": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Source",
+          "type": "array"
+        },
+        "target_predicates": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Target Predicates",
+          "type": "array"
+        },
+        "verification_input": {
+          "additionalProperties": true,
+          "title": "Verification Input",
+          "type": "object"
+        }
+      },
+      "required": [
+        "target_predicates",
+        "descriptions",
+        "verification_input"
+      ],
+      "title": "ContentAnalysisArguments",
+      "type": "object"
+    },
+    "name": "content_analysis.privacy_analysis"
+  },
+  {
+    "description": "Detect: establish harmful-content predicates for the analyzed text with a moderation provider. [P Sec. 3.3; Fig. 16] This tool analyzes text content only. Provider: openai:omni-moderation-latest. Provider modalities: image, text.",
+    "input_schema": {
+      "$defs": {
+        "Modality": {
+          "enum": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "title": "Modality",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "The arguments of a ``content_analysis`` tool. [P Fig. 16]\n\n``target_predicates``, ``descriptions``, and ``source`` are the printed\nargument names. The printed ``observation`` argument is the\npseudo-expression \"Interaction_History + [thought_text, action_text]\". Its\nexecutable form is ``verification_input``. ``predicate_ids`` and\n``modality`` are reconstruction-authored.",
+      "properties": {
+        "descriptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Descriptions",
+          "type": "array"
+        },
+        "modality": {
+          "$ref": "#/$defs/Modality",
+          "default": "text"
+        },
+        "predicate_ids": {
+          "anyOf": [
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predicate Ids"
+        },
+        "source": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Source",
+          "type": "array"
+        },
+        "target_predicates": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Target Predicates",
+          "type": "array"
+        },
+        "verification_input": {
+          "additionalProperties": true,
+          "title": "Verification Input",
+          "type": "object"
+        }
+      },
+      "required": [
+        "target_predicates",
+        "descriptions",
+        "verification_input"
+      ],
+      "title": "ContentAnalysisArguments",
+      "type": "object"
+    },
+    "name": "content_analysis.text_moderate"
+  },
+  {
+    "description": "Detect: establish harmful-content predicates for the image content of the current observation. [P Sec. 3.3] The tool name is reconstruction-authored. This tool analyzes image content only. Provider: openai:omni-moderation-latest. Provider modalities: image, text.",
+    "input_schema": {
+      "$defs": {
+        "Modality": {
+          "enum": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "title": "Modality",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "The arguments of a ``content_analysis`` tool. [P Fig. 16]\n\n``target_predicates``, ``descriptions``, and ``source`` are the printed\nargument names. The printed ``observation`` argument is the\npseudo-expression \"Interaction_History + [thought_text, action_text]\". Its\nexecutable form is ``verification_input``. ``predicate_ids`` and\n``modality`` are reconstruction-authored.",
+      "properties": {
+        "descriptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Descriptions",
+          "type": "array"
+        },
+        "modality": {
+          "$ref": "#/$defs/Modality",
+          "default": "text"
+        },
+        "predicate_ids": {
+          "anyOf": [
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predicate Ids"
+        },
+        "source": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Source",
+          "type": "array"
+        },
+        "target_predicates": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Target Predicates",
+          "type": "array"
+        },
+        "verification_input": {
+          "additionalProperties": true,
+          "title": "Verification Input",
+          "type": "object"
+        }
+      },
+      "required": [
+        "target_predicates",
+        "descriptions",
+        "verification_input"
+      ],
+      "title": "ContentAnalysisArguments",
+      "type": "object"
+    },
+    "name": "content_analysis.image_moderate"
+  },
+  {
+    "description": "Detect: check truthfulness and outdatedness predicates of the analyzed text against explicit sources. [P Sec. 3.3; Fig. 16] Configured sources: []. Backend: llm:factual_check. Supported modalities: text.",
+    "input_schema": {
+      "$defs": {
+        "Modality": {
+          "enum": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "title": "Modality",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "The arguments of a ``content_analysis`` tool. [P Fig. 16]\n\n``target_predicates``, ``descriptions``, and ``source`` are the printed\nargument names. The printed ``observation`` argument is the\npseudo-expression \"Interaction_History + [thought_text, action_text]\". Its\nexecutable form is ``verification_input``. ``predicate_ids`` and\n``modality`` are reconstruction-authored.",
+      "properties": {
+        "descriptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Descriptions",
+          "type": "array"
+        },
+        "modality": {
+          "$ref": "#/$defs/Modality",
+          "default": "text"
+        },
+        "predicate_ids": {
+          "anyOf": [
+            {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Predicate Ids"
+        },
+        "source": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Source",
+          "type": "array"
+        },
+        "target_predicates": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Target Predicates",
+          "type": "array"
+        },
+        "verification_input": {
+          "additionalProperties": true,
+          "title": "Verification Input",
+          "type": "object"
+        }
+      },
+      "required": [
+        "target_predicates",
+        "descriptions",
+        "verification_input"
+      ],
+      "title": "ContentAnalysisArguments",
+      "type": "object"
+    },
+    "name": "content_analysis.factual_check"
+  },
+  {
+    "description": "Search: enumerate the items that a query asks for from the supplied interaction history and the current observation and action. Each item carries its step and its source. [P Sec. 3.3] The tool name and schema are reconstruction-authored. Supported modalities: image, text.",
+    "input_schema": {
+      "additionalProperties": false,
+      "description": "The arguments of ``search.enumerate``. Reconstruction-authored.",
+      "properties": {
+        "query": {
+          "minLength": 1,
+          "title": "Query",
+          "type": "string"
+        },
+        "verification_input": {
+          "additionalProperties": true,
+          "title": "Verification Input",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "verification_input"
+      ],
+      "title": "SearchArguments",
+      "type": "object"
+    },
+    "name": "search.enumerate"
+  },
+  {
+    "description": "Binary-Check: answer each Boolean query about the supplied interaction history and the current observation and action. A flag is true, false, or null. Null means that the supplied observations do not answer the query. [P Sec. 3.3; Fig. 17] Supported modalities: image, text.",
+    "input_schema": {
+      "$defs": {
+        "SearchItemWire": {
+          "additionalProperties": false,
+          "description": "The tool-wire form of one ``SearchItem``.",
+          "properties": {
+            "evidence": {
+              "title": "Evidence",
+              "type": "string"
+            },
+            "source": {
+              "enum": [
+                "instruction",
+                "observation",
+                "action"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "step": {
+              "title": "Step",
+              "type": "integer"
+            },
+            "text": {
+              "title": "Text",
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "step",
+            "source",
+            "evidence"
+          ],
+          "title": "SearchItemWire",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "description": "The arguments of ``binary_check.general_query``. [P Fig. 17]\n\n``query`` and ``binary_flag`` are the printed argument names. The printed\n``observation`` argument is the pseudo-expression \"Interaction_History +\n[thought_text, action_text]\". Its executable form is ``verification_input``.",
+      "properties": {
+        "binary_flag": {
+          "const": true,
+          "default": true,
+          "title": "Binary Flag",
+          "type": "boolean"
+        },
+        "query": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Query",
+          "type": "array"
+        },
+        "supporting_items": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SearchItemWire"
+          },
+          "title": "Supporting Items",
+          "type": "array"
+        },
+        "verification_input": {
+          "additionalProperties": true,
+          "title": "Verification Input",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "verification_input"
+      ],
+      "title": "GeneralQueryArguments",
+      "type": "object"
+    },
+    "name": "binary_check.general_query"
+  },
+  {
+    "description": "Safety Certification: compute the two conditional world probabilities of Eq. 4 from the rule results and the rule weights, and apply the relative safety condition of Eq. 5 with the given threshold. Every rule result must be a Boolean. [P Eq. 4; Eq. 5; Fig. 19] Supported modalities: none. The tool reads rule results only.",
+    "input_schema": {
+      "additionalProperties": false,
+      "description": "The arguments of ``certification.probabilistic_inference``. [P Fig. 19]\n\n``rule_idx``, ``rule_execute``, ``rule_non_execute``, ``threshold``, and\n``certificate`` are the printed argument names. ``weights`` is\nreconstruction-authored: the printed call names no weights, so this\nstateless adapter takes them explicitly, one for each rule.",
+      "properties": {
+        "certificate": {
+          "const": "barrier-certificate",
+          "default": "barrier-certificate",
+          "title": "Certificate",
+          "type": "string"
+        },
+        "rule_execute": {
+          "items": {
+            "type": "boolean"
+          },
+          "title": "Rule Execute",
+          "type": "array"
+        },
+        "rule_idx": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "minItems": 1,
+          "title": "Rule Idx",
+          "type": "array"
+        },
+        "rule_non_execute": {
+          "items": {
+            "type": "boolean"
+          },
+          "title": "Rule Non Execute",
+          "type": "array"
+        },
+        "threshold": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Threshold"
+        },
+        "weights": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "title": "Weights",
+          "type": "array"
+        }
+      },
+      "required": [
+        "rule_idx",
+        "rule_execute",
+        "rule_non_execute",
+        "weights",
+        "threshold"
+      ],
+      "title": "ProbabilisticInferenceArguments",
+      "type": "object"
+    },
+    "name": "certification.probabilistic_inference"
+  },
+  {
+    "description": "Guardrail output: serialize the verified safety label, the violated rules, the textual explanation, and the remediation feedback of one verification. The label and the violated rules come from the verified findings and cannot be changed here. [P Eq. 1; Fig. 19] Supported modalities: none. The tool reads verified findings only.",
+    "input_schema": {
+      "$defs": {
+        "CircuitResultWire": {
+          "additionalProperties": false,
+          "description": "The tool-wire form of ``CircuitResult``.",
+          "properties": {
+            "action_predicate_id": {
+              "title": "Action Predicate Id",
+              "type": "string"
+            },
+            "excluded_rule_ids": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Excluded Rule Ids",
+              "type": "array"
+            },
+            "probability_execute": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "title": "Probability Execute"
+            },
+            "probability_non_execute": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "title": "Probability Non Execute"
+            },
+            "rule_execute": {
+              "items": {
+                "type": "boolean"
+              },
+              "title": "Rule Execute",
+              "type": "array"
+            },
+            "rule_ids": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Rule Ids",
+              "type": "array"
+            },
+            "rule_non_execute": {
+              "items": {
+                "type": "boolean"
+              },
+              "title": "Rule Non Execute",
+              "type": "array"
+            },
+            "safe": {
+              "title": "Safe",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "action_predicate_id",
+            "rule_ids",
+            "excluded_rule_ids",
+            "rule_execute",
+            "rule_non_execute",
+            "probability_execute",
+            "probability_non_execute",
+            "safe"
+          ],
+          "title": "CircuitResultWire",
+          "type": "object"
+        },
+        "ExplanationWire": {
+          "additionalProperties": false,
+          "description": "The tool-wire form of ``Explanation``.",
+          "properties": {
+            "feedback": {
+              "default": [],
+              "items": {
+                "type": "string"
+              },
+              "title": "Feedback",
+              "type": "array"
+            },
+            "textual_explanation": {
+              "title": "Textual Explanation",
+              "type": "string"
+            }
+          },
+          "required": [
+            "textual_explanation"
+          ],
+          "title": "ExplanationWire",
+          "type": "object"
+        },
+        "RuleFindingWire": {
+          "additionalProperties": false,
+          "description": "The tool-wire form of ``RuleFinding``.",
+          "properties": {
+            "action_predicate_id": {
+              "title": "Action Predicate Id",
+              "type": "string"
+            },
+            "description": {
+              "title": "Description",
+              "type": "string"
+            },
+            "logic": {
+              "title": "Logic",
+              "type": "string"
+            },
+            "reference": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Reference",
+              "type": "array"
+            },
+            "rule_id": {
+              "title": "Rule Id",
+              "type": "string"
+            },
+            "satisfied_execute": {
+              "title": "Satisfied Execute",
+              "type": "boolean"
+            },
+            "satisfied_non_execute": {
+              "title": "Satisfied Non Execute",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "rule_id",
+            "logic",
+            "description",
+            "reference",
+            "action_predicate_id",
+            "satisfied_execute",
+            "satisfied_non_execute"
+          ],
+          "title": "RuleFindingWire",
+          "type": "object"
+        },
+        "VerifiedFindingsWire": {
+          "additionalProperties": false,
+          "description": "The tool-wire form of ``VerifiedFindings``.",
+          "properties": {
+            "circuits": {
+              "items": {
+                "$ref": "#/$defs/CircuitResultWire"
+              },
+              "minItems": 1,
+              "title": "Circuits",
+              "type": "array"
+            },
+            "epsilon": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "title": "Epsilon"
+            },
+            "rules": {
+              "items": {
+                "$ref": "#/$defs/RuleFindingWire"
+              },
+              "title": "Rules",
+              "type": "array"
+            },
+            "safety_label": {
+              "title": "Safety Label",
+              "type": "boolean"
+            },
+            "violated_rules": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Violated Rules",
+              "type": "array"
+            }
+          },
+          "required": [
+            "safety_label",
+            "violated_rules",
+            "epsilon",
+            "circuits",
+            "rules"
+          ],
+          "title": "VerifiedFindingsWire",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "description": "The arguments of ``response.report_guardrail``.\n\nFig. 19 prints ``action_allowed``, ``violated_rules``, ``explanation``, and\n``feedback`` as free arguments of the agent. Here the label and the\nviolated rules come only from ``findings``, which are the serialized\n``VerifiedFindings`` of the pipeline. The explanation cannot overwrite them.",
+      "properties": {
+        "explanation": {
+          "$ref": "#/$defs/ExplanationWire"
+        },
+        "findings": {
+          "$ref": "#/$defs/VerifiedFindingsWire"
+        }
+      },
+      "required": [
+        "findings",
+        "explanation"
+      ],
+      "title": "ReportGuardrailArguments",
+      "type": "object"
+    },
+    "name": "response.report_guardrail"
+  },
+  {
+    "description": "Retrieve successful shielding workflows for a target action, ranked by keyword overlap. Only workflows stored for the same ASPM, rule context, and tool schema are returned.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "aspm_identifier": {
+          "minLength": 1,
+          "title": "Aspm Identifier",
+          "type": "string"
+        },
+        "keywords": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Keywords",
+          "type": "array"
+        },
+        "limit": {
+          "default": 3,
+          "maximum": 20,
+          "minimum": 1,
+          "title": "Limit",
+          "type": "integer"
+        },
+        "rule_context_sha256": {
+          "minLength": 1,
+          "title": "Rule Context Sha256",
+          "type": "string"
+        },
+        "target_action": {
+          "minLength": 1,
+          "title": "Target Action",
+          "type": "string"
+        },
+        "tool_schema_sha256": {
+          "minLength": 1,
+          "title": "Tool Schema Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "target_action",
+        "rule_context_sha256",
+        "aspm_identifier",
+        "tool_schema_sha256"
+      ],
+      "title": "RetrieveWorkflowArguments",
+      "type": "object"
+    },
+    "name": "memory-db.retrieve_workflow"
+  },
+  {
+    "description": "Store one operationally successful shielding workflow in long-term memory. Reconstruction-authored tool name. A frozen memory rejects the call.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "operationally_successful": {
+          "const": true,
+          "title": "Operationally Successful",
+          "type": "boolean"
+        },
+        "workflow": {
+          "additionalProperties": true,
+          "title": "Workflow",
+          "type": "object"
+        }
+      },
+      "required": [
+        "workflow",
+        "operationally_successful"
+      ],
+      "title": "StoreWorkflowArguments",
+      "type": "object"
+    },
+    "name": "memory-db.store_workflow"
+  },
+  {
+    "description": "Extract the action predicates that the current agent output invokes and match all higher-level nodes of the action tree.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "verification": {
+          "additionalProperties": true,
+          "title": "Verification",
+          "type": "object"
+        }
+      },
+      "required": [
+        "verification"
+      ],
+      "title": "ExtractStepActionArguments",
+      "type": "object"
+    },
+    "name": "trajectory-analysis.extract_step_action"
+  },
+  {
+    "description": "Retrieve the action rule circuits of the given action predicates from the ASPM.",
+    "input_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "action_predicate_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Action Predicate Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "action_predicate_ids"
+      ],
+      "title": "GetActionCircuitArguments",
+      "type": "object"
+    },
+    "name": "aspm-server.get_action_circuit"
+  }
+]

@@ -1,0 +1,1 @@
+{"label": "unsafe", "policy_ids": ["reddit.document_001.c00.p002"], "reason": "The action discloses someone's personal or confidential information without their consent, which violates the Reddit policy prohibiting such behavior."}

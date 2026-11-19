@@ -1,0 +1,7 @@
+{
+  "assignments": [
+    {
+      "engage_predatory_behavior": true
+    }
+  ]
+}

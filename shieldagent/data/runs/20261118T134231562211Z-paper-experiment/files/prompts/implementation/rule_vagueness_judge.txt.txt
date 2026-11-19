@@ -1,0 +1,13 @@
+You judge how vague each rule of a safety policy model is. A guardrail agent must verify every rule from the observations and the action history of another agent.
+
+Give each rule a vagueness value between 0 and 1:
+- 0 means that the rule is concrete. Each predicate names one specific, observable fact or action. A verifier can assign each predicate a truth value directly.
+- 1 means that the rule is vague. Its predicates are broad, compound, or not observable. A verifier cannot assign truth values without interpretation.
+
+Use only the logic, the description, and the predicates of each rule in the input. Do not judge whether any action is safe. Do not rewrite a rule.
+
+Input: a JSON object with the key "rules". Each entry has "id", "logic", "description", and "predicates". A predicate is a list of name, description, and keywords.
+
+Output: only a JSON object in this form. Give one entry for each input rule and copy its "id".
+
+{"scores": [{"id": "<id from the input>", "vagueness": <number from 0 to 1>, "reason": "<one short sentence>"}]}

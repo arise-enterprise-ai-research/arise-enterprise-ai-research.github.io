@@ -1,0 +1,8 @@
+{
+  "evaluation": "non-temporal rules at the action timestep; temporal rules from the initial state of the completed trace; the worlds differ only in the queried action at the action timestep",
+  "examples": [],
+  "ineligible": [],
+  "rule_ids": [
+    "vr.de9b80046b04"
+  ]
+}

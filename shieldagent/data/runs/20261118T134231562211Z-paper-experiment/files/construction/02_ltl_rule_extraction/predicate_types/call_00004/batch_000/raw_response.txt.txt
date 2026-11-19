@@ -1,0 +1,1 @@
+{"types": [{"id": "is_graphic.012b2eca", "type": "state", "reason": "The predicate describes a condition of the content being graphic or explicit, not an action."}]}

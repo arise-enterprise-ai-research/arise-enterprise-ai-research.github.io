@@ -1,0 +1,7 @@
+{
+  "accepted": 8,
+  "failures": [],
+  "normalizations": [],
+  "parsed": 8,
+  "rejected_unsupported": 0
+}

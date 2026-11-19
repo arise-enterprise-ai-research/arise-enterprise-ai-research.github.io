@@ -1,0 +1,6 @@
+{
+  "model": "text-embedding-3-large",
+  "texts": [
+    "label_community\nA community is labeled to indicate its nature, specifically whether it contains graphic, sexually explicit, or offensive content.\ncommunity, labeling, classification, graphic, sexually explicit, offensive\naction"
+  ]
+}

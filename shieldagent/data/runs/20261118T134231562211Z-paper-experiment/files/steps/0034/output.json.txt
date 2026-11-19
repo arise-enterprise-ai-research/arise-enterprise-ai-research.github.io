@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 0.6755882909928914,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "{\"types\": [{\"id\": \"is_graphic.012b2eca\", \"type\": \"state\", \"reason\": \"The predicate describes a condition of the content being graphic or explicit, not an action.\"}]}",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 45,
+    "prompt_tokens": 349,
+    "total_tokens": 394
+  }
+}

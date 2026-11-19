@@ -1,0 +1,142 @@
+# Construction report
+
+Run `20261118T134231562211Z-paper-experiment`, command `paper-experiment`, status **partially_trained**.
+
+## Stages
+
+| Stage | Status | Run |
+|---|---|---|
+| action_based_aspm_clustering | completed | `20261118T134231562211Z-paper-experiment` |
+| aspm_structure_optimization | completed | `20261118T134231562211Z-paper-experiment` |
+| aspm_weight_learning | completed | `20261118T134231562211Z-paper-experiment` |
+| expert_review | skipped | `20261118T134231562211Z-paper-experiment` |
+| ltl_rule_extraction | completed | `20261118T134231562211Z-paper-experiment` |
+| policy_extraction | completed | `20261118T134231562211Z-paper-experiment` |
+| sources | completed | `20261118T134231562211Z-paper-experiment` |
+
+## Policy Input
+
+| Document | Source | Retrieval | Raw SHA-256 | Characters |
+|---|---|---|---|---|
+| document_000 | eu_ai_act_2024_1689_article_5 | preserved_copy | 242b88140ecf | 11151 |
+| document_001 | reddit_rules | preserved_copy | f33b786ab42c | 3530 |
+
+## Policy Extraction
+
+| Document | Parsed | Accepted | Unsupported | Failures |
+|---|---|---|---|---|
+| document_000 | 8 | 0 | 8 | 0 |
+| document_001 | 8 | 8 | 0 | 0 |
+
+## LTL Rule Extraction
+
+18 rules were accepted. 1 validation failures are recorded.
+
+## ASPM Structure Optimization
+
+Vagueness is the Eq. 3 embedding proxy. It is not the GPT-4o judge of Fig. 6.
+
+| | Predicates | Rules | Average rule vagueness |
+|---|---|---|---|
+| Before | 43 | 18 | 0.5736 |
+| After | 41 | 18 | 0.5766 |
+
+Stop reason: no_change. Iterations: 2 of 10. Accepted refinements: 12 of 200. Accepted merges: 1.
+
+Table 8 of the paper, as reference values only:
+
+| Environment | Predicates before | Rules before | Vagueness before | Predicates after | Rules after | Vagueness after |
+|---|---|---|---|---|---|---|
+| Shopping | 920 | 562 | 0.71 | 461 | 240 | 0.38 |
+| CMS | 590 | 326 | 0.69 | 225 | 120 | 0.34 |
+| Reddit | 1150 | 730 | 0.77 | 490 | 178 | 0.49 |
+| GitLab | 1079 | 600 | 0.62 | 363 | 198 | 0.51 |
+| Maps | 430 | 202 | 0.64 | 210 | 104 | 0.25 |
+| SuiteCRM | 859 | 492 | 0.66 | 390 | 240 | 0.32 |
+
+## Action-based ASPM Clustering
+
+19 state predicates, k = 4, 4 clusters after the co-occurrence merge, 9 connected components. 2 rules are in no circuit. 6 rules without a state predicate are attached directly to their actions.
+
+## Training Dataset
+
+Origin simulated_pseudo_learning. 31 trajectories: 5 test, 23 train, 3 validation.
+
+## ASPM Weight Learning
+
+Weight status: **partially_trained**.
+
+| Circuit | Status | Train examples | Final train loss | Loss at zero weights | Test loss |
+|---|---|---|---|---|---|
+| ban_community.7c7f6afb | untrained | 0 | n/a | n/a | n/a |
+| ban_user.505ad330 | untrained | 0 | n/a | n/a | n/a |
+| report_harassment.40aa2577 | untrained | 0 | n/a | n/a | n/a |
+| take_action_against_harassment.abe19749 | untrained | 0 | n/a | n/a | n/a |
+| engage_in_spam.59fb1b9d | trained | 1 | 0.0000 | 0.0000 | n/a |
+| engage_in_disruptive_behavior.f570183f | untrained | 0 | n/a | n/a | n/a |
+| engage_in_content_manipulation.f4db380f | trained | 2 | 0.0000 | 0.0000 | n/a |
+| reveal_personal_info.e1661515 | trained | 1 | 0.0000 | 0.0000 | n/a |
+| post_intimate_media.003415a6 | untrained | 0 | n/a | n/a | n/a |
+| threaten_to_post_media.98c3c806 | untrained | 0 | n/a | n/a | n/a |
+| share_content.0582158e | untrained | 0 | n/a | n/a | n/a |
+| engage_predatory_behavior.16bd686a | trained | 2 | 0.0000 | 0.0000 | n/a |
+| intentionally_mislead.d1fc1a98 | trained | 3 | 0.0000 | 0.0000 | 0.0000 |
+| impersonate_entity.1246f277 | trained | 3 | 0.0000 | 0.0000 | 0.0000 |
+| label_content.1ab5bcfc | untrained | 0 | n/a | n/a | n/a |
+| post_content.5d43f06f | untrained | 0 | n/a | n/a | n/a |
+| solicit_transaction.f60efb4e | untrained | 0 | n/a | n/a | n/a |
+| facilitate_transaction.07d054e6 | trained | 1 | 0.0000 | 0.0000 | n/a |
+| label_community.edfa82ad | untrained | 0 | n/a | n/a | n/a |
+| user_action.2aa9f62c | trained | 6 | 0.0000 | 0.0000 | 0.0000 |
+| interfere_accessibility.f98d5ade | trained | 3 | 0.0000 | 0.0000 | 0.0000 |
+| instigate_harassment.c43b50f2 | trained | 1 | 0.0000 | 0.0000 | n/a |
+
+## Reproduction choices
+
+22 fabricated choices and 3 source-stated values are recorded in fabrications.jsonl.
+
+- `F-SOURCE-EU-AI-ACT-ARTICLE-5` (Policy Input): construction.policy_documents
+- `F-SOURCE-REDDIT-RULES` (Policy Input): construction.policy_documents
+- `F-POLICY-NORMALIZATION` (Policy Input): policy_input.normalization
+- `F-GPT4O-SNAPSHOT` (Policy Extraction): llm.model
+- `F-LLM-SAMPLING` (Policy Extraction): llm.temperature, llm.seed
+- `F-PROMPT-ENVELOPE` (Policy Extraction): prompt envelope
+- `F-POLICY-CHUNKING` (Policy Extraction): policy_extraction.max_chunk_characters
+- `F-OUTPUT-VALIDATION` (Policy Extraction): policy_extraction.*, ltl_rule_extraction.on_validation_failure
+- `F-PREDICATE-TYPES` (LTL Rule Extraction): ltl_rule_extraction.predicate_types
+- `F-RULE-ENRICHMENT` (LTL Rule Extraction): rule identity and description
+- `F-EMBEDDING-MODEL` (ASPM Structure Optimization): embedding_model.model
+- `F-VAGUENESS` (ASPM Structure Optimization): aspm_structure_optimization.vagueness_top_k
+- `P-MAX-ITERATIONS` (ASPM Structure Optimization): aspm_structure_optimization.max_iterations
+- `F-REFINEMENT-BUDGET` (ASPM Structure Optimization): aspm_structure_optimization.refinement_budget
+- `F-OPTIMIZATION-PROCEDURE` (ASPM Structure Optimization): Algorithm 2 interpretation
+- `F-RP-CANDIDATES` (ASPM Structure Optimization): aspm_structure_optimization.redundancy_*
+- `F-WEIGHT-BOUNDARY` (ASPM Structure Optimization): optimized ASPM weights
+- `P-ADJACENCY-RULE` (Action-based ASPM Clustering): adjacency
+- `F-CLUSTERING` (Action-based ASPM Clustering): action_based_aspm_clustering.*
+- `F-PSEUDO-LEARNING-RECIPE` (Training Dataset): construction.training_data
+- `F-PSEUDO-LEARNING-BUDGET` (Training Dataset): training_dataset.scenario_groups_*
+- `F-DATASET-SPLIT` (Training Dataset): training_dataset.split_fractions, training_dataset.seed
+- `F-WEIGHT-LEARNING` (ASPM Weight Learning): aspm_weight_learning.*
+- `F-TWO-WORLD-FEATURES` (ASPM Weight Learning): Eq. 4 training features
+- `P-HINGE-LOSS` (ASPM Weight Learning): loss
+
+## Missing information
+
+- `M-ORIGINAL-POLICY-CORPUS`: The policy documents behind Table 8 are not published.
+- `M-PAPER-POLICY-IDENTIFIERS`: Identifiers such as reddit.policies.reddit_rules.21 do not map to a published clause numbering.
+- `M-REQUEST-ENVELOPES`: The GPT-4o snapshot, sampling settings, and request payloads are not published.
+- `M-FEW-SHOT-EXAMPLES`: The few-shot examples of the VR and RP templates are not printed. Nothing replaces them.
+- `M-OPTIMIZATION-SETTINGS`: The refinement budget, k, the embedding configuration, and the RP clustering are not published.
+- `M-VAGUENESS-JUDGE-PROMPT`: The GPT-4o judge prompt and scale of Fig. 6 are not published.
+- `M-CLUSTERING-SETTINGS`: The threshold theta and the cluster count k of Algorithm 3 are not published.
+- `M-TRAINING-DATA`: The safety-labeled trajectories and the pseudo-learning generator are not published.
+- `M-LEARNED-WEIGHTS`: The learned rule weights are not published. Weights of this run are not author weights.
+- `M-TRAINING-SETTINGS`: The initialization, learning rate, epochs, and example order are not published.
+
+## Limits
+
+- Validation checks syntax, references, and source spans. It does not show that a formula means what the policy text means.
+- Eq. 6 is zero at zero weights and wherever a margin is zero. A low loss alone is no evidence of learning.
+- Simulated or fixture labels are fabricated content. Results on them are consistency results, not real-world guardrail accuracy.
+- The run does not reproduce the authors' corpora, prompts as sent, or weights.

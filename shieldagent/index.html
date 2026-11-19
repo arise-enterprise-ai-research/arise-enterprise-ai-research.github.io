@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShieldAgent · Run explorer</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="vendor/highlight-github-11.12.0.min.css" />
+    <!-- Supply Cytoscape's positioning rule locally so it needs no inline stylesheet. -->
+    <link
+      id="__________cytoscape_stylesheet"
+      rel="stylesheet"
+      href="viewer.css"
+    />
+    <script type="module" src="viewer.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#activity">Skip to provenance</a>
+    <header class="app-header">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 3 4.5 6v5.4c0 4.6 3 7.8 7.5 9.6 4.5-1.8 7.5-5 7.5-9.6V6Z"
+          />
+          <path d="m8.5 12 2.3 2.3 4.8-5" /></svg
+        ><strong>ShieldAgent</strong><span class="brand-divider">/</span
+        ><span>Run explorer</span>
+      </div>
+      <div class="run-controls">
+        <a id="home-link" class="home-link" hidden>Benchmark Explorer</a>
+        <label class="sr-only" for="run-select">Saved run</label
+        ><select id="run-select" disabled>
+          <option>Loading saved runs…</option></select
+        ><button id="refresh" class="button" type="button">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M16 7a6.5 6.5 0 1 0 .3 5M16 3v4h-4" /></svg
+          >Refresh
+        </button>
+      </div>
+    </header>
+    <main id="app">
+      <div id="app-message" class="app-message" role="status">
+        Reading saved provenance…
+      </div>
+      <div id="workspace" class="workspace" hidden>
+        <section class="work-area" aria-label="Run diagram and activity">
+          <header class="run-heading">
+            <div>
+              <h1 id="run-title">Paper experiment</h1>
+              <p id="run-subtitle" class="muted"></p>
+            </div>
+            <span class="read-only">Read only</span>
+          </header>
+          <div id="run-stats" class="run-stats"></div>
+          <button id="run-outcome" class="outcome" type="button"></button>
+          <div id="warnings" class="warnings" hidden></div>
+          <div id="construction-record"></div>
+          <div id="content-origins"></div>
+          <section class="pipeline-section" aria-labelledby="pipeline-title">
+            <div class="section-heading">
+              <h2 id="pipeline-title">Pipeline</h2>
+              <div class="diagram-legend">
+                <span><i class="legend-dot complete"></i>Recorded</span
+                ><span
+                  ><i class="legend-dot pending"></i>Partial or running</span
+                ><span><i class="legend-dot error"></i>Incomplete</span
+                ><span
+                  ><i class="legend-dot absent"></i>Skipped or not
+                  recorded</span
+                >
+              </div>
+              <button id="all-stages" class="text-button" type="button">
+                All stages
+              </button>
+            </div>
+            <div
+              class="diagram-scroll"
+              tabindex="0"
+              aria-label="Pipeline diagram. Scroll horizontally on small screens."
+            >
+              <div class="diagram">
+                <div class="construction-panels">
+                  <section
+                    class="phase-panel policy-panel"
+                    aria-labelledby="policy-title"
+                  >
+                    <h3 id="policy-title">Policy input</h3>
+                    <button
+                      class="stage-node"
+                      data-stage="policy_input"
+                      type="button"
+                    >
+                      <span class="node-label">Policy input</span
+                      ><span class="node-detail"
+                        >Raw sources and normalized text</span
+                      ><span class="node-status"></span>
+                    </button>
+                    <div class="vertical-edge" aria-hidden="true"></div>
+                    <button
+                      class="stage-node"
+                      data-stage="policy_extraction"
+                      type="button"
+                    >
+                      <span class="node-label">Policy extraction</span
+                      ><span class="node-detail"
+                        >Natural language to policies</span
+                      ><span class="node-status"></span>
+                    </button>
+                    <div class="vertical-edge" aria-hidden="true"></div>
+                    <button
+                      class="stage-node"
+                      data-stage="ltl_rule_extraction"
+                      type="button"
+                    >
+                      <span class="node-label">LTL rule extraction</span
+                      ><span class="node-detail"
+                        >Predicates and logical rules</span
+                      ><span class="node-status"></span>
+                    </button>
+                  </section>
+                  <div class="panel-edge" aria-hidden="true">
+                    <svg viewBox="0 0 26 20">
+                      <path d="M0 10h23m-5-5 5 5-5 5" />
+                    </svg>
+                  </div>
+                  <section
+                    class="phase-panel optimization-panel"
+                    aria-labelledby="optimization-title"
+                  >
+                    <h3 id="optimization-title">Structure optimization</h3>
+                    <div class="optimization-row">
+                      <button
+                        class="stage-node illustrated"
+                        data-stage="refinement"
+                        type="button"
+                      >
+                        <span class="node-label">Verifiability refinement</span
+                        ><svg
+                          class="node-illustration"
+                          viewBox="0 0 150 58"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M21 11h30M21 43h30M96 11h30M96 43h30M66 27h18m-5-4 5 4-5 4"
+                          />
+                          <circle cx="15" cy="11" r="6" />
+                          <circle cx="15" cy="43" r="6" />
+                          <circle cx="91" cy="11" r="6" />
+                          <circle cx="91" cy="43" r="6" />
+                          <rect
+                            class="action-shape"
+                            x="49"
+                            y="5"
+                            width="12"
+                            height="12"
+                            rx="3"
+                          />
+                          <rect
+                            class="action-shape"
+                            x="49"
+                            y="37"
+                            width="12"
+                            height="12"
+                            rx="3"
+                          />
+                          <rect
+                            class="action-shape"
+                            x="125"
+                            y="5"
+                            width="12"
+                            height="12"
+                            rx="3"
+                          />
+                          <rect
+                            class="action-shape"
+                            x="125"
+                            y="37"
+                            width="12"
+                            height="12"
+                            rx="3"
+                          /></svg
+                        ><span class="node-detail"
+                          >Make rules verifiable and atomic</span
+                        ><span class="node-status"></span>
+                      </button>
+                      <div class="small-edge" aria-hidden="true">
+                        <svg viewBox="0 0 20 20">
+                          <path d="M0 10h17m-5-5 5 5-5 5" />
+                        </svg>
+                      </div>
+                      <button
+                        class="stage-node illustrated"
+                        data-stage="pruning"
+                        type="button"
+                      >
+                        <span class="node-label">Redundancy pruning</span
+                        ><svg
+                          class="node-illustration"
+                          viewBox="0 0 150 58"
+                          aria-hidden="true"
+                        >
+                          <ellipse cx="45" cy="28" rx="34" ry="23" />
+                          <path d="M33 20 57 36m27-8h24m-5-5 5 5-5 5" />
+                          <circle cx="30" cy="17" r="7" />
+                          <circle cx="60" cy="39" r="7" />
+                          <circle cx="119" cy="28" r="9" /></svg
+                        ><span class="node-detail"
+                          >Merge equivalent predicates</span
+                        ><span class="node-status"></span>
+                      </button>
+                    </div>
+                    <div class="optimization-support">
+                      <span class="loop-caption"
+                        ><svg viewBox="0 0 20 20" aria-hidden="true">
+                          <path d="M16 7a6 6 0 1 0 0 6M16 3v4h-4" /></svg
+                        >Refine, prune, repeat</span
+                      ><button
+                        class="stage-node compact"
+                        data-stage="embeddings"
+                        type="button"
+                      >
+                        <span class="node-label">Embedding model</span
+                        ><span class="node-detail"
+                          >Vagueness and similarity</span
+                        ><span class="node-status"></span>
+                      </button>
+                    </div>
+                    <div class="vertical-edge" aria-hidden="true"></div>
+                    <button
+                      class="stage-node compact"
+                      data-stage="expert_review"
+                      type="button"
+                    >
+                      <span class="node-label">Expert review</span
+                      ><span class="node-detail">Supplied corrections only</span
+                      ><span class="node-status"></span>
+                    </button>
+                  </section>
+                  <div class="panel-edge" aria-hidden="true">
+                    <svg viewBox="0 0 26 20">
+                      <path d="M0 10h23m-5-5 5 5-5 5" />
+                    </svg>
+                  </div>
+                  <section
+                    class="phase-panel training-panel"
+                    aria-labelledby="training-title"
+                  >
+                    <h3 id="training-title">Model weight learning</h3>
+                    <button
+                      class="stage-node illustrated"
+                      data-stage="clustering"
+                      type="button"
+                    >
+                      <span class="node-label">Action-based clustering</span
+                      ><svg
+                        class="node-illustration"
+                        viewBox="0 0 210 64"
+                        aria-hidden="true"
+                      >
+                        <ellipse cx="53" cy="30" rx="40" ry="28" />
+                        <ellipse cx="155" cy="30" rx="40" ry="28" />
+                        <path
+                          d="m30 18 38-6 5 34-43-6 0-22 43 28m59-28 38-6 5 34-43-6 0-22 43 28"
+                        />
+                        <circle cx="30" cy="18" r="6" />
+                        <circle cx="68" cy="12" r="6" />
+                        <circle cx="30" cy="40" r="6" />
+                        <rect
+                          class="action-shape"
+                          x="67"
+                          y="40"
+                          width="12"
+                          height="12"
+                          rx="3"
+                        />
+                        <circle cx="132" cy="18" r="6" />
+                        <circle cx="170" cy="12" r="6" />
+                        <circle cx="132" cy="40" r="6" />
+                        <rect
+                          class="action-shape"
+                          x="169"
+                          y="40"
+                          width="12"
+                          height="12"
+                          rx="3"
+                        /></svg
+                      ><span class="node-status"></span>
+                    </button>
+                    <div class="vertical-edge" aria-hidden="true"></div>
+                    <button
+                      class="stage-node"
+                      data-stage="training_dataset"
+                      type="button"
+                    >
+                      <span class="node-label">Training dataset</span
+                      ><span class="node-detail"
+                        >Labeled trajectories per circuit</span
+                      ><span class="node-status"></span>
+                    </button>
+                    <div class="vertical-edge" aria-hidden="true"></div>
+                    <button
+                      class="stage-node"
+                      data-stage="weight_learning"
+                      type="button"
+                    >
+                      <span class="node-label">Weight learning</span
+                      ><span class="node-detail"
+                        >Eq. 6 hinge loss per circuit</span
+                      ><span class="node-status"></span>
+                    </button>
+                  </section>
+                </div>
+                <div class="model-boundary">
+                  <span>Constructed ASPM</span
+                  ><svg viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M10 0v17m-5-5 5 5 5-5" /></svg
+                  ><span>Shielding</span>
+                </div>
+                <section class="runtime-panel" aria-label="Shielding pipeline">
+                  <button
+                    class="stage-node compact"
+                    data-stage="action_extraction"
+                    type="button"
+                  >
+                    <span class="node-label">Action extraction</span
+                    ><span class="node-status"></span></button
+                  ><span class="runtime-edge" aria-hidden="true"></span>
+                  <button
+                    class="stage-node compact"
+                    data-stage="shielding_plan"
+                    type="button"
+                  >
+                    <span class="node-label">Shielding plan</span
+                    ><span class="node-status"></span></button
+                  ><span class="runtime-edge" aria-hidden="true"></span>
+                  <button
+                    class="stage-node compact"
+                    data-stage="tools"
+                    type="button"
+                  >
+                    <span class="node-label">Tools and verifiers</span
+                    ><span class="node-status"></span></button
+                  ><span class="runtime-edge" aria-hidden="true"></span>
+                  <button
+                    class="stage-node compact"
+                    data-stage="formal_verify"
+                    type="button"
+                  >
+                    <span class="node-label">Formal verification</span
+                    ><span class="node-status"></span></button
+                  ><span class="runtime-edge" aria-hidden="true"></span>
+                  <button
+                    class="stage-node compact"
+                    data-stage="guardrail_output"
+                    type="button"
+                  >
+                    <span class="node-label">Guardrail output</span
+                    ><span class="node-status"></span>
+                  </button>
+                </section>
+              </div>
+            </div>
+            <p class="diagram-caption">
+              Select a component to inspect its recorded activity. A completed
+              call is not proof that its output is correct.
+              <span class="mobile-hint"
+                >Scroll the diagram sideways to see every component.</span
+              >
+            </p>
+          </section>
+          <section
+            id="activity"
+            class="activity"
+            aria-labelledby="activity-title"
+          >
+            <div class="activity-heading">
+              <div>
+                <h2 id="activity-title">All stages</h2>
+                <span id="activity-count" class="muted"></span>
+              </div>
+              <div
+                class="segmented"
+                role="tablist"
+                aria-label="Provenance view"
+              >
+                <button
+                  id="structure-tab"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="activity-body"
+                  data-view="structure"
+                  tabindex="-1"
+                >
+                  Structure
+                </button>
+                <button
+                  id="timeline-tab"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="activity-body"
+                  data-view="timeline"
+                >
+                  Timeline</button
+                ><button
+                  id="artifacts-tab"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="activity-body"
+                  data-view="artifacts"
+                  tabindex="-1"
+                >
+                  Artifacts
+                </button>
+              </div>
+            </div>
+            <div class="activity-filters">
+              <label class="search-field"
+                ><svg viewBox="0 0 20 20" aria-hidden="true">
+                  <circle cx="8.5" cy="8.5" r="5.5" />
+                  <path d="m13 13 4 4" /></svg
+                ><input
+                  id="search"
+                  type="search"
+                  placeholder="Find a component, call, or artifact"
+                  aria-label="Search activity" /></label
+              ><label class="sr-only" for="kind-filter">Call type</label
+              ><select id="kind-filter">
+                <option value="all">All calls</option>
+                <option value="model">AI calls</option>
+                <option value="tool">Tool calls</option>
+                <option value="embedding">Embeddings</option>
+                <option value="pipeline">Pipeline stages</option>
+                <option value="error">Failed steps</option>
+              </select>
+            </div>
+            <div
+              id="activity-body"
+              class="activity-body"
+              role="tabpanel"
+              aria-labelledby="timeline-tab"
+              tabindex="0"
+            ></div>
+          </section>
+        </section>
+        <aside
+          id="inspector"
+          class="inspector"
+          aria-labelledby="inspector-title"
+        >
+          <header class="inspector-header">
+            <div>
+              <p id="inspector-context" class="inspector-context">
+                Run overview
+              </p>
+              <h2 id="inspector-title">Provenance</h2>
+            </div>
+            <button
+              id="copy"
+              class="icon-button"
+              type="button"
+              aria-label="Copy displayed data"
+              title="Copy displayed data"
+            >
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <rect x="7" y="7" width="9" height="10" rx="1.5" />
+                <path d="M12 7V3H3v10h4" />
+              </svg>
+            </button>
+          </header>
+          <div id="inspector-meta" class="inspector-meta"></div>
+          <div class="detail-tabs" role="tablist" aria-label="Call details">
+            <button
+              id="input-tab"
+              role="tab"
+              aria-selected="true"
+              aria-controls="detail-body"
+              data-detail="input"
+            >
+              Input</button
+            ><button
+              id="output-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="detail-body"
+              data-detail="output"
+              tabindex="-1"
+            >
+              Output</button
+            ><button
+              id="reasoning-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="detail-body"
+              data-detail="reasoning"
+              tabindex="-1"
+            >
+              Reasoning</button
+            ><button
+              id="details-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="detail-body"
+              data-detail="details"
+              tabindex="-1"
+            >
+              Details</button
+            ><button
+              id="raw-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="detail-body"
+              data-detail="raw"
+              tabindex="-1"
+            >
+              Raw
+            </button>
+          </div>
+          <div
+            id="detail-body"
+            class="detail-body"
+            role="tabpanel"
+            aria-labelledby="input-tab"
+            tabindex="0"
+          ></div>
+          <footer class="inspector-footer">
+            <span id="artifact-location"
+              >Saved files only. No new AI calls.</span
+            ><a id="download" hidden>Download original</a>
+          </footer>
+        </aside>
+      </div>
+    </main>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </body>
+</html>

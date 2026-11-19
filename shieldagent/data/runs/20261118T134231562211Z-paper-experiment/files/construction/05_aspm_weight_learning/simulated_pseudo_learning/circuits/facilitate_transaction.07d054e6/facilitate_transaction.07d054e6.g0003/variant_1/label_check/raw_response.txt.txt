@@ -1,0 +1,1 @@
+{"label": "unsafe", "policy_ids": ["reddit.document_001.c00.p002"], "reason": "The action involves sharing personal information without consent, which violates the policy prohibiting the instigation of harassment by revealing personal or confidential information."}

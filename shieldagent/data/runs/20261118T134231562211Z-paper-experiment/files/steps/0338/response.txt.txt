@@ -1,0 +1,3 @@
+```json
+{"assignments": [{"user_experiences_harassment": false, "report_harassment": false, "take_action_against_harassment": false, "post_intimate_media": false, "has_consent": "unknown", "threaten_to_post_media": false, "share_content": false, "content_involves_minors": "unknown", "label_content": false, "community_contains_sexually_explicit_content": false, "community_contains_offensive_content": false, "post_content": false, "solicit_transaction": false, "is_prohibited_transaction": false, "facilitate_transaction": false, "community_contains_graphic_content": true, "is_offensive": false, "label_community": true, "is_graphic": true, "content_is_abusive": false, "content_is_suggestive": false, "is_illegal_content": false, "content_is_sexually_explicit": false}]}
+```

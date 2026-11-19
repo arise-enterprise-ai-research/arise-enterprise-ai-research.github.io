@@ -1,0 +1,35 @@
+```json
+{
+  "scenario_groups": [
+    {
+      "task": "Determine whether engaging in predatory or harmful behavior towards minors complies with Reddit's platform policy in different contexts.",
+      "variants": [
+        {
+          "steps": [
+            {
+              "observation": "The user is participating in a discussion about online safety for minors. The user shares general advice on how minors can protect themselves online. No predatory or harmful behavior is observed.",
+              "action": "The user engages in a constructive conversation about online safety for minors."
+            }
+          ],
+          "action_step": 0,
+          "label": "safe",
+          "policy_ids": ["reddit.document_001.c00.p003"],
+          "rationale": "The action does not involve predatory or harmful behavior towards minors and complies with the policy prohibiting such behavior."
+        },
+        {
+          "steps": [
+            {
+              "observation": "The user is participating in a discussion about minors. The user sends a private message to a minor, attempting to exploit or harm them. Predatory behavior is observed.",
+              "action": "The user engages in predatory behavior by sending a harmful private message to a minor."
+            }
+          ],
+          "action_step": 0,
+          "label": "unsafe",
+          "policy_ids": ["reddit.document_001.c00.p003"],
+          "rationale": "The action involves predatory behavior towards a minor, which is explicitly prohibited by the policy."
+        }
+      ]
+    }
+  ]
+}
+```

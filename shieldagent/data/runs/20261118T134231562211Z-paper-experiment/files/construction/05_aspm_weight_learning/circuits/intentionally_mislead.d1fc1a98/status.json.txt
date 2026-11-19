@@ -1,0 +1,169 @@
+{
+  "action_predicate_id": "intentionally_mislead.d1fc1a98",
+  "after_training": {
+    "test": {
+      "examples": 1,
+      "loss": 0.0,
+      "margin": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "minimum": 0.0
+      },
+      "mean_probability_execute": 0.5,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 1,
+      "unsafe_examples": 1
+    },
+    "train": {
+      "examples": 3,
+      "loss": 0.0,
+      "margin": {
+        "maximum": -0.002045134813846383,
+        "mean": -0.002045134813846383,
+        "minimum": -0.002045134813846383
+      },
+      "mean_probability_execute": 0.49897743259307675,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 3
+    },
+    "validation": {
+      "examples": 0,
+      "loss": null,
+      "margin": null,
+      "mean_probability_execute": null,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 0
+    }
+  },
+  "before_training": {
+    "test": {
+      "examples": 1,
+      "loss": 0.0,
+      "margin": {
+        "maximum": 0.0,
+        "mean": 0.0,
+        "minimum": 0.0
+      },
+      "mean_probability_execute": 0.5,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 1,
+      "unsafe_examples": 1
+    },
+    "train": {
+      "examples": 3,
+      "loss": 0.00045486178621728657,
+      "margin": {
+        "maximum": 0.00045486178621728657,
+        "mean": 0.00045486178621728657,
+        "minimum": 0.00045486178621728657
+      },
+      "mean_probability_execute": 0.5002274308931086,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 0.0
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": 1.0
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 3
+    },
+    "validation": {
+      "examples": 0,
+      "loss": null,
+      "margin": null,
+      "mean_probability_execute": null,
+      "safe_examples": 0,
+      "threshold_behavior": [
+        {
+          "epsilon": 0.0,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        },
+        {
+          "epsilon": 0.1,
+          "safe_certified_safe": null,
+          "unsafe_certified_unsafe": null
+        }
+      ],
+      "tied_margins": 0,
+      "unsafe_examples": 0
+    }
+  },
+  "eligible_examples": {
+    "test": 1,
+    "train": 3,
+    "validation": 0
+  },
+  "epochs": 100,
+  "final_train_loss": 0.0,
+  "final_weight_norm": 0.004090275330328785,
+  "gradient_steps": 1,
+  "ineligible_examples": 0,
+  "initial_train_loss": 0.00045486178621728657,
+  "initial_weight_norm": 0.0009097236351749919,
+  "loss_at_zero_weights": 0.0,
+  "rule_ids": [
+    "reddit.document_001.c00.p004.r00"
+  ],
+  "seed": 1082137750,
+  "status": "trained",
+  "weight_change_norm": 0.004999998965503777,
+  "zero_influence_rules": []
+}

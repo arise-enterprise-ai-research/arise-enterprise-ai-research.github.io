@@ -1,0 +1,1 @@
+{"types": [{"id": "label_community.edfa82ad", "type": "action", "reason": "The predicate describes the agent executing the action of labeling a community."}]}

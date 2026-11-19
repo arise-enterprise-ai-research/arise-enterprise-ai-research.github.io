@@ -1,0 +1,1 @@
+{"types": [{"id": "is_illegal_content.02441bdc", "type": "state", "reason": "The predicate describes a condition (content being illegal) rather than an action."}]}

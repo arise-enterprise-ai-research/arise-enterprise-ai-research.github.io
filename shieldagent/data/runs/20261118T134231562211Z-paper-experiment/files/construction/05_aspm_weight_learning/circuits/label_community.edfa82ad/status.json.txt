@@ -1,0 +1,33 @@
+{
+  "action_predicate_id": "label_community.edfa82ad",
+  "eligible_examples": {
+    "test": 0,
+    "train": 0,
+    "validation": 0
+  },
+  "ineligible_examples": 0,
+  "reason": "no eligible training example",
+  "rule_ids": [
+    "reddit.document_001.c00.p000.r02",
+    "reddit.document_001.c00.p002.r02",
+    "reddit.document_001.c00.p002.r03",
+    "rp.503aa518887a",
+    "rp.826d0ce98300",
+    "vr.915db2edcc50",
+    "vr.7bd434f42dda",
+    "reddit.document_001.c00.p006.r01",
+    "reddit.document_001.c00.p006.r02"
+  ],
+  "status": "untrained",
+  "zero_influence_rules": [
+    "reddit.document_001.c00.p000.r02",
+    "reddit.document_001.c00.p002.r02",
+    "reddit.document_001.c00.p002.r03",
+    "rp.503aa518887a",
+    "rp.826d0ce98300",
+    "vr.915db2edcc50",
+    "vr.7bd434f42dda",
+    "reddit.document_001.c00.p006.r01",
+    "reddit.document_001.c00.p006.r02"
+  ]
+}

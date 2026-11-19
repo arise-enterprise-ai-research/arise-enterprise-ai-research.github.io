@@ -1,0 +1,1 @@
+{"types": [{"id": "interfere_accessibility.f98d5ade", "type": "action", "reason": "The description specifies an action that hinders or prevents access, and the example logic treats it as an action."}]}

@@ -1,0 +1,4 @@
+{
+  "note": "A span shows that a field was copied from the document. It does not prove that the extraction is complete. A null span marks a field that is not a verbatim copy.",
+  "spans": []
+}

@@ -1,0 +1,4 @@
+{
+  "message": "Rule 'vr.35c0e81e9193' (execute): pending. The 3 available positions do not resolve the temporal obligation of the rule. No shielding code was run.",
+  "type": "IncompleteVerificationError"
+}

@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "content": "You are an advanced policy translation model designed to convert organizational policies into structured Linear Temporal Logic (LTL) rules. Your task is to extract verifiable rules from the provided safety guidelines and express them in a machine-interpretable format while maintaining full compliance with logical correctness.\n",
+      "images": [],
+      "role": "system"
+    },
+    {
+      "content": "As a policy-to-LTL conversion model, your tasks are:\n1. Carefully analyze the policy’s definition, scope, and policy description.\n2. Break down the policy into structured rules that precisely capture its constraints and requirements.\n3. Translate each rule into LTL using atomic predicates derived from the policy.\n\nTranslation Guidelines:\n• Use atomic predicates that are directly verifiable from the agent’s observations and action history.\n• Prefer positive predicates over negative ones (e.g., use store_data instead of is_data_stored).\n• If a rule involves multiple predicates, decompose it into smaller, verifiable atomic rules whenever possible.\n• Emphasize action-based predicates, ensuring that constrained actions are positioned appropriately within logical expressions (e.g., “only authorized users can access personal data” should be expressed as:\n\n(is_authorized ∧ has_legitimate_need) ⇒ access_personal_data    (8)\n\n).\n\nPredicate Formatting: Each predicate must include:\n• Predicate Name: Use snake_case format.\n• Description: A brief, clear explanation of what the predicate represents.\n• Keywords: A list of descriptive keywords providing relevant context (e.g., actions, entities, attributes).\n\nLTL Symbol Definitions:\n• Always: ALWAYS\n• Eventually: EVENTUALLY\n• Next: NEXT\n• Until: UNTIL\n• Not: NOT\n• And: AND\n• Or: OR\n• Implies: IMPLIES\n\nOutput Format: ```json\n[\n  {\n    \"predicates\": [\n      [\"predicate_name\", \"Description of the predicate.\", [\"kw1\", \"kw2\", ...]]\n    ],\n    \"logic\": \"LTL rule using predicate names.\"\n  },\n  ...\n]\n```\n\nOutput Requirements:\n• Ensure each rule is explicitly defined and unambiguous.\n• Keep predicates general when applicable (e.g., use create_project instead of click_create_project).\n• Avoid combining unrelated rules into a single LTL statement.\n",
+      "images": [],
+      "role": "user"
+    },
+    {
+      "content": "{\"definition\": [\"Interference with normal use: Actions that disrupt the functionality or accessibility of Reddit for other users.\"], \"policy_description\": \"Don’t break the site or do anything that interferes with normal use of Reddit.\", \"reference\": [\"https://redditinc.com/policies/reddit-rules\"], \"scope\": \"Applies to all users and activities on Reddit.\"}",
+      "images": [],
+      "role": "user"
+    }
+  ],
+  "template": {
+    "few_shot_examples_provided": false,
+    "name": "ltl_rule_extraction",
+    "origin": "Appendix H",
+    "source_page": 30,
+    "system": "You are an advanced policy translation model designed to convert organizational policies into structured Linear Temporal Logic (LTL) rules. Your task is to extract verifiable rules from the provided safety guidelines and express them in a machine-interpretable format while maintaining full compliance with logical correctness.\n",
+    "system_sha256": "144296bbb180592984449d7b0475af4c374250932da4466a674625972f62bd10",
+    "user": "As a policy-to-LTL conversion model, your tasks are:\n1. Carefully analyze the policy’s definition, scope, and policy description.\n2. Break down the policy into structured rules that precisely capture its constraints and requirements.\n3. Translate each rule into LTL using atomic predicates derived from the policy.\n\nTranslation Guidelines:\n• Use atomic predicates that are directly verifiable from the agent’s observations and action history.\n• Prefer positive predicates over negative ones (e.g., use store_data instead of is_data_stored).\n• If a rule involves multiple predicates, decompose it into smaller, verifiable atomic rules whenever possible.\n• Emphasize action-based predicates, ensuring that constrained actions are positioned appropriately within logical expressions (e.g., “only authorized users can access personal data” should be expressed as:\n\n(is_authorized ∧ has_legitimate_need) ⇒ access_personal_data    (8)\n\n).\n\nPredicate Formatting: Each predicate must include:\n• Predicate Name: Use snake_case format.\n• Description: A brief, clear explanation of what the predicate represents.\n• Keywords: A list of descriptive keywords providing relevant context (e.g., actions, entities, attributes).\n\nLTL Symbol Definitions:\n• Always: ALWAYS\n• Eventually: EVENTUALLY\n• Next: NEXT\n• Until: UNTIL\n• Not: NOT\n• And: AND\n• Or: OR\n• Implies: IMPLIES\n\nOutput Format: ```json\n[\n  {\n    \"predicates\": [\n      [\"predicate_name\", \"Description of the predicate.\", [\"kw1\", \"kw2\", ...]]\n    ],\n    \"logic\": \"LTL rule using predicate names.\"\n  },\n  ...\n]\n```\n\nOutput Requirements:\n• Ensure each rule is explicitly defined and unambiguous.\n• Keep predicates general when applicable (e.g., use create_project instead of click_create_project).\n• Avoid combining unrelated rules into a single LTL statement.\n",
+    "user_sha256": "63ff05eaa21af5d6f25bd68f287b6909982fe05c4d95ffdd4bf11a0aae89e42c"
+  }
+}

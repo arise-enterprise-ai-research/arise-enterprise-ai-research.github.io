@@ -1,0 +1,6 @@
+{
+  "model": "text-embedding-3-large",
+  "texts": [
+    "is_graphic\nContent contains imagery, descriptions, or depictions of violence, injury, or other explicit material that may be disturbing to viewers.\ncontent, graphic, violence, explicit, disturbing\nstate"
+  ]
+}

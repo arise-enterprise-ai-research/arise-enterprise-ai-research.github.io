@@ -1,0 +1,13 @@
+{
+  "accepted_merges": 1,
+  "accepted_refinements": 12,
+  "budget_exhausted": false,
+  "iterations_run": 2,
+  "max_iterations": 10,
+  "refinement_budget": 200,
+  "rules_left_in_heap": 0,
+  "source_policies_before": 8,
+  "source_policies_without_rule_after": [],
+  "stop_reason": "no_change",
+  "vagueness_top_k": 5
+}

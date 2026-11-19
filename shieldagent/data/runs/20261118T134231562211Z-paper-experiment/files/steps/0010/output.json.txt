@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 2.6840314580185805,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n[\n  {\n    \"predicates\": [\n      [\"post_content\", \"Represents the action of posting content on Reddit.\", [\"action\", \"content\", \"post\"]],\n      [\"is_illegal_content\", \"Indicates that the content violates laws or regulations.\", [\"content\", \"illegal\", \"violation\"]],\n      [\"solicit_transaction\", \"Represents the action of soliciting a transaction.\", [\"action\", \"transaction\", \"solicit\"]],\n      [\"facilitate_transaction\", \"Represents the action of facilitating a transaction.\", [\"action\", \"transaction\", \"facilitate\"]],\n      [\"is_prohibited_transaction\", \"Indicates that the transaction is prohibited under Reddit's policies or applicable laws.\", [\"transaction\", \"prohibited\", \"policy\"]]\n    ],\n    \"logic\": \"ALWAYS (NOT (post_content AND is_illegal_content))\"\n  },\n  {\n    \"predicates\": [\n      [\"post_content\", \"Represents the action of posting content on Reddit.\", [\"action\", \"content\", \"post\"]],\n      [\"is_illegal_content\", \"Indicates that the content violates laws or regulations.\", [\"content\", \"illegal\", \"violation\"]],\n      [\"solicit_transaction\", \"Represents the action of soliciting a transaction.\", [\"action\", \"transaction\", \"solicit\"]],\n      [\"facilitate_transaction\", \"Represents the action of facilitating a transaction.\", [\"action\", \"transaction\", \"facilitate\"]],\n      [\"is_prohibited_transaction\", \"Indicates that the transaction is prohibited under Reddit's policies or applicable laws.\", [\"transaction\", \"prohibited\", \"policy\"]]\n    ],\n    \"logic\": \"ALWAYS (NOT (solicit_transaction AND is_prohibited_transaction))\"\n  },\n  {\n    \"predicates\": [\n      [\"post_content\", \"Represents the action of posting content on Reddit.\", [\"action\", \"content\", \"post\"]],\n      [\"is_illegal_content\", \"Indicates that the content violates laws or regulations.\", [\"content\", \"illegal\", \"violation\"]],\n      [\"solicit_transaction\", \"Represents the action of soliciting a transaction.\", [\"action\", \"transaction\", \"solicit\"]],\n      [\"facilitate_transaction\", \"Represents the action of facilitating a transaction.\", [\"action\", \"transaction\", \"facilitate\"]],\n      [\"is_prohibited_transaction\", \"Indicates that the transaction is prohibited under Reddit's policies or applicable laws.\", [\"transaction\", \"prohibited\", \"policy\"]]\n    ],\n    \"logic\": \"ALWAYS (NOT (facilitate_transaction AND is_prohibited_transaction))\"\n  }\n]\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 528,
+    "prompt_tokens": 539,
+    "total_tokens": 1067
+  }
+}

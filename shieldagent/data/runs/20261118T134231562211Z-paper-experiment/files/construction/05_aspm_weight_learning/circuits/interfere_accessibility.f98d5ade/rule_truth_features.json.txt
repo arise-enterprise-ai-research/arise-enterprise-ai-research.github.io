@@ -1,0 +1,57 @@
+{
+  "evaluation": "non-temporal rules at the action timestep; temporal rules from the initial state of the completed trace; the worlds differ only in the queried action at the action timestep",
+  "examples": [
+    {
+      "instruction_group_id": "interfere_accessibility.f98d5ade.g0000",
+      "label": -1,
+      "rule_execute": [
+        false
+      ],
+      "rule_non_execute": [
+        true
+      ],
+      "split": "test",
+      "trajectory_id": "interfere_accessibility.f98d5ade.g0000.v1"
+    },
+    {
+      "instruction_group_id": "interfere_accessibility.f98d5ade.g0001",
+      "label": -1,
+      "rule_execute": [
+        false
+      ],
+      "rule_non_execute": [
+        true
+      ],
+      "split": "train",
+      "trajectory_id": "interfere_accessibility.f98d5ade.g0001.v1"
+    },
+    {
+      "instruction_group_id": "interfere_accessibility.f98d5ade.g0002",
+      "label": -1,
+      "rule_execute": [
+        false
+      ],
+      "rule_non_execute": [
+        true
+      ],
+      "split": "train",
+      "trajectory_id": "interfere_accessibility.f98d5ade.g0002.v1"
+    },
+    {
+      "instruction_group_id": "interfere_accessibility.f98d5ade.g0003",
+      "label": -1,
+      "rule_execute": [
+        false
+      ],
+      "rule_non_execute": [
+        true
+      ],
+      "split": "train",
+      "trajectory_id": "interfere_accessibility.f98d5ade.g0003.v1"
+    }
+  ],
+  "ineligible": [],
+  "rule_ids": [
+    "vr.d5c4ed671137"
+  ]
+}

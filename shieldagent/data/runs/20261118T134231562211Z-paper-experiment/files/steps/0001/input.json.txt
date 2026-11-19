@@ -1,0 +1,24 @@
+{
+  "expert_review": null,
+  "policy_documents": [
+    {
+      "actor": "Providers and deployers of AI systems within the scope of Article 2",
+      "category": "government_regulation",
+      "organization": "European Union",
+      "path": null,
+      "required": true,
+      "source": "",
+      "source_id": "eu_ai_act_2024_1689_article_5"
+    },
+    {
+      "actor": "Reddit users and communities",
+      "category": "platform_policy",
+      "organization": "Reddit",
+      "path": null,
+      "required": true,
+      "source": "",
+      "source_id": "reddit_rules"
+    }
+  ],
+  "training_dataset_type": "GPT4oSimulatedPseudoLearning"
+}

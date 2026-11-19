@@ -1,0 +1,1 @@
+{"label": "unsafe", "policy_ids": ["reddit.document_001.c00.p001"], "reason": "The action violates the policy prohibiting content manipulation and disruptive behaviors that interfere with Reddit communities."}

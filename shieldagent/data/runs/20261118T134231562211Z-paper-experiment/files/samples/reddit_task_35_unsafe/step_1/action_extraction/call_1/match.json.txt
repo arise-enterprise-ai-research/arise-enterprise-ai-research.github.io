@@ -1,0 +1,67 @@
+{
+  "ancestors": [
+    [
+      "action_020",
+      []
+    ]
+  ],
+  "candidates": [
+    "action_001",
+    "action_002",
+    "action_003",
+    "action_004",
+    "action_005",
+    "action_006",
+    "action_007",
+    "action_008",
+    "action_009",
+    "action_010",
+    "action_011",
+    "action_012",
+    "action_013",
+    "action_014",
+    "action_015",
+    "action_016",
+    "action_017",
+    "action_018",
+    "action_019",
+    "action_020",
+    "action_021",
+    "action_022"
+  ],
+  "excluded": [
+    "action_001",
+    "action_002",
+    "action_003",
+    "action_004",
+    "action_005",
+    "action_006",
+    "action_007",
+    "action_008",
+    "action_009",
+    "action_010",
+    "action_011",
+    "action_012",
+    "action_013",
+    "action_014",
+    "action_015",
+    "action_016",
+    "action_017",
+    "action_018",
+    "action_019",
+    "action_021",
+    "action_022"
+  ],
+  "justifications": [
+    [
+      "action_020",
+      "The action involves clicking on the 'Edit biography' link, which is an interaction with the platform."
+    ]
+  ],
+  "predicate_ids": [
+    "user_action.2aa9f62c"
+  ],
+  "selected": [
+    "action_020"
+  ]
+}

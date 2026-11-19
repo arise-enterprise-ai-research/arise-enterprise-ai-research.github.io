@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 1.0728322089998983,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "{\"types\": [{\"id\": \"community_contains_graphic_content.5d53d0ea\", \"type\": \"state\", \"reason\": \"The predicate describes a condition of a community containing graphic content, not an action.\"}]}",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 354,
+    "total_tokens": 402
+  }
+}

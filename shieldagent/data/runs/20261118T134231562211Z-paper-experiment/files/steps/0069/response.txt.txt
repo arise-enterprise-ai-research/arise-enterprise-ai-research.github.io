@@ -1,0 +1,24 @@
+Reasoning:
+1. **Verifiable**: The predicate "community_is_labeled" is verifiable as it can be checked whether a community has been labeled appropriately based on predefined criteria.
+2. **Concrete**: The predicate is somewhat vague. The term "labeled appropriately" is not specific enough and could lead to ambiguity. It needs refinement to define what "appropriately" means in this context (e.g., labeled as graphic, sexually explicit, offensive, etc.).
+3. **Accurate**: The predicate is accurate in its intent but lacks precision in its definition. It should specify the labeling criteria or standards.
+4. **Atomic**: The predicate is atomic as it describes a single fact: whether the community is labeled.
+5. **Necessary**: The predicate is necessary for the rule as it ensures communities are labeled, which aligns with the policy goal of predictable experiences.
+6. **Unambiguous**: The predicate name is not ambiguous in this context, but its definition needs to be clarified to avoid misinterpretation.
+
+Decision: Yes, refinement is needed.
+
+Output JSON:
+
+```json
+{
+  "rules": [
+    {
+      "predicates": [
+        ["community_is_labeled", "The community has been assigned a label that accurately reflects its content type (e.g., graphic, sexually explicit, offensive) based on predefined labeling standards.", ["community", "labeling", "classification"]]
+      ],
+      "logic": "ALWAYS (content_is_labeled AND community_is_labeled)"
+    }
+  ]
+}
+```

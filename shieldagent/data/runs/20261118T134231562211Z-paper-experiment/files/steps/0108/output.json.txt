@@ -1,0 +1,2079 @@
+{
+  "aspm": {
+    "action_rule_circuits": [
+      {
+        "action_predicate_id": "ban_community.7c7f6afb",
+        "predicate_ids": [
+          "content_promotes_hate.a5d8268d",
+          "content_incites_violence.29b46c59",
+          "ban_community.7c7f6afb",
+          "ban_user.505ad330"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r00"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "ban_user.505ad330",
+        "predicate_ids": [
+          "content_promotes_hate.a5d8268d",
+          "content_incites_violence.29b46c59",
+          "ban_community.7c7f6afb",
+          "ban_user.505ad330"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r00"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "report_harassment.40aa2577",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "take_action_against_harassment.abe19749",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "engage_in_spam.59fb1b9d",
+        "predicate_ids": [
+          "engage_in_spam.59fb1b9d",
+          "engage_in_disruptive_behavior.f570183f",
+          "engage_in_content_manipulation.f4db380f"
+        ],
+        "rule_ids": [
+          "vr.de9b80046b04"
+        ],
+        "rule_weights": [
+          [
+            "vr.de9b80046b04",
+            0.020000924811473402
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "engage_in_disruptive_behavior.f570183f",
+        "predicate_ids": [
+          "engage_in_spam.59fb1b9d",
+          "engage_in_disruptive_behavior.f570183f",
+          "engage_in_content_manipulation.f4db380f"
+        ],
+        "rule_ids": [
+          "vr.de9b80046b04"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "engage_in_content_manipulation.f4db380f",
+        "predicate_ids": [
+          "engage_in_spam.59fb1b9d",
+          "engage_in_disruptive_behavior.f570183f",
+          "engage_in_content_manipulation.f4db380f"
+        ],
+        "rule_ids": [
+          "vr.de9b80046b04"
+        ],
+        "rule_weights": [
+          [
+            "vr.de9b80046b04",
+            -0.011189463555375796
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "reveal_personal_info.e1661515",
+        "predicate_ids": [
+          "reveal_personal_info.e1661515",
+          "instigate_harassment.c43b50f2"
+        ],
+        "rule_ids": [
+          "vr.35c0e81e9193"
+        ],
+        "rule_weights": [
+          [
+            "vr.35c0e81e9193",
+            0.0009140729659646196
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "post_intimate_media.003415a6",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "threaten_to_post_media.98c3c806",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "share_content.0582158e",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "engage_predatory_behavior.16bd686a",
+        "predicate_ids": [
+          "engage_predatory_behavior.16bd686a"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p003.r01"
+        ],
+        "rule_weights": [
+          [
+            "reddit.document_001.c00.p003.r01",
+            0.004486776874310738
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "intentionally_mislead.d1fc1a98",
+        "predicate_ids": [
+          "intentionally_mislead.d1fc1a98",
+          "impersonate_entity.1246f277"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p004.r00"
+        ],
+        "rule_weights": [
+          [
+            "reddit.document_001.c00.p004.r00",
+            0.004090275330328785
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "impersonate_entity.1246f277",
+        "predicate_ids": [
+          "intentionally_mislead.d1fc1a98",
+          "impersonate_entity.1246f277"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p004.r00"
+        ],
+        "rule_weights": [
+          [
+            "reddit.document_001.c00.p004.r00",
+            0.01279130912611127
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "label_content.1ab5bcfc",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "post_content.5d43f06f",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "solicit_transaction.f60efb4e",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "facilitate_transaction.07d054e6",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [
+          [
+            "reddit.document_001.c00.p000.r02",
+            0.0017976833344409342
+          ],
+          [
+            "reddit.document_001.c00.p002.r02",
+            -0.0027938359675725995
+          ],
+          [
+            "reddit.document_001.c00.p002.r03",
+            -0.01199445624359929
+          ],
+          [
+            "rp.503aa518887a",
+            0.01801349222258666
+          ],
+          [
+            "rp.826d0ce98300",
+            -0.0016244737498962215
+          ],
+          [
+            "vr.915db2edcc50",
+            0.004190965168329645
+          ],
+          [
+            "vr.7bd434f42dda",
+            0.0029133148305712283
+          ],
+          [
+            "reddit.document_001.c00.p006.r01",
+            0.009801338778555187
+          ],
+          [
+            "reddit.document_001.c00.p006.r02",
+            0.00020826930693724336
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "label_community.edfa82ad",
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749",
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7",
+          "threaten_to_post_media.98c3c806",
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "label_content.1ab5bcfc",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "post_content.5d43f06f",
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c",
+          "facilitate_transaction.07d054e6",
+          "community_contains_graphic_content.5d53d0ea",
+          "is_offensive.b14be022",
+          "label_community.edfa82ad",
+          "is_graphic.012b2eca",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542",
+          "is_illegal_content.02441bdc",
+          "content_is_sexually_explicit.91dccacd"
+        ],
+        "rule_ids": [
+          "reddit.document_001.c00.p000.r02",
+          "reddit.document_001.c00.p002.r02",
+          "reddit.document_001.c00.p002.r03",
+          "rp.503aa518887a",
+          "rp.826d0ce98300",
+          "vr.915db2edcc50",
+          "vr.7bd434f42dda",
+          "reddit.document_001.c00.p006.r01",
+          "reddit.document_001.c00.p006.r02"
+        ],
+        "rule_weights": [],
+        "weight_status": "uninitialized"
+      },
+      {
+        "action_predicate_id": "user_action.2aa9f62c",
+        "predicate_ids": [
+          "user_action.2aa9f62c",
+          "interfere_accessibility.f98d5ade"
+        ],
+        "rule_ids": [
+          "vr.d5c4ed671137"
+        ],
+        "rule_weights": [
+          [
+            "vr.d5c4ed671137",
+            0.002273900100823092
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "interfere_accessibility.f98d5ade",
+        "predicate_ids": [
+          "user_action.2aa9f62c",
+          "interfere_accessibility.f98d5ade"
+        ],
+        "rule_ids": [
+          "vr.d5c4ed671137"
+        ],
+        "rule_weights": [
+          [
+            "vr.d5c4ed671137",
+            0.0007441262024719085
+          ]
+        ],
+        "weight_status": "trained"
+      },
+      {
+        "action_predicate_id": "instigate_harassment.c43b50f2",
+        "predicate_ids": [
+          "reveal_personal_info.e1661515",
+          "instigate_harassment.c43b50f2"
+        ],
+        "rule_ids": [
+          "vr.70acd6282e39",
+          "vr.35c0e81e9193"
+        ],
+        "rule_weights": [
+          [
+            "vr.70acd6282e39",
+            0.014549268982702717
+          ],
+          [
+            "vr.35c0e81e9193",
+            -0.009090770918646268
+          ]
+        ],
+        "weight_status": "trained"
+      }
+    ],
+    "predicates": [
+      {
+        "description": "The content promotes hate based on identity or vulnerability.",
+        "id": "content_promotes_hate.a5d8268d",
+        "keywords": [
+          "content",
+          "hate",
+          "identity",
+          "vulnerability"
+        ],
+        "name": "content_promotes_hate",
+        "type": "state"
+      },
+      {
+        "description": "The content incites violence against marginalized or vulnerable groups.",
+        "id": "content_incites_violence.29b46c59",
+        "keywords": [
+          "content",
+          "violence",
+          "marginalized_groups"
+        ],
+        "name": "content_incites_violence",
+        "type": "state"
+      },
+      {
+        "description": "A community is banned by Reddit.",
+        "id": "ban_community.7c7f6afb",
+        "keywords": [
+          "action",
+          "community",
+          "ban"
+        ],
+        "name": "ban_community",
+        "type": "action"
+      },
+      {
+        "description": "A user is banned by Reddit.",
+        "id": "ban_user.505ad330",
+        "keywords": [
+          "action",
+          "user",
+          "ban"
+        ],
+        "name": "ban_user",
+        "type": "action"
+      },
+      {
+        "description": "A user experiences harassment, bullying, or threats of violence.",
+        "id": "user_experiences_harassment.7c307279",
+        "keywords": [
+          "user",
+          "harassment",
+          "bullying",
+          "violence"
+        ],
+        "name": "user_experiences_harassment",
+        "type": "state"
+      },
+      {
+        "description": "A user reports harassment, bullying, or threats of violence.",
+        "id": "report_harassment.40aa2577",
+        "keywords": [
+          "action",
+          "user",
+          "report"
+        ],
+        "name": "report_harassment",
+        "type": "action"
+      },
+      {
+        "description": "Reddit takes action to address reported harassment.",
+        "id": "take_action_against_harassment.abe19749",
+        "keywords": [
+          "action",
+          "platform",
+          "harassment_response"
+        ],
+        "name": "take_action_against_harassment",
+        "type": "action"
+      },
+      {
+        "description": "A user uses Reddit.",
+        "id": "user_uses_reddit.fdba4841",
+        "keywords": [
+          "user",
+          "platform",
+          "usage"
+        ],
+        "name": "user_uses_reddit",
+        "type": "state"
+      },
+      {
+        "description": "A user is safe from harassment, bullying, or threats of violence while using Reddit.",
+        "id": "user_safe_from_harassment.45b0d5d2",
+        "keywords": [
+          "user",
+          "safety",
+          "harassment_free"
+        ],
+        "name": "user_safe_from_harassment",
+        "type": "state"
+      },
+      {
+        "description": "The user engages in spamming activities within a community.",
+        "id": "engage_in_spam.59fb1b9d",
+        "keywords": [
+          "spam",
+          "disruption",
+          "behavior"
+        ],
+        "name": "engage_in_spam",
+        "type": "action"
+      },
+      {
+        "description": "The user engages in behaviors that disrupt the integrity of a community.",
+        "id": "engage_in_disruptive_behavior.f570183f",
+        "keywords": [
+          "disruption",
+          "behavior",
+          "community"
+        ],
+        "name": "engage_in_disruptive_behavior",
+        "type": "action"
+      },
+      {
+        "description": "The user manipulates content in a way that disrupts the integrity of a community.",
+        "id": "engage_in_content_manipulation.f4db380f",
+        "keywords": [
+          "content",
+          "manipulation",
+          "disruption"
+        ],
+        "name": "engage_in_content_manipulation",
+        "type": "action"
+      },
+      {
+        "description": "An action that discloses someone's personal or confidential information.",
+        "id": "reveal_personal_info.e1661515",
+        "keywords": [
+          "privacy",
+          "personal_info",
+          "disclosure"
+        ],
+        "name": "reveal_personal_info",
+        "type": "action"
+      },
+      {
+        "description": "An action of posting intimate or sexually-explicit media of someone.",
+        "id": "post_intimate_media.003415a6",
+        "keywords": [
+          "media",
+          "intimate",
+          "posting"
+        ],
+        "name": "post_intimate_media",
+        "type": "action"
+      },
+      {
+        "description": "Indicates that consent has been given by the individual involved.",
+        "id": "has_consent.0ca579d7",
+        "keywords": [
+          "consent",
+          "permission",
+          "individual"
+        ],
+        "name": "has_consent",
+        "type": "state"
+      },
+      {
+        "description": "An action of threatening to post intimate or sexually-explicit media of someone.",
+        "id": "threaten_to_post_media.98c3c806",
+        "keywords": [
+          "media",
+          "threat",
+          "intimate"
+        ],
+        "name": "threaten_to_post_media",
+        "type": "action"
+      },
+      {
+        "description": "The action of sharing any content on the platform.",
+        "id": "share_content.0582158e",
+        "keywords": [
+          "action",
+          "content",
+          "sharing"
+        ],
+        "name": "share_content",
+        "type": "action"
+      },
+      {
+        "description": "The content involves individuals under the age of 18.",
+        "id": "content_involves_minors.a994294b",
+        "keywords": [
+          "content",
+          "minors",
+          "age"
+        ],
+        "name": "content_involves_minors",
+        "type": "state"
+      },
+      {
+        "description": "The user engages in predatory or harmful behavior towards minors.",
+        "id": "engage_predatory_behavior.16bd686a",
+        "keywords": [
+          "action",
+          "predatory",
+          "behavior",
+          "minors"
+        ],
+        "name": "engage_predatory_behavior",
+        "type": "action"
+      },
+      {
+        "description": "The user intentionally misleads others.",
+        "id": "intentionally_mislead.d1fc1a98",
+        "keywords": [
+          "deception",
+          "mislead",
+          "intent"
+        ],
+        "name": "intentionally_mislead",
+        "type": "action"
+      },
+      {
+        "description": "The user impersonates another individual or entity.",
+        "id": "impersonate_entity.1246f277",
+        "keywords": [
+          "impersonation",
+          "deception",
+          "entity"
+        ],
+        "name": "impersonate_entity",
+        "type": "action"
+      },
+      {
+        "description": "Content is labeled to indicate its nature.",
+        "id": "label_content.1ab5bcfc",
+        "keywords": [
+          "content",
+          "labeling",
+          "classification"
+        ],
+        "name": "label_content",
+        "type": "action"
+      },
+      {
+        "description": "A community contains sexually explicit content.",
+        "id": "community_contains_sexually_explicit_content.37043415",
+        "keywords": [
+          "community",
+          "sexual",
+          "explicit"
+        ],
+        "name": "community_contains_sexually_explicit_content",
+        "type": "state"
+      },
+      {
+        "description": "A community contains offensive content.",
+        "id": "community_contains_offensive_content.e76a15ba",
+        "keywords": [
+          "community",
+          "offensive",
+          "sensitive"
+        ],
+        "name": "community_contains_offensive_content",
+        "type": "state"
+      },
+      {
+        "description": "Content is labeled appropriately.",
+        "id": "content_is_labeled.27c0e67b",
+        "keywords": [
+          "content",
+          "labeling",
+          "classification"
+        ],
+        "name": "content_is_labeled",
+        "type": "state"
+      },
+      {
+        "description": "Community is labeled appropriately.",
+        "id": "community_is_labeled.0a70c0f6",
+        "keywords": [
+          "community",
+          "labeling",
+          "classification"
+        ],
+        "name": "community_is_labeled",
+        "type": "state"
+      },
+      {
+        "description": "Represents the action of posting content on Reddit.",
+        "id": "post_content.5d43f06f",
+        "keywords": [
+          "action",
+          "content",
+          "post"
+        ],
+        "name": "post_content",
+        "type": "action"
+      },
+      {
+        "description": "Represents the action of soliciting a transaction.",
+        "id": "solicit_transaction.f60efb4e",
+        "keywords": [
+          "action",
+          "transaction",
+          "solicit"
+        ],
+        "name": "solicit_transaction",
+        "type": "action"
+      },
+      {
+        "description": "Indicates that the transaction is prohibited under Reddit's policies or applicable laws.",
+        "id": "is_prohibited_transaction.aae3912c",
+        "keywords": [
+          "transaction",
+          "prohibited",
+          "policy"
+        ],
+        "name": "is_prohibited_transaction",
+        "type": "state"
+      },
+      {
+        "description": "Represents the action of facilitating a transaction.",
+        "id": "facilitate_transaction.07d054e6",
+        "keywords": [
+          "action",
+          "transaction",
+          "facilitate"
+        ],
+        "name": "facilitate_transaction",
+        "type": "action"
+      },
+      {
+        "description": "A community contains content that depicts violence, gore, or other visually disturbing material.",
+        "id": "community_contains_graphic_content.5d53d0ea",
+        "keywords": [
+          "community",
+          "graphic",
+          "violence",
+          "gore",
+          "disturbing"
+        ],
+        "name": "community_contains_graphic_content",
+        "type": "state"
+      },
+      {
+        "description": "Content contains language, imagery, or behavior that is widely recognized as offensive, such as hate speech, slurs, or explicit derogatory remarks.",
+        "id": "is_offensive.b14be022",
+        "keywords": [
+          "content",
+          "offensive",
+          "hate_speech",
+          "slurs",
+          "derogatory"
+        ],
+        "name": "is_offensive",
+        "type": "state"
+      },
+      {
+        "description": "A community is labeled to indicate its nature, specifically whether it contains graphic, sexually explicit, or offensive content.",
+        "id": "label_community.edfa82ad",
+        "keywords": [
+          "community",
+          "labeling",
+          "classification",
+          "graphic",
+          "sexually explicit",
+          "offensive"
+        ],
+        "name": "label_community",
+        "type": "action"
+      },
+      {
+        "description": "Content contains imagery, descriptions, or depictions of violence, injury, or other explicit material that may be disturbing to viewers.",
+        "id": "is_graphic.012b2eca",
+        "keywords": [
+          "content",
+          "graphic",
+          "violence",
+          "explicit",
+          "disturbing"
+        ],
+        "name": "is_graphic",
+        "type": "state"
+      },
+      {
+        "description": "The content contains abusive language, threats, or harmful behavior.",
+        "id": "content_is_abusive.ed9155d9",
+        "keywords": [
+          "content",
+          "abusive",
+          "threats",
+          "harmful"
+        ],
+        "name": "content_is_abusive",
+        "type": "state"
+      },
+      {
+        "description": "The content is suggestive in nature, implying sexual or inappropriate behavior without being explicit.",
+        "id": "content_is_suggestive.8a3c7542",
+        "keywords": [
+          "content",
+          "suggestive",
+          "inappropriate"
+        ],
+        "name": "content_is_suggestive",
+        "type": "state"
+      },
+      {
+        "description": "Indicates that the content violates specific laws or regulations, such as copyright infringement, criminal activity, or other prohibited actions as defined by the jurisdiction or platform policies.",
+        "id": "is_illegal_content.02441bdc",
+        "keywords": [
+          "content",
+          "illegal",
+          "violation",
+          "specific"
+        ],
+        "name": "is_illegal_content",
+        "type": "state"
+      },
+      {
+        "description": "A user performs any observable action on Reddit, such as posting, commenting, voting, or interacting with the platform.",
+        "id": "user_action.2aa9f62c",
+        "keywords": [
+          "action",
+          "user",
+          "activity"
+        ],
+        "name": "user_action",
+        "type": "action"
+      },
+      {
+        "description": "An action that significantly hinders or prevents other users from accessing Reddit, such as spamming, DDoS attacks, or other activities that degrade the platform's availability.",
+        "id": "interfere_accessibility.f98d5ade",
+        "keywords": [
+          "interference",
+          "accessibility",
+          "users",
+          "hindrance",
+          "availability"
+        ],
+        "name": "interfere_accessibility",
+        "type": "action"
+      },
+      {
+        "description": "An action that intentionally causes harm, distress, or intimidation to another individual through harassment, including but not limited to revealing personal information or posting intimate media without consent.",
+        "id": "instigate_harassment.c43b50f2",
+        "keywords": [
+          "harassment",
+          "intentional",
+          "harm",
+          "users"
+        ],
+        "name": "instigate_harassment",
+        "type": "action"
+      },
+      {
+        "description": "The content is sexual in nature, including explicit or pornographic material.",
+        "id": "content_is_sexually_explicit.91dccacd",
+        "keywords": [
+          "content",
+          "sexual",
+          "explicit"
+        ],
+        "name": "content_is_sexually_explicit",
+        "type": "state"
+      }
+    ],
+    "rules": [
+      {
+        "description": "Reddit is a place for creating community and belonging, not for attacking marginalized or vulnerable groups of people. Everyone has a right to use Reddit free of harassment, bullying, and threats of violence. Communities and users that incite violence or that promote hate based on identity or vulnerability will be banned.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "content_promotes_hate.a5d8268d"
+                    },
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "content_incites_violence.29b46c59"
+                    }
+                  ],
+                  "operator": "OR",
+                  "predicate_id": null
+                },
+                {
+                  "operands": [
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "ban_community.7c7f6afb"
+                    },
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "ban_user.505ad330"
+                    }
+                  ],
+                  "operator": "OR",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p000.r00",
+        "logic": "ALWAYS ((content_promotes_hate OR content_incites_violence) IMPLIES (ban_community OR ban_user))",
+        "policy_ids": [
+          "reddit.document_001.c00.p000"
+        ],
+        "predicate_ids": [
+          "content_promotes_hate.a5d8268d",
+          "content_incites_violence.29b46c59",
+          "ban_community.7c7f6afb",
+          "ban_user.505ad330"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Reddit is a place for creating community and belonging, not for attacking marginalized or vulnerable groups of people. Everyone has a right to use Reddit free of harassment, bullying, and threats of violence. Communities and users that incite violence or that promote hate based on identity or vulnerability will be banned.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "user_experiences_harassment.7c307279"
+                },
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "report_harassment.40aa2577"
+                        },
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "take_action_against_harassment.abe19749"
+                        }
+                      ],
+                      "operator": "AND",
+                      "predicate_id": null
+                    }
+                  ],
+                  "operator": "EVENTUALLY",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p000.r02",
+        "logic": "ALWAYS (user_experiences_harassment IMPLIES EVENTUALLY (report_harassment AND take_action_against_harassment))",
+        "policy_ids": [
+          "reddit.document_001.c00.p000"
+        ],
+        "predicate_ids": [
+          "user_experiences_harassment.7c307279",
+          "report_harassment.40aa2577",
+          "take_action_against_harassment.abe19749"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Reddit is a place for creating community and belonging, not for attacking marginalized or vulnerable groups of people. Everyone has a right to use Reddit free of harassment, bullying, and threats of violence. Communities and users that incite violence or that promote hate based on identity or vulnerability will be banned.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "user_uses_reddit.fdba4841"
+                },
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "user_safe_from_harassment.45b0d5d2"
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p000.r03",
+        "logic": "ALWAYS (user_uses_reddit IMPLIES user_safe_from_harassment)",
+        "policy_ids": [
+          "reddit.document_001.c00.p000"
+        ],
+        "predicate_ids": [
+          "user_uses_reddit.fdba4841",
+          "user_safe_from_harassment.45b0d5d2"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "physical"
+      },
+      {
+        "description": "Participate authentically in communities where you have a personal interest, and do not spam or engage in disruptive behaviors (including content manipulation) that interfere with Reddit communities.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "engage_in_spam.59fb1b9d"
+                        },
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "engage_in_disruptive_behavior.f570183f"
+                        }
+                      ],
+                      "operator": "OR",
+                      "predicate_id": null
+                    },
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "engage_in_content_manipulation.f4db380f"
+                    }
+                  ],
+                  "operator": "OR",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "vr.de9b80046b04",
+        "logic": "ALWAYS (NOT (engage_in_spam OR engage_in_disruptive_behavior OR engage_in_content_manipulation))",
+        "policy_ids": [
+          "reddit.document_001.c00.p001"
+        ],
+        "predicate_ids": [
+          "engage_in_spam.59fb1b9d",
+          "engage_in_disruptive_behavior.f570183f",
+          "engage_in_content_manipulation.f4db380f"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Instigating harassment, for example by revealing someone’s personal or confidential information, is not allowed. Never post or threaten to post intimate or sexually-explicit media of someone without their consent.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "instigate_harassment.c43b50f2"
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "vr.70acd6282e39",
+        "logic": "ALWAYS (NOT instigate_harassment)",
+        "policy_ids": [
+          "reddit.document_001.c00.p002"
+        ],
+        "predicate_ids": [
+          "instigate_harassment.c43b50f2"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Instigating harassment, for example by revealing someone’s personal or confidential information, is not allowed. Never post or threaten to post intimate or sexually-explicit media of someone without their consent.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "reveal_personal_info.e1661515"
+                },
+                {
+                  "operands": [
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "instigate_harassment.c43b50f2"
+                    }
+                  ],
+                  "operator": "NOT",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "vr.35c0e81e9193",
+        "logic": "ALWAYS (reveal_personal_info IMPLIES NOT instigate_harassment)",
+        "policy_ids": [
+          "reddit.document_001.c00.p002"
+        ],
+        "predicate_ids": [
+          "reveal_personal_info.e1661515",
+          "instigate_harassment.c43b50f2"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Instigating harassment, for example by revealing someone’s personal or confidential information, is not allowed. Never post or threaten to post intimate or sexually-explicit media of someone without their consent.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "post_intimate_media.003415a6"
+                },
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "has_consent.0ca579d7"
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p002.r02",
+        "logic": "ALWAYS (post_intimate_media IMPLIES has_consent)",
+        "policy_ids": [
+          "reddit.document_001.c00.p002"
+        ],
+        "predicate_ids": [
+          "post_intimate_media.003415a6",
+          "has_consent.0ca579d7"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Instigating harassment, for example by revealing someone’s personal or confidential information, is not allowed. Never post or threaten to post intimate or sexually-explicit media of someone without their consent.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "threaten_to_post_media.98c3c806"
+                },
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "has_consent.0ca579d7"
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p002.r03",
+        "logic": "ALWAYS (threaten_to_post_media IMPLIES has_consent)",
+        "policy_ids": [
+          "reddit.document_001.c00.p002"
+        ],
+        "predicate_ids": [
+          "threaten_to_post_media.98c3c806",
+          "has_consent.0ca579d7"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Do not share or encourage the sharing of sexual, abusive, or suggestive content involving minors. Any predatory or inappropriate behavior involving a minor is also strictly prohibited.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "share_content.0582158e"
+                        },
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "content_involves_minors.a994294b"
+                        }
+                      ],
+                      "operator": "AND",
+                      "predicate_id": null
+                    },
+                    {
+                      "operands": [
+                        {
+                          "operands": [
+                            {
+                              "operands": [],
+                              "operator": "ATOM",
+                              "predicate_id": "content_is_sexually_explicit.91dccacd"
+                            },
+                            {
+                              "operands": [],
+                              "operator": "ATOM",
+                              "predicate_id": "content_is_abusive.ed9155d9"
+                            }
+                          ],
+                          "operator": "OR",
+                          "predicate_id": null
+                        },
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "content_is_suggestive.8a3c7542"
+                        }
+                      ],
+                      "operator": "OR",
+                      "predicate_id": null
+                    }
+                  ],
+                  "operator": "AND",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "rp.503aa518887a",
+        "logic": "ALWAYS NOT ((share_content AND content_involves_minors) AND ((content_is_sexually_explicit OR content_is_abusive) OR content_is_suggestive))",
+        "policy_ids": [
+          "reddit.document_001.c00.p003"
+        ],
+        "predicate_ids": [
+          "share_content.0582158e",
+          "content_involves_minors.a994294b",
+          "content_is_sexually_explicit.91dccacd",
+          "content_is_abusive.ed9155d9",
+          "content_is_suggestive.8a3c7542"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Ensure people have predictable experiences on Reddit by properly labeling content and communities, particularly content that is graphic, sexually-explicit, or offensive.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "is_graphic.012b2eca"
+                        },
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "content_is_sexually_explicit.91dccacd"
+                        }
+                      ],
+                      "operator": "OR",
+                      "predicate_id": null
+                    },
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "is_offensive.b14be022"
+                    }
+                  ],
+                  "operator": "OR",
+                  "predicate_id": null
+                },
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "label_content.1ab5bcfc"
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "rp.826d0ce98300",
+        "logic": "ALWAYS (((is_graphic OR content_is_sexually_explicit) OR is_offensive) IMPLIES label_content)",
+        "policy_ids": [
+          "reddit.document_001.c00.p005"
+        ],
+        "predicate_ids": [
+          "is_graphic.012b2eca",
+          "content_is_sexually_explicit.91dccacd",
+          "is_offensive.b14be022",
+          "label_content.1ab5bcfc"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Do not share or encourage the sharing of sexual, abusive, or suggestive content involving minors. Any predatory or inappropriate behavior involving a minor is also strictly prohibited.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "engage_predatory_behavior.16bd686a"
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p003.r01",
+        "logic": "ALWAYS (NOT engage_predatory_behavior)",
+        "policy_ids": [
+          "reddit.document_001.c00.p003"
+        ],
+        "predicate_ids": [
+          "engage_predatory_behavior.16bd686a"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "You don't have to use your real name, but do not intentionally mislead others or impersonate an individual or entity in a deceptive manner.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "intentionally_mislead.d1fc1a98"
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            },
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "impersonate_entity.1246f277"
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            }
+          ],
+          "operator": "AND",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p004.r00",
+        "logic": "NOT intentionally_mislead AND NOT impersonate_entity",
+        "policy_ids": [
+          "reddit.document_001.c00.p004"
+        ],
+        "predicate_ids": [
+          "intentionally_mislead.d1fc1a98",
+          "impersonate_entity.1246f277"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Ensure people have predictable experiences on Reddit by properly labeling content and communities, particularly content that is graphic, sexually-explicit, or offensive.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "community_contains_graphic_content.5d53d0ea"
+                        },
+                        {
+                          "operands": [],
+                          "operator": "ATOM",
+                          "predicate_id": "community_contains_sexually_explicit_content.37043415"
+                        }
+                      ],
+                      "operator": "OR",
+                      "predicate_id": null
+                    },
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "community_contains_offensive_content.e76a15ba"
+                    }
+                  ],
+                  "operator": "OR",
+                  "predicate_id": null
+                },
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "label_community.edfa82ad"
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "vr.915db2edcc50",
+        "logic": "ALWAYS ((community_contains_graphic_content OR community_contains_sexually_explicit_content OR community_contains_offensive_content) IMPLIES label_community)",
+        "policy_ids": [
+          "reddit.document_001.c00.p005"
+        ],
+        "predicate_ids": [
+          "community_contains_graphic_content.5d53d0ea",
+          "community_contains_sexually_explicit_content.37043415",
+          "community_contains_offensive_content.e76a15ba",
+          "label_community.edfa82ad"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Ensure people have predictable experiences on Reddit by properly labeling content and communities, particularly content that is graphic, sexually-explicit, or offensive.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "content_is_labeled.27c0e67b"
+                },
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "community_is_labeled.0a70c0f6"
+                }
+              ],
+              "operator": "AND",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "vr.c6ab43cbacc6",
+        "logic": "ALWAYS (content_is_labeled AND community_is_labeled)",
+        "policy_ids": [
+          "reddit.document_001.c00.p005"
+        ],
+        "predicate_ids": [
+          "content_is_labeled.27c0e67b",
+          "community_is_labeled.0a70c0f6"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "physical"
+      },
+      {
+        "description": "Don't post illegal content, and don't solicit or facilitate illegal or prohibited transactions.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "post_content.5d43f06f"
+                    },
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "is_illegal_content.02441bdc"
+                    }
+                  ],
+                  "operator": "AND",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "vr.7bd434f42dda",
+        "logic": "ALWAYS (NOT (post_content AND is_illegal_content))",
+        "policy_ids": [
+          "reddit.document_001.c00.p006"
+        ],
+        "predicate_ids": [
+          "post_content.5d43f06f",
+          "is_illegal_content.02441bdc"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Don't post illegal content, and don't solicit or facilitate illegal or prohibited transactions.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "solicit_transaction.f60efb4e"
+                    },
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "is_prohibited_transaction.aae3912c"
+                    }
+                  ],
+                  "operator": "AND",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p006.r01",
+        "logic": "ALWAYS (NOT (solicit_transaction AND is_prohibited_transaction))",
+        "policy_ids": [
+          "reddit.document_001.c00.p006"
+        ],
+        "predicate_ids": [
+          "solicit_transaction.f60efb4e",
+          "is_prohibited_transaction.aae3912c"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Don't post illegal content, and don't solicit or facilitate illegal or prohibited transactions.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "facilitate_transaction.07d054e6"
+                    },
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "is_prohibited_transaction.aae3912c"
+                    }
+                  ],
+                  "operator": "AND",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "NOT",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "reddit.document_001.c00.p006.r02",
+        "logic": "ALWAYS (NOT (facilitate_transaction AND is_prohibited_transaction))",
+        "policy_ids": [
+          "reddit.document_001.c00.p006"
+        ],
+        "predicate_ids": [
+          "facilitate_transaction.07d054e6",
+          "is_prohibited_transaction.aae3912c"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      },
+      {
+        "description": "Don’t break the site or do anything that interferes with normal use of Reddit.",
+        "formula": {
+          "operands": [
+            {
+              "operands": [
+                {
+                  "operands": [],
+                  "operator": "ATOM",
+                  "predicate_id": "user_action.2aa9f62c"
+                },
+                {
+                  "operands": [
+                    {
+                      "operands": [],
+                      "operator": "ATOM",
+                      "predicate_id": "interfere_accessibility.f98d5ade"
+                    }
+                  ],
+                  "operator": "NOT",
+                  "predicate_id": null
+                }
+              ],
+              "operator": "IMPLIES",
+              "predicate_id": null
+            }
+          ],
+          "operator": "ALWAYS",
+          "predicate_id": null
+        },
+        "id": "vr.d5c4ed671137",
+        "logic": "ALWAYS (user_action IMPLIES NOT (interfere_accessibility))",
+        "policy_ids": [
+          "reddit.document_001.c00.p007"
+        ],
+        "predicate_ids": [
+          "user_action.2aa9f62c",
+          "interfere_accessibility.f98d5ade"
+        ],
+        "reference": [
+          "https://redditinc.com/policies/reddit-rules"
+        ],
+        "type": "action"
+      }
+    ]
+  },
+  "aspm_identifier": "4abe85c9705b81c81907be5ac0f766a68d436b6f4839132fb9c77840070e29ee",
+  "equation_2": {
+    "action_predicates": [
+      "ban_community.7c7f6afb",
+      "ban_user.505ad330",
+      "report_harassment.40aa2577",
+      "take_action_against_harassment.abe19749",
+      "engage_in_spam.59fb1b9d",
+      "engage_in_disruptive_behavior.f570183f",
+      "engage_in_content_manipulation.f4db380f",
+      "reveal_personal_info.e1661515",
+      "post_intimate_media.003415a6",
+      "threaten_to_post_media.98c3c806",
+      "share_content.0582158e",
+      "engage_predatory_behavior.16bd686a",
+      "intentionally_mislead.d1fc1a98",
+      "impersonate_entity.1246f277",
+      "label_content.1ab5bcfc",
+      "post_content.5d43f06f",
+      "solicit_transaction.f60efb4e",
+      "facilitate_transaction.07d054e6",
+      "label_community.edfa82ad",
+      "user_action.2aa9f62c",
+      "interfere_accessibility.f98d5ade",
+      "instigate_harassment.c43b50f2"
+    ],
+    "action_rule_circuits": [
+      "ban_community.7c7f6afb",
+      "ban_user.505ad330",
+      "report_harassment.40aa2577",
+      "take_action_against_harassment.abe19749",
+      "engage_in_spam.59fb1b9d",
+      "engage_in_disruptive_behavior.f570183f",
+      "engage_in_content_manipulation.f4db380f",
+      "reveal_personal_info.e1661515",
+      "post_intimate_media.003415a6",
+      "threaten_to_post_media.98c3c806",
+      "share_content.0582158e",
+      "engage_predatory_behavior.16bd686a",
+      "intentionally_mislead.d1fc1a98",
+      "impersonate_entity.1246f277",
+      "label_content.1ab5bcfc",
+      "post_content.5d43f06f",
+      "solicit_transaction.f60efb4e",
+      "facilitate_transaction.07d054e6",
+      "label_community.edfa82ad",
+      "user_action.2aa9f62c",
+      "interfere_accessibility.f98d5ade",
+      "instigate_harassment.c43b50f2"
+    ],
+    "action_rules": [
+      "reddit.document_001.c00.p000.r00",
+      "reddit.document_001.c00.p000.r02",
+      "vr.de9b80046b04",
+      "vr.70acd6282e39",
+      "vr.35c0e81e9193",
+      "reddit.document_001.c00.p002.r02",
+      "reddit.document_001.c00.p002.r03",
+      "rp.503aa518887a",
+      "rp.826d0ce98300",
+      "reddit.document_001.c00.p003.r01",
+      "reddit.document_001.c00.p004.r00",
+      "vr.915db2edcc50",
+      "vr.7bd434f42dda",
+      "reddit.document_001.c00.p006.r01",
+      "reddit.document_001.c00.p006.r02",
+      "vr.d5c4ed671137"
+    ],
+    "physical_rules": [
+      "reddit.document_001.c00.p000.r03",
+      "vr.c6ab43cbacc6"
+    ],
+    "state_predicates": [
+      "content_promotes_hate.a5d8268d",
+      "content_incites_violence.29b46c59",
+      "user_experiences_harassment.7c307279",
+      "user_uses_reddit.fdba4841",
+      "user_safe_from_harassment.45b0d5d2",
+      "has_consent.0ca579d7",
+      "content_involves_minors.a994294b",
+      "community_contains_sexually_explicit_content.37043415",
+      "community_contains_offensive_content.e76a15ba",
+      "content_is_labeled.27c0e67b",
+      "community_is_labeled.0a70c0f6",
+      "is_prohibited_transaction.aae3912c",
+      "community_contains_graphic_content.5d53d0ea",
+      "is_offensive.b14be022",
+      "is_graphic.012b2eca",
+      "content_is_abusive.ed9155d9",
+      "content_is_suggestive.8a3c7542",
+      "is_illegal_content.02441bdc",
+      "content_is_sexually_explicit.91dccacd"
+    ]
+  },
+  "format": "shieldagent.aspm/2",
+  "weight_status": "partially_trained"
+}

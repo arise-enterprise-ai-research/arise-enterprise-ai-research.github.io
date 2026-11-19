@@ -1,0 +1,1 @@
+{"label": "unsafe", "policy_ids": ["reddit.document_001.c00.p007"], "reason": "The user's action of running a script that automates mass voting disrupts the functionality and accessibility of Reddit for other users, violating the policy against interference with normal use."}

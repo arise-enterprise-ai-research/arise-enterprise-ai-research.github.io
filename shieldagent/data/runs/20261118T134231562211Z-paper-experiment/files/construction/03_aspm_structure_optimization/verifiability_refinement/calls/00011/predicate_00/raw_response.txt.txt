@@ -1,0 +1,24 @@
+Reasoning:
+1. **Verifiable**: The predicate `post_content` is verifiable because the action of posting content on Reddit can be observed in the system's action history.
+2. **Concrete**: The predicate is specific and unambiguous, as it clearly refers to the action of posting content on Reddit.
+3. **Accurate**: The definition accurately represents the intended action of posting content.
+4. **Atomic**: The predicate describes a single action (posting content) and does not combine multiple facts or conditions.
+5. **Necessary**: The predicate is necessary for the rule, as it defines the action that must be restricted when combined with illegal content.
+6. **Unambiguous**: The predicate name `post_content` is not reused in different contexts with different meanings, so it is unambiguous.
+
+Decision: No (The predicate is good and does not need refinement).
+
+Output JSON:
+```json
+{
+  "rules": [
+    {
+      "predicates": [
+        ["post_content", "Represents the action of posting content on Reddit.", ["action", "content", "post"]],
+        ["is_illegal_content", "Indicates that the content violates laws or regulations.", ["content", "illegal", "violation"]]
+      ],
+      "logic": "ALWAYS (NOT (post_content AND is_illegal_content))"
+    }
+  ]
+}
+```

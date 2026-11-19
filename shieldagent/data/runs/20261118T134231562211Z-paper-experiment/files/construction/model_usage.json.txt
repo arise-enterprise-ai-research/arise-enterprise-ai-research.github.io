@@ -1,0 +1,32 @@
+{
+  "ltl_rule_extraction": {
+    "completion_tokens": 2800,
+    "prompt_tokens": 4489,
+    "queries": 8
+  },
+  "policy_extraction": {
+    "completion_tokens": 2533,
+    "prompt_tokens": 3734,
+    "queries": 2
+  },
+  "predicate_type_annotation": {
+    "completion_tokens": 2133,
+    "prompt_tokens": 6665,
+    "queries": 10
+  },
+  "redundancy_pruning": {
+    "completion_tokens": 803,
+    "prompt_tokens": 954,
+    "queries": 1
+  },
+  "simulated_pseudo_learning": {
+    "completion_tokens": 53720,
+    "prompt_tokens": 263419,
+    "queries": 287
+  },
+  "verifiability_refinement": {
+    "completion_tokens": 27784,
+    "prompt_tokens": 53108,
+    "queries": 73
+  }
+}

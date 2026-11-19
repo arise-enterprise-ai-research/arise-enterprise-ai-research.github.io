@@ -1,0 +1,243 @@
+{
+  "action_based_aspm_clustering": {
+    "number_of_clusters": "square_root",
+    "seed": 42,
+    "similarity_threshold": 0.85
+  },
+  "aspm_structure_optimization": {
+    "max_iterations": 10,
+    "redundancy_max_cluster_size": 8,
+    "redundancy_similarity_threshold": 0.9,
+    "refinement_budget": 200,
+    "vagueness_top_k": 5
+  },
+  "aspm_weight_learning": {
+    "initialization_standard_deviation": 0.01,
+    "learning_rate": 0.01,
+    "max_epochs": 100,
+    "report_thresholds": [
+      0.0,
+      0.1
+    ],
+    "seed": 42,
+    "training_data": null
+  },
+  "case_study": {
+    "executable_fixtures": "tests/fixtures/executable",
+    "fixture": "tests/fixtures/executable/reddit_bio_case_study.json",
+    "paper_fixtures": "tests/fixtures/paper"
+  },
+  "construction": {
+    "expert_review": null,
+    "policy_documents": [
+      {
+        "actor": "Providers and deployers of AI systems within the scope of Article 2",
+        "category": "government_regulation",
+        "organization": "European Union",
+        "path": null,
+        "required": true,
+        "source": "",
+        "source_id": "eu_ai_act_2024_1689_article_5"
+      },
+      {
+        "actor": "Reddit users and communities",
+        "category": "platform_policy",
+        "organization": "Reddit",
+        "path": null,
+        "required": true,
+        "source": "",
+        "source_id": "reddit_rules"
+      }
+    ],
+    "source_manifest": "sources/source_manifest.json",
+    "training_data": "simulated_pseudo_learning"
+  },
+  "dataset": {
+    "augmentation": null,
+    "behavior_files": {},
+    "name": null,
+    "path": null,
+    "revision": null,
+    "split": "test"
+  },
+  "embedding_model": {
+    "model": "text-embedding-3-large",
+    "precomputed_vectors": null,
+    "provider": "openai"
+  },
+  "evaluation": {
+    "action_tree_by_policy": {},
+    "aspm_by_policy": {},
+    "bootstrap_resamples": 0,
+    "closed_source_providers": [
+      "openai"
+    ],
+    "count_errors_as_incorrect_for_accuracy": true,
+    "granularity": "step",
+    "guardagent_bridge_command": [],
+    "guardagent_repository": null,
+    "guardagent_revision": null,
+    "guardagent_timeout_seconds": 600.0,
+    "guardrails": [
+      "shieldagent"
+    ],
+    "order": "dataset",
+    "report_completed_only_metrics": true,
+    "report_error_counts": true,
+    "rule_traverse_early_stop": false,
+    "seed": 0
+  },
+  "internvl2": {
+    "binary_check_adapter": null,
+    "device": "cpu",
+    "dtype": "bfloat16",
+    "include_screenshots": true,
+    "local_files_only": true,
+    "max_context_tokens": 8192,
+    "max_new_tokens": 256,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": null,
+    "search_adapter": null,
+    "trust_remote_code": false
+  },
+  "llm": {
+    "api_key_environment_variable": "OPENAI_API_KEY",
+    "max_retries": 2,
+    "model": "gpt-4o-2024-11-20",
+    "provider": "openai",
+    "recorded_responses": null,
+    "seed": 0,
+    "temperature": 0.0,
+    "timeout_seconds": 120.0
+  },
+  "ltl_rule_extraction": {
+    "on_validation_failure": "record",
+    "predicate_type_batch_size": 50,
+    "predicate_types": "gpt4o",
+    "supplied_predicate_types": null
+  },
+  "ltlf": {
+    "open_prefix": "report_pending",
+    "until_interpretation": "standard_strong"
+  },
+  "memory_modules": {
+    "long_term_path": "data/paper_example_workflows",
+    "long_term_update_during_test": false,
+    "short_term_kv_cache": false
+  },
+  "online_guardrail": {
+    "awm_bridge_command": [],
+    "awm_repository": null,
+    "awm_revision": null,
+    "bridge_timeout_seconds": 600.0,
+    "guardrail": "shieldagent",
+    "max_feedback_rounds": 1,
+    "max_steps": 30,
+    "sandbox_acknowledged": false,
+    "tasks": null
+  },
+  "policy_extraction": {
+    "allow_none_literal": false,
+    "max_chunk_characters": 24000,
+    "on_validation_failure": "record"
+  },
+  "prompts": {
+    "allow_implementation_prompts": true,
+    "append_unpublished_few_shot_examples": false,
+    "appendix_h": "src/shieldagent/prompt_template/appendix_h",
+    "implementation": "src/shieldagent/prompt_template/implementation"
+  },
+  "runs": "runs",
+  "safety_certification": {
+    "epsilon": 0.1
+  },
+  "shielding_pipeline": {
+    "action_tree": null,
+    "aggregation": "all_circuits_safe",
+    "allow_silent_fallback": false,
+    "aspm": null,
+    "early_termination": false,
+    "guardrail_output_generation": "gpt4o",
+    "max_plan_rounds": 4,
+    "max_workflows": 3,
+    "planning_scope": "rule",
+    "rule_filtering": "justified_exclusion",
+    "shielding_code_generation": "gpt4o"
+  },
+  "source": {
+    "paper": "reference/chen25ae.pdf"
+  },
+  "tool_library": {
+    "binary_check_backend": "openai",
+    "detect_content_scope": "action",
+    "factual_check_backend": "gpt4o",
+    "factual_sources": {},
+    "formal_verification": "prover9_mace4",
+    "harmful_categories": [
+      "harassment",
+      "harassment_threatening",
+      "hate",
+      "hate_threatening",
+      "illicit",
+      "illicit_violent",
+      "self_harm",
+      "self_harm_instructions",
+      "self_harm_intent",
+      "sexual",
+      "sexual_minors",
+      "violence",
+      "violence_graphic"
+    ],
+    "harmful_predicate_categories": {},
+    "mace4_path": "mace4",
+    "moderation_model": "omni-moderation-latest",
+    "network_allowed_in_solver": false,
+    "privacy_backend": "pattern",
+    "privacy_categories": [
+      "email_address",
+      "phone_number",
+      "credit_card_number",
+      "us_social_security_number",
+      "ipv4_address",
+      "api_token"
+    ],
+    "privacy_predicate_categories": {},
+    "prover9_path": "prover9",
+    "recorded_tool_results": null,
+    "search_backend": "openai",
+    "server_environment_variables": [],
+    "solver_direct_encoding_clause_limit": 64,
+    "solver_max_megabytes": 200,
+    "solver_max_output_bytes": 1000000,
+    "solver_timeout_seconds": 10,
+    "text_moderation_backend": "openai_moderation",
+    "tool_call_timeout_seconds": 60.0,
+    "transport": "local",
+    "verifier_model": "gpt-4o-mini-2024-07-18"
+  },
+  "training_dataset": {
+    "max_scenario_groups": 400,
+    "scenario_groups_per_circuit": 4,
+    "scenario_groups_per_request": 1,
+    "seed": 42,
+    "split_fractions": [
+      0.7,
+      0.15,
+      0.15
+    ]
+  },
+  "verifier_training": {
+    "batch_size": 1,
+    "epochs": 1,
+    "examples_per_template": 8,
+    "learning_rate": 0.0001,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_rank": 16,
+    "lora_target_modules": [],
+    "output_directory": "runs/verifier_training",
+    "seed": 0,
+    "test_fraction": 0.1,
+    "validation_fraction": 0.1
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "decisions": [
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "content_promotes_hate.a5d8268d",
+      "reason": "The predicate describes a condition about content promoting hate.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "content_incites_violence.29b46c59",
+      "reason": "The predicate describes a condition about content inciting violence.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "ban_community.7c7f6afb",
+      "reason": "The predicate describes the action of banning a community.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "ban_user.505ad330",
+      "reason": "The predicate describes the action of banning a user.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "user_experiences_harassment.7c307279",
+      "reason": "The predicate describes a condition where a user experiences harassment.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "report_harassment.40aa2577",
+      "reason": "The predicate describes the action of reporting harassment.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "take_action_against_harassment.abe19749",
+      "reason": "The predicate describes the action of addressing harassment.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "user_uses_reddit.fdba4841",
+      "reason": "The predicate describes a condition where a user uses Reddit.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "user_safe_from_harassment.45b0d5d2",
+      "reason": "The predicate describes a condition where a user is safe from harassment.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "participate_authentically.479b3f5b",
+      "reason": "The predicate describes a condition of authentic participation.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "engage_in_spam.59fb1b9d",
+      "reason": "The predicate describes the action of engaging in spam.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "engage_in_disruptive_behavior.f570183f",
+      "reason": "The predicate describes the action of engaging in disruptive behavior.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "engage_in_content_manipulation.f4db380f",
+      "reason": "The predicate describes the action of manipulating content.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "instigate_harassment.063390f5",
+      "reason": "The predicate describes the action of instigating harassment.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "reveal_personal_info.e1661515",
+      "reason": "The predicate describes the action of revealing personal information.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "post_intimate_media.003415a6",
+      "reason": "The predicate describes the action of posting intimate media.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "has_consent.0ca579d7",
+      "reason": "The predicate describes a condition where consent is given.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "threaten_to_post_media.98c3c806",
+      "reason": "The predicate describes the action of threatening to post media.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "share_content.0582158e",
+      "reason": "The predicate describes the action of sharing content.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "content_involves_minors.a994294b",
+      "reason": "The predicate describes a condition where content involves minors.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "content_is_sexual_or_abusive.9e57ad97",
+      "reason": "The predicate describes a condition where content is sexual or abusive.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "engage_predatory_behavior.16bd686a",
+      "reason": "The predicate describes the action of engaging in predatory behavior.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "intentionally_mislead.d1fc1a98",
+      "reason": "The predicate describes the action of intentionally misleading others.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "impersonate_entity.1246f277",
+      "reason": "The predicate describes the action of impersonating another entity.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "is_graphic.181a547b",
+      "reason": "The predicate describes a condition where content is graphic.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "is_sexually_explicit.a8e34a31",
+      "reason": "The predicate describes a condition where content is sexually explicit.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "is_offensive.7d37e114",
+      "reason": "The predicate describes a condition where content is offensive.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "label_content.1ab5bcfc",
+      "reason": "The predicate describes the action of labeling content.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "community_contains_graphic_content.158f3fa3",
+      "reason": "The predicate describes a condition where a community contains graphic content.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "community_contains_sexually_explicit_content.37043415",
+      "reason": "The predicate describes a condition where a community contains sexually explicit content.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "community_contains_offensive_content.e76a15ba",
+      "reason": "The predicate describes a condition where a community contains offensive content.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "label_community.89e6d8d8",
+      "reason": "The predicate describes the action of labeling a community.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "ensure_predictable_experience.9240b21c",
+      "reason": "The predicate describes a condition ensuring predictable user experiences.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "content_is_labeled.27c0e67b",
+      "reason": "The predicate describes a condition where content is labeled.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "community_is_labeled.0a70c0f6",
+      "reason": "The predicate describes a condition where a community is labeled.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "post_content.5d43f06f",
+      "reason": "The predicate describes the action of posting content.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "is_illegal_content.de83be94",
+      "reason": "The predicate describes a condition where content is illegal.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "solicit_transaction.f60efb4e",
+      "reason": "The predicate describes the action of soliciting a transaction.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "is_prohibited_transaction.aae3912c",
+      "reason": "The predicate describes a condition where a transaction is prohibited.",
+      "type": "state"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "facilitate_transaction.07d054e6",
+      "reason": "The predicate describes the action of facilitating a transaction.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "perform_action.7a29b8ea",
+      "reason": "The predicate describes the action of performing an activity on Reddit.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "disrupt_functionality.7a6accb6",
+      "reason": "The predicate describes the action of disrupting Reddit's functionality.",
+      "type": "action"
+    },
+    {
+      "origin": "gpt-4o-2024-11-20",
+      "predicate_id": "interfere_accessibility.201f1a53",
+      "reason": "The predicate describes the action of interfering with Reddit's accessibility.",
+      "type": "action"
+    }
+  ],
+  "note": "Appendix H does not specify predicate types. This step adds them."
+}

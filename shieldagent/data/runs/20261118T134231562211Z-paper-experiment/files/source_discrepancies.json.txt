@@ -1,0 +1,264 @@
+{
+  "document": "docs/architecture.html",
+  "entries": [
+    {
+      "configuration": [],
+      "id": "D01",
+      "selected_interpretation": "the prompt file keeps the printed example. The default run sends it unchanged. An extracted rule is treated as the output of a fallible translator. A corrected-prompt run would be a separate experiment. It is not implemented.",
+      "title": "The LTL prompt example states the implication in the wrong direction"
+    },
+    {
+      "configuration": [
+        "prompts.append_unpublished_few_shot_examples"
+      ],
+      "id": "D02",
+      "selected_interpretation": "the literal strings stay in the templates. The default run appends no example and records `few_shot_examples_provided: false` for each call. Figs. 11 to 13 serve only as case-study inputs and expected outputs. Configuration: `prompts.append_unpublished_few_shot_examples` admits only `false`.",
+      "title": "The few-shot examples of VR and RP are not printed"
+    },
+    {
+      "configuration": [],
+      "id": "D03",
+      "selected_interpretation": "these operations use prompts under `prompt_template/implementation/`. Each file starts with the line \"NOT PUBLISHED IN APPENDIX H\" and carries the origin `implementation` and the figure or algorithm that guided its design. No such prompt is ever described as a paper prompt.",
+      "title": "No runtime prompt is published"
+    },
+    {
+      "configuration": [
+        "ltl_rule_extraction.predicate_types"
+      ],
+      "id": "D04",
+      "selected_interpretation": "the template is unchanged. Deterministic IDs are added afterward. The rule description is inherited from the policy description and recorded as inherited. Predicate types come from supplied annotations or from an implementation-authored classification step, and that step is persisted. A rule with at least one action predicate is an action rule. A rule with state predicates only is a physical rule. Figure labels print `condition` for state predicates. The executable fixtures map `condition` to `state` explicitly. Configuration: `ltl_rule_extraction.predicate_types`.",
+      "title": "The published LTL output format lacks four fields of a rule"
+    },
+    {
+      "configuration": [],
+      "id": "D05",
+      "selected_interpretation": "JSON `null` is accepted. A literal `None` is a parse failure by default. With `policy_extraction.allow_none_literal = true`, a syntax-only normalization replaces a bare `None` outside JSON strings, and the result reports the count. `eval` is never used.",
+      "title": "`None` is not JSON"
+    },
+    {
+      "configuration": [],
+      "id": "D06",
+      "selected_interpretation": "the parser accepts the eight Appendix H keywords, `XOR`, parentheses, and the glyphs `∧ ∨ ⊕ ¬ → ⇒ □ ◇ ○`. It rejects every other syntax, including `IMPLY` and `SOMETIMES`. Operator precedence is an implementation choice (`docs/architecture.html#implementation-choices`).",
+      "title": "Operator names differ between Appendix H and Appendix C.3"
+    },
+    {
+      "configuration": [],
+      "id": "D07",
+      "selected_interpretation": "both readings are implemented. The standard strong reading of the cited LTLf literature is the default, and every evaluator call names its reading. The case-study configuration keeps the source-text reading. Configuration: `ltlf.until_interpretation = \"standard_strong\"` or `\"appendix_c3_inclusive\"`.",
+      "title": "The Until wording differs from the conventional finite-trace until"
+    },
+    {
+      "configuration": [],
+      "id": "D08",
+      "selected_interpretation": "on an open prefix a formula has one of three statuses: true, false, or pending. Pending is a runtime status, not a safety label. It is never read as true. In the default online mode a pending rule fails the verification with `IncompleteVerificationError`. Consequence: a rule that is wrapped in `ALWAYS` cannot certify a compliant step online. A complete trajectory can be evaluated offline with `ltlf.open_prefix = \"complete_trace\"`, and such a run must be labeled offline. A non-temporal rule describes the current action state. A temporal rule is evaluated from the initial position.",
+      "title": "The paper does not say how a temporal rule is checked at one step"
+    },
+    {
+      "configuration": [
+        "safety_certification.epsilon"
+      ],
+      "id": "D09",
+      "selected_interpretation": "Eq. 5 is implemented as printed, with `>=` and a signed finite ε. `safety_certification.epsilon` defaults to the Fig. 19 value 0.1 for the case study. A broader evaluation must preregister ε. The value 0 accepts a tie. No test changes ε or the comparison to make a label pass.",
+      "title": "Eq. 5 rejects a tie for a positive threshold, and prohibition rules never give a positive margin"
+    },
+    {
+      "configuration": [],
+      "id": "D10",
+      "selected_interpretation": "the printed values stay in the raw fixtures. They are not expected results. The implementation normalizes over the two worlds, so the probabilities sum to 1. With the supplied rule vectors and seven test weights of 1.0, P1 ≈ 0.1192 and P0 ≈ 0.8808. These numbers do not reproduce the figure.",
+      "title": "The printed case-study probabilities are not complementary, and two margins are printed"
+    },
+    {
+      "configuration": [],
+      "id": "D11",
+      "selected_interpretation": "the pipeline reverses only the queried action of each circuit. The Fig. 19 vector stays in the supplied fixture. The two computations are kept apart.",
+      "title": "The non-execution vector of Fig. 19 reverses more than the queried action"
+    },
+    {
+      "configuration": [],
+      "id": "D12",
+      "selected_interpretation": "physical rules stay in the model and in every circuit. Their formal results are reported. The implementation does not claim that they repair a wrong state assignment.",
+      "title": "Physical rules cancel under fully conditioned inference"
+    },
+    {
+      "configuration": [],
+      "id": "D13",
+      "selected_interpretation": "the printed loss is implemented without a margin, a regularizer, or a cross-entropy term. Initialization is random, as the paper states. Each circuit report gives the loss at zero weights, the tied margins, the weight change, the rules without influence, and the results of each class and split.",
+      "title": "Eq. 6 has a zero-loss solution at zero weights"
+    },
+    {
+      "configuration": [],
+      "id": "D14",
+      "selected_interpretation": "the code keeps `PredicateMap` apart from the violated-rule results.",
+      "title": "Eq. 1 and Algorithm 1 use `V_s` for two things"
+    },
+    {
+      "configuration": [],
+      "id": "D15",
+      "selected_interpretation": "`safety_label` is true for safe and false for unsafe, as in Alg. 1 and Eq. 5.",
+      "title": "Fig. 1 prints label 1 for the unsafe condition"
+    },
+    {
+      "configuration": [],
+      "id": "D16",
+      "selected_interpretation": "Alg. 1 is the default. Planning is per rule, with predicate assignments shared when context, target, and position match. For several extracted actions the pipeline runs each circuit with single-action reversal. A step is safe only if every queried circuit certifies safe. A rule exclusion is honored only with `shielding_pipeline.rule_filtering = \"justified_exclusion\"`, and the justification is recorded. An excluded rule is not counted as satisfied.",
+      "title": "Algorithm 1 works per rule, and the text and figures work per action"
+    },
+    {
+      "configuration": [],
+      "id": "D17",
+      "selected_interpretation": "at most `refinement_budget` refinements are accepted, with the condition n < N_b. VR runs for each predicate of the popped rule, with every rule that refers to the predicate. RP candidate clusters are complete-linkage clusters of same-type predicates whose pairwise embedding similarity reaches a threshold. Configuration: `aspm_structure_optimization.*`. `max_iterations = 10` follows Table 8.",
+      "title": "Algorithm 2 leaves the budget boundary and the clustering open"
+    },
+    {
+      "configuration": [
+        "aspm_structure_optimization.vagueness_top_k"
+      ],
+      "id": "D18",
+      "selected_interpretation": "the vagueness of a predicate is the mean of its k largest cosine similarities to the other predicates of the same type. The predicate itself is excluded. With fewer than k peers, all peers are used. A predicate without a peer scores 0 and is listed in `insufficient_neighbors`, so its 0 is not read as a measurement. The rule score is the maximum over its predicates. Configuration: `aspm_structure_optimization.vagueness_top_k`.",
+      "title": "Eq. 3 has unusable indices and includes the predicate itself"
+    },
+    {
+      "configuration": [],
+      "id": "D19",
+      "selected_interpretation": "such a rule is attached to each action that it mentions. A physical rule whose rule cluster holds no action rule enters no circuit, and `coverage.json` lists it. The diagonal of the adjacency matrix is 0. θ and k are configuration values (`action_based_aspm_clustering.*`).",
+      "title": "Algorithm 3 does not cover rules without state predicates"
+    },
+    {
+      "configuration": [],
+      "id": "D20",
+      "selected_interpretation": "raw fixtures keep the printed names. Executable fixtures map each name explicitly and list the change with its reason. A raw rule with an undeclared name is a validation error, and that error is the expected test result.",
+      "title": "Predicate names disagree inside figures"
+    },
+    {
+      "configuration": [],
+      "id": "D21",
+      "selected_interpretation": "the executable interpretation uses `data_is_harmful = false`, `user_consent_for_publish_contact_info = false`, and `user_consent_for_update_bio = true`. These values agree with the rule results that Fig. 18 prints.",
+      "title": "Figs. 16 and 17 disagree on harmfulness, and Fig. 17 explanations contradict their flags"
+    },
+    {
+      "configuration": [],
+      "id": "D22",
+      "selected_interpretation": "the executable tool names use `content_analysis`. The raw fixture keeps both spellings.",
+      "title": "Fig. 16 names the tool server in two ways"
+    },
+    {
+      "configuration": [],
+      "id": "D23",
+      "selected_interpretation": "one program per rule and per world. The grounded facts are the assumptions and the rule is the goal. The adapter sets `prolog_style_variables`, turns `auto_denials` off, and bounds time and memory. A proof gives a satisfied rule. A Mace4 countermodel gives a violated rule. Contradictory facts, a constant goal, a timeout, and a solver error give no result. With the normalized facts the executed-world results for rules 1 to 7 are `[F, T, T, T, T, T, F]`, as Fig. 18 prints.",
+      "title": "The printed shielding code is not a valid or sound Prover9 program"
+    },
+    {
+      "configuration": [],
+      "id": "D24",
+      "selected_interpretation": "each fixture keeps its own step label. No single step number is hard-coded as the original step.",
+      "title": "Step labels differ between Fig. 7 and Fig. 14"
+    },
+    {
+      "configuration": [],
+      "id": "D25",
+      "selected_interpretation": "the loader reads counts from the supplied dataset manifest. It hard-codes no count and creates no trajectory to reach a total.",
+      "title": "Dataset counts and pairings are stated in several ways"
+    },
+    {
+      "configuration": [],
+      "id": "D26",
+      "selected_interpretation": "adapters accept supplied policies, trajectories, and labels. They report the augmentation that is missing. An evaluation on a reconstructed augmentation is a new evaluation.",
+      "title": "Counts for the existing benchmarks differ from the text and from current releases"
+    },
+    {
+      "configuration": [],
+      "id": "D27",
+      "selected_interpretation": "this repository reports accuracy differences in points, with sample counts. No gain is a completion criterion.",
+      "title": "The stated gain is printed as 11.3% and as 10.2%"
+    },
+    {
+      "configuration": [],
+      "id": "D28",
+      "selected_interpretation": "the evaluation code reports every configured guardrail and reports time for every run.",
+      "title": "Table 3 and Table 4 do not match their context"
+    },
+    {
+      "configuration": [],
+      "id": "D29",
+      "selected_interpretation": "an action tree is a versioned input with a provenance field. The case-study tree is reconstructed from the two printed paths and is labeled so. A step with no matching circuit raises `CoverageError`.",
+      "title": "No action tree is published"
+    },
+    {
+      "configuration": [],
+      "id": "D30",
+      "selected_interpretation": "the two roles have a training entry point with reconstruction-authored data and settings. No checkpoint is downloaded or trained here. A base checkpoint without an adapter is never described as the authors' verifier.",
+      "title": "No verifier training data, recipe, or checkpoint is published"
+    },
+    {
+      "configuration": [],
+      "id": "D31",
+      "selected_interpretation": "weight learning takes an explicit Training Dataset: supplied trajectories or the simulated pseudo-learning recipe. The recipe writes scenarios from the source policies with GPT-4o and checks the grounding and the labels in separate calls. It is a documented reconstruction choice, and its labels are fabricated content. The case study uses test weights of 1.0 and stores the weight status `test_fixture`.",
+      "title": "No weight-learning data and no learned weights are published"
+    },
+    {
+      "configuration": [
+        "evaluation.rule_traverse_early_stop"
+      ],
+      "id": "D32",
+      "selected_interpretation": "`evaluation.rule_traverse_early_stop` selects the behavior. The default examines every rule. With an early stop, the rules that were not examined are reported as not examined.",
+      "title": "Rule Traverse stops at the first violation, and Table 2 reports rule recall for it"
+    },
+    {
+      "configuration": [
+        "evaluation.granularity"
+      ],
+      "id": "D33",
+      "selected_interpretation": "`evaluation.granularity` is `step` or `trajectory_final_step`. Every guardrail of a run uses the same value, and the run records it.",
+      "title": "Direct uses one query for each sample, and Algorithm 1 verifies each step"
+    },
+    {
+      "configuration": [],
+      "id": "D34",
+      "selected_interpretation": "rule recall needs an explicit, validated mapping from reported rule IDs to annotated references. A report without a mapping is counted as unmapped. The annotation level is reported next to the metric. Task success is stored apart from safety.",
+      "title": "The annotation of Fig. 7 names policies, and the metric names rules"
+    },
+    {
+      "configuration": [],
+      "id": "D35",
+      "selected_interpretation": "the loader accepts both spellings as one category.",
+      "title": "One risk category has two spellings"
+    },
+    {
+      "configuration": [],
+      "id": "D36",
+      "selected_interpretation": "Algorithm 3 and Figs. 14 to 19 are the only sources for training and for the runtime framework.",
+      "title": "Two appendix sections have a heading and no text"
+    },
+    {
+      "configuration": [],
+      "id": "D37",
+      "selected_interpretation": "the optimization report keeps two outputs apart: the Eq. 3 proxy and the GPT-4o judge. Neither replaces the other.",
+      "title": "Table 8 does not name its vagueness measure"
+    },
+    {
+      "configuration": [],
+      "id": "D38",
+      "selected_interpretation": "`k′` is the number of clusters after the co-occurrence merge. Weight learning takes one gradient step for each training example. Each epoch shuffles the training groups with a seeded generator.",
+      "title": "Algorithm 3 uses an undefined symbol and updates on each sample"
+    },
+    {
+      "configuration": [],
+      "id": "D39",
+      "selected_interpretation": "the KV-cache belongs to the two local verifier models. A workflow is successful when its verification completed: every required assignment has evidence, every tool call succeeded, and formal verification finished in both worlds. A workflow that detects an unsafe action can be successful. Retrieval follows Alg. 1, for each rule. Configuration: `memory_modules.*`.",
+      "title": "The memory modules are described without their owners or criteria"
+    },
+    {
+      "configuration": [],
+      "id": "D40",
+      "selected_interpretation": "each tool receives the verification input as one JSON value. A factual check accepts only configured sources with their texts, and the replay passes no source. The inference tool takes explicit weights.",
+      "title": "Tool calls in the figures are not executable as printed"
+    },
+    {
+      "configuration": [],
+      "id": "D41",
+      "selected_interpretation": "the rule is kept as printed. The replay excludes it with the justification that Fig. 15 prints.",
+      "title": "Rule 9 of Fig. 15 negates a whole implication"
+    }
+  ],
+  "source": "reference/chen25ae.pdf"
+}

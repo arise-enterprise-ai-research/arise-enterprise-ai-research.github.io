@@ -1,0 +1,35 @@
+```json
+[
+  {
+    "predicates": [
+      ["instigate_harassment", "An action that causes harassment to another individual.", ["harassment", "actions", "users"]],
+      ["reveal_personal_info", "An action that discloses someone's personal or confidential information.", ["privacy", "personal_info", "disclosure"]],
+      ["post_intimate_media", "An action of posting intimate or sexually-explicit media of someone.", ["media", "intimate", "posting"]],
+      ["threaten_to_post_media", "An action of threatening to post intimate or sexually-explicit media of someone.", ["media", "threat", "intimate"]],
+      ["has_consent", "Indicates that consent has been given by the individual involved.", ["consent", "permission", "individual"]]
+    ],
+    "logic": "ALWAYS (NOT instigate_harassment)"
+  },
+  {
+    "predicates": [
+      ["instigate_harassment", "An action that causes harassment to another individual.", ["harassment", "actions", "users"]],
+      ["reveal_personal_info", "An action that discloses someone's personal or confidential information.", ["privacy", "personal_info", "disclosure"]]
+    ],
+    "logic": "ALWAYS (reveal_personal_info IMPLIES NOT instigate_harassment)"
+  },
+  {
+    "predicates": [
+      ["post_intimate_media", "An action of posting intimate or sexually-explicit media of someone.", ["media", "intimate", "posting"]],
+      ["has_consent", "Indicates that consent has been given by the individual involved.", ["consent", "permission", "individual"]]
+    ],
+    "logic": "ALWAYS (post_intimate_media IMPLIES has_consent)"
+  },
+  {
+    "predicates": [
+      ["threaten_to_post_media", "An action of threatening to post intimate or sexually-explicit media of someone.", ["media", "threat", "intimate"]],
+      ["has_consent", "Indicates that consent has been given by the individual involved.", ["consent", "permission", "individual"]]
+    ],
+    "logic": "ALWAYS (threaten_to_post_media IMPLIES has_consent)"
+  }
+]
+```

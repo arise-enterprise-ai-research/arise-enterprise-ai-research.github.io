@@ -1,0 +1,128 @@
+{
+  "appendix_h": [
+    {
+      "name": "policy_extraction",
+      "origin": "Appendix H",
+      "page": 29,
+      "pinned": true,
+      "system_sha256": "9d12f4082b283eba507db26282877d90ab7e2c1c9d0974161192d7fd433981cf",
+      "user_sha256": "4307b975e652524c0214764de73dc05e1add19eb0d99e1bc7937f5914c29faff"
+    },
+    {
+      "name": "ltl_rule_extraction",
+      "origin": "Appendix H",
+      "page": 30,
+      "pinned": true,
+      "system_sha256": "144296bbb180592984449d7b0475af4c374250932da4466a674625972f62bd10",
+      "user_sha256": "63ff05eaa21af5d6f25bd68f287b6909982fe05c4d95ffdd4bf11a0aae89e42c"
+    },
+    {
+      "name": "verifiability_refinement",
+      "origin": "Appendix H",
+      "page": 31,
+      "pinned": true,
+      "system_sha256": "2334679313ab146902fb070dc47dca1c78dc67933156d8aa1b306cecd390497e",
+      "user_sha256": "aa6aed07419fe557d88fe2438cee5e2113a635de1b4a6720c63d96e61cbdebf8"
+    },
+    {
+      "name": "redundancy_pruning",
+      "origin": "Appendix H",
+      "page": 32,
+      "pinned": true,
+      "system_sha256": "f9394356d3e0576d66b87b299f22a1dd84a0fde4ec37b395d90671791e181951",
+      "user_sha256": "c5527b945ae1ffe68d1cce7d96fa7fe516bd368c6bf7f8be8dd6c7107db429ab"
+    }
+  ],
+  "implementation": [
+    {
+      "design_source": "Eq. 2; App. A.2",
+      "name": "predicate_types",
+      "origin": "implementation",
+      "sha256": "b7abd82723210dc128db5865a598eff1cf00b16a0afee08c571cde8c28991ef0"
+    },
+    {
+      "design_source": "Fig. 6 caption; Sec. 3.2.3",
+      "name": "rule_vagueness_judge",
+      "origin": "implementation",
+      "sha256": "1bc5e2460e2633bd179ae78b4ff39bf46c14453bc003ba564d8c560703c33de3"
+    },
+    {
+      "design_source": "Sec. 3.2.4 simulated pseudo-learning; handoff specification Sec. 14",
+      "name": "pseudo_learning_scenarios",
+      "origin": "implementation",
+      "sha256": "6a3895f2b0b52ac823dc358cc786c7440d51fbeb08adcf0003ef6bec4adc7598"
+    },
+    {
+      "design_source": "Sec. 3.2.4 simulated pseudo-learning; handoff specification Sec. 14",
+      "name": "pseudo_learning_grounding",
+      "origin": "implementation",
+      "sha256": "a6eef95890eb6dcd8462c91c4d2e466c30d389ecf5f3ecf2e5567aab435548fd"
+    },
+    {
+      "design_source": "Sec. 3.2.4 simulated pseudo-learning; handoff specification Sec. 14",
+      "name": "pseudo_learning_label_check",
+      "origin": "implementation",
+      "sha256": "683768d0b41c71631a2e33b579b0d760ed553eaaf182cce378978862c20094b6"
+    },
+    {
+      "design_source": "Alg. 1 line 1; Fig. 14 step 1; Fig. 15 caption",
+      "name": "action_extraction",
+      "origin": "implementation",
+      "sha256": "6a290717b416db358a187fda67e20997adc2b04bcadbb436c9cc3dd2b33b40c9"
+    },
+    {
+      "design_source": "Alg. 1 lines 6-12; Sec. 3.3; Figs. 15-17",
+      "name": "shielding_plan",
+      "origin": "implementation",
+      "sha256": "b500f51218c64066a2037ff4fc9e1bc2409a3d046e1b95a8747fd0c3e4080b31"
+    },
+    {
+      "design_source": "Sec. 3.3; Fig. 18",
+      "name": "shielding_code",
+      "origin": "implementation",
+      "sha256": "a02bf3b73bab6922c63e95bde6a4b797d89259b95aea02b021924facb0b95db0"
+    },
+    {
+      "design_source": "Eq. 1; Sec. 3.3; Fig. 19",
+      "name": "guardrail_output",
+      "origin": "implementation",
+      "sha256": "e9e8ba9a9329ffb4e398853765d941424f0d9c156ca568aea5b0389be5bd1bc6"
+    },
+    {
+      "design_source": "Fig. 16 content_analysis.factual_check; Sec. 3.3",
+      "name": "factual_check",
+      "origin": "implementation",
+      "sha256": "86047d035237d26943bf31ec0af58e165174ceb2f87d07b10aec728772ab1aa6"
+    },
+    {
+      "design_source": "Sec. 3.3 Search and the enumeration model",
+      "name": "search_training",
+      "origin": "implementation",
+      "sha256": "bdfc63c69c2122f418c0115c2ef91fc3a89da63078e88f346100d22373e7c576"
+    },
+    {
+      "design_source": "Sec. 3.3; Fig. 17 binary_check.general_query",
+      "name": "binary_check_training",
+      "origin": "implementation",
+      "sha256": "9cf80e7a50ef7909f3347416b0160f48cc1b3c2faa2aa7e38423d268d7b7de49"
+    },
+    {
+      "design_source": "Sec. 3.3; Fig. 17 binary_check.general_query; API substitution",
+      "name": "binary_check_api",
+      "origin": "implementation",
+      "sha256": "926417f067152bdf52b8620b1a5c850f246a7f4baf0e9d1ea3f07b62549ac294"
+    },
+    {
+      "design_source": "Sec. 5.1 baseline (1) Direct prompt",
+      "name": "direct",
+      "origin": "implementation",
+      "sha256": "fc1a44a4fc41c6b5be63294ca6abcc7415efb3787e4e417b94bb0372983cc83d"
+    },
+    {
+      "design_source": "Sec. 5.1 baseline (2) Rule traverse",
+      "name": "rule_traverse",
+      "origin": "implementation",
+      "sha256": "ed7063d0ca4b7b1adf4d1c593c8ef60c876a201e648646b4e76b087263a9e1aa"
+    }
+  ]
+}

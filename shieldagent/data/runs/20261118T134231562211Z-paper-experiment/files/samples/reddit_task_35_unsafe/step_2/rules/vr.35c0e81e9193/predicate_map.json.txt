@@ -1,0 +1,70 @@
+{
+  "contexts": [],
+  "positions": [
+    0,
+    1,
+    2
+  ],
+  "values": [
+    {
+      "evidence": [
+        "action_extraction: extracted for step 2"
+      ],
+      "position": 2,
+      "predicate_id": "reveal_personal_info.e1661515",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": true
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 2 (closed-world assignment)"
+      ],
+      "position": 2,
+      "predicate_id": "instigate_harassment.c43b50f2",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "reveal_personal_info.e1661515",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 0 (closed-world assignment)"
+      ],
+      "position": 0,
+      "predicate_id": "instigate_harassment.c43b50f2",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "reveal_personal_info.e1661515",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    },
+    {
+      "evidence": [
+        "action_extraction: not extracted for step 1 (closed-world assignment)"
+      ],
+      "position": 1,
+      "predicate_id": "instigate_harassment.c43b50f2",
+      "rule_context": "*",
+      "target": "current_action",
+      "value": false
+    }
+  ]
+}

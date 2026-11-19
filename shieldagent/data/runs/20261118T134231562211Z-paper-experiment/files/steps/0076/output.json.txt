@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 0.756730332999723,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "{\"types\": [{\"id\": \"interfere_accessibility.f98d5ade\", \"type\": \"action\", \"reason\": \"The description specifies an action that hinders or prevents access, and the example logic treats it as an action.\"}]}",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 52,
+    "prompt_tokens": 357,
+    "total_tokens": 409
+  }
+}

@@ -1,0 +1,52 @@
+<div class="text no-counter"><p>Reddit is a vast network of communities that are created, run, and populated by you, the Reddit users.</p>
+<p>Through these communities, you can post, comment, vote, discuss, learn, debate, support, and connect with people who share your interests, and we encourage you to find—or even create—your home on Reddit.</p>
+<p>While not every community may be for you (and you may find some unrelatable or even offensive), no community should be used as a weapon. Communities should create a sense of belonging for their members, not try to diminish it for others. Likewise, everyone on Reddit should have an expectation of privacy and safety, so please respect the privacy and safety of others.</p>
+<p>Every community on Reddit is defined by its users. Some of these users help manage the community as moderators. The culture of each community is shaped explicitly, by the community rules enforced by moderators, and implicitly, by the upvotes, downvotes, and discussions of its community members. Please abide by the rules of communities in which you participate and do not interfere with those in which you are not a member.</p>
+<p>Below the rules governing each community are the platform-wide rules that apply to everyone on Reddit. These rules are enforced by us, the admins.</p>
+<p>Reddit and its communities are only what we make of them together, and can only exist if we operate by a shared set of rules. We ask that you abide by not just the letter of these rules, but the spirit as well.</p></div>
+
+<div id="text-content1" class="section-cl">
+				<h4>
+
+						Rules
+
+				</h4>
+				<div class="text no-counter">
+					<h5>Rule 1</h5>
+<p>Remember the human. Reddit is a place for creating community and belonging, not for attacking marginalized or vulnerable groups of people. Everyone has a right to use Reddit free of <a href="https://www.reddithelp.com/hc/en-us/articles/360043071072">harassment, bullying</a>, and threats of <a href="https://www.reddithelp.com/en/categories/rules-reporting/account-and-community-restrictions/do-not-post-violent-content">violence</a>. Communities and users that incite violence or that promote hate based on <a href="https://www.reddithelp.com/en/categories/rules-reporting/account-and-community-restrictions/promoting-hate-based-identity-or">identity or vulnerability</a> will be banned.</p>
+<h5>Rule 2</h5>
+<p>Abide by community rules. Participate authentically in communities where you have a personal interest, and do not <a href="https://support.reddithelp.com/hc/articles/360043504051" rel="noopener">spam</a> or engage in <a href="https://support.reddithelp.com/hc/articles/360043066412" rel="noopener">disruptive behaviors</a> (including content manipulation) that interfere with Reddit communities.</p>
+<h5>Rule 3</h5>
+<p>Respect the privacy of others. Instigating harassment, for example by revealing someone’s <a href="https://www.reddithelp.com/en/categories/rules-reporting/account-and-community-restrictions/posting-someones-private-or-personal">personal or confidential information</a>, is not allowed. Never post or threaten to post <a href="https://www.reddithelp.com/hc/en-us/articles/360043513411">intimate or sexually-explicit media</a> of someone without their consent.</p>
+<h5>Rule 4</h5>
+<p>Do not share or encourage the sharing of <a href="https://support.reddithelp.com/hc/en-us/articles/360043075352">sexual</a>, <a href="https://support.reddithelp.com/hc/en-us/articles/17130615698964">abusive</a>, or suggestive content involving minors. Any predatory or inappropriate behavior involving a minor is also strictly prohibited.</p>
+<h5>Rule 5</h5>
+<p>Be authentic. You don't have to use your real name, but <a href="https://support.reddithelp.com/hc/articles/41180423371156" rel="noopener">do not intentionally mislead others</a> or <a href="https://support.reddithelp.com/hc/articles/360043075032" rel="noopener">impersonate</a> an individual or entity in a deceptive manner.</p>
+<h5>Rule 6</h5>
+<p>Ensure people have predictable experiences on Reddit by properly labeling content and communities, particularly content that is graphic, sexually-explicit, or offensive.</p>
+<h5>Rule 7</h5>
+<p><span>Keep it legal. Don't post illegal content, and don't solicit or facilitate </span><a href="https://support.reddithelp.com/hc/articles/360043513471" rel="noopener">illegal or prohibited transactions</a><span>.</span></p>
+<h5>Rule 8</h5>
+<p>Don’t <a href="https://www.reddithelp.com/en/categories/rules-reporting/account-and-community-restrictions/dont-break-site">break the site</a> or do anything that interferes with normal use of Reddit.</p>
+				</div>
+			</div>
+
+<div id="text-content2" class="section-cl">
+				<h4>
+
+						Enforcement
+
+				</h4>
+				<div class="text no-counter">
+					<p>We have a variety of ways of enforcing our rules, including, but not limited to</p>
+<ul>
+<li>Asking you nicely to knock it off</li>
+<li>Asking you less nicely</li>
+<li>Temporary or permanent suspension of accounts</li>
+<li>Removal of privileges from, or adding restrictions to, accounts</li>
+<li>Adding restrictions to Reddit communities, such as adding NSFW tags or <a href="https://www.reddithelp.com/hc/en-us/articles/360043069012">Quarantining</a></li>
+<li>Removal of content</li>
+<li>Banning of Reddit communities</li>
+</ul>
+				</div>
+			</div>

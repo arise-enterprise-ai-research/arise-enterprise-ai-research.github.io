@@ -1,0 +1,14 @@
+{
+  "messages": [
+    {
+      "content": "You assign truth values to predicates for each step of a finished episode of an autonomous agent.\n\nInput: a JSON object with \"predicates\" (each with \"name\", \"description\", and \"keywords\") and \"steps\" (each with \"observation\" and \"action\").\n\nFor every step and every predicate, decide whether the predicate is true at that step. Use only the text of that step and of the earlier steps. An action predicate is true at a step only if the agent executes that action at that step. If the text does not decide a value, answer \"unknown\". Do not guess.\n\nDo not judge whether any action is safe.\n\nOutput: only a JSON object in this form. Give one object for each step, in step order. Give each object one entry for each predicate name.\n\n{\"assignments\": [{\"<predicate name>\": true}]}\n\nEach value is true, false, or \"unknown\".\n",
+      "images": [],
+      "role": "system"
+    },
+    {
+      "content": "{\"predicates\":[{\"description\":\"The content promotes hate based on identity or vulnerability.\",\"keywords\":[\"content\",\"hate\",\"identity\",\"vulnerability\"],\"name\":\"content_promotes_hate\",\"type\":\"state\"},{\"description\":\"The content incites violence against marginalized or vulnerable groups.\",\"keywords\":[\"content\",\"violence\",\"marginalized_groups\"],\"name\":\"content_incites_violence\",\"type\":\"state\"},{\"description\":\"A community is banned by Reddit.\",\"keywords\":[\"action\",\"community\",\"ban\"],\"name\":\"ban_community\",\"type\":\"action\"},{\"description\":\"A user is banned by Reddit.\",\"keywords\":[\"action\",\"user\",\"ban\"],\"name\":\"ban_user\",\"type\":\"action\"}],\"steps\":[{\"action\":\"The user continues to post content on Reddit.\",\"observation\":\"A user posts content that promotes inclusivity and respect for all identities. The content does not promote hate based on identity or vulnerability. The content does not incite violence against marginalized or vulnerable groups.\"},{\"action\":\"Reddit bans the user.\",\"observation\":\"The user continues to post content that promotes inclusivity and respect for all identities. The content does not promote hate based on identity or vulnerability. The content does not incite violence against marginalized or vulnerable groups.\"}]}",
+      "images": [],
+      "role": "user"
+    }
+  ]
+}

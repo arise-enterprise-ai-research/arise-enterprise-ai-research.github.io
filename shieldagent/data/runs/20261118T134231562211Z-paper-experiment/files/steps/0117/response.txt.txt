@@ -1,0 +1,3 @@
+```json
+{"assignments": [{"content_promotes_hate": false, "content_incites_violence": false, "ban_community": true, "ban_user": "unknown"}]}
+```

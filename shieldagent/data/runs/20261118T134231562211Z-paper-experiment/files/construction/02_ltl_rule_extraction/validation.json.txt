@@ -1,0 +1,59 @@
+{
+  "configuration": {
+    "on_validation_failure": "record",
+    "predicate_type_batch_size": 50,
+    "predicate_types": "gpt4o",
+    "supplied_predicate_types": null
+  },
+  "failures": [
+    {
+      "error": "Undeclared predicate name 'ban_user'",
+      "logic": "ALWAYS ((interaction_promotes_hate OR interaction_incites_violence) IMPLIES (ban_user))",
+      "policy_id": "reddit.document_001.c00.p000",
+      "rule_index": 1
+    }
+  ],
+  "notes": [
+    {
+      "note": "The logic does not use the declared predicates ['create_community', 'post_content', 'harassment_detected', 'user_free_of_harassment']",
+      "policy_id": "reddit.document_001.c00.p000",
+      "rule_index": 0
+    },
+    {
+      "note": "The logic does not use the declared predicates ['reveal_personal_info', 'post_intimate_media', 'threaten_to_post_media', 'has_consent']",
+      "policy_id": "reddit.document_001.c00.p002",
+      "rule_index": 0
+    },
+    {
+      "note": "The logic does not use the declared predicates ['engage_predatory_behavior']",
+      "policy_id": "reddit.document_001.c00.p003",
+      "rule_index": 0
+    },
+    {
+      "note": "The logic does not use the declared predicates ['use_real_name']",
+      "policy_id": "reddit.document_001.c00.p004",
+      "rule_index": 0
+    },
+    {
+      "note": "The logic does not use the declared predicates ['user_engages_with_content']",
+      "policy_id": "reddit.document_001.c00.p005",
+      "rule_index": 0
+    },
+    {
+      "note": "The logic does not use the declared predicates ['solicit_transaction', 'facilitate_transaction', 'is_prohibited_transaction']",
+      "policy_id": "reddit.document_001.c00.p006",
+      "rule_index": 0
+    },
+    {
+      "note": "The logic does not use the declared predicates ['post_content', 'is_illegal_content', 'facilitate_transaction']",
+      "policy_id": "reddit.document_001.c00.p006",
+      "rule_index": 1
+    },
+    {
+      "note": "The logic does not use the declared predicates ['post_content', 'is_illegal_content', 'solicit_transaction']",
+      "policy_id": "reddit.document_001.c00.p006",
+      "rule_index": 2
+    }
+  ],
+  "rules": 18
+}

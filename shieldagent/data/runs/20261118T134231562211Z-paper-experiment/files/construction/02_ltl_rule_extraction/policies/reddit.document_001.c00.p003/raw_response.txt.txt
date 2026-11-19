@@ -1,0 +1,19 @@
+```json
+[
+  {
+    "predicates": [
+      ["share_content", "The action of sharing any content on the platform.", ["action", "content", "sharing"]],
+      ["content_involves_minors", "The content involves individuals under the age of 18.", ["content", "minors", "age"]],
+      ["content_is_sexual_or_abusive", "The content is sexual, abusive, or suggestive in nature.", ["content", "sexual", "abusive", "suggestive"]],
+      ["engage_predatory_behavior", "The user engages in predatory or harmful behavior towards minors.", ["action", "predatory", "behavior", "minors"]]
+    ],
+    "logic": "ALWAYS (NOT (share_content AND content_involves_minors AND content_is_sexual_or_abusive))"
+  },
+  {
+    "predicates": [
+      ["engage_predatory_behavior", "The user engages in predatory or harmful behavior towards minors.", ["action", "predatory", "behavior", "minors"]]
+    ],
+    "logic": "ALWAYS (NOT engage_predatory_behavior)"
+  }
+]
+```

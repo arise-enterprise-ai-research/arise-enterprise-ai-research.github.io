@@ -1,0 +1,46 @@
+{
+  "invalid": [],
+  "rules": [
+    {
+      "logic": "ALWAYS (participate_authentically AND NOT (engage_in_spam OR engage_in_disruptive_behavior OR engage_in_content_manipulation))",
+      "predicates": [
+        [
+          "participate_authentically",
+          "The user participates in a community with genuine personal interest.",
+          [
+            "participation",
+            "authenticity",
+            "community"
+          ]
+        ],
+        [
+          "engage_in_spam",
+          "The user engages in spamming activities within a community.",
+          [
+            "spam",
+            "disruption",
+            "behavior"
+          ]
+        ],
+        [
+          "engage_in_disruptive_behavior",
+          "The user engages in behaviors that disrupt the integrity of a community.",
+          [
+            "disruption",
+            "behavior",
+            "community"
+          ]
+        ],
+        [
+          "engage_in_content_manipulation",
+          "The user manipulates content in a way that disrupts the integrity of a community.",
+          [
+            "content",
+            "manipulation",
+            "disruption"
+          ]
+        ]
+      ]
+    }
+  ]
+}

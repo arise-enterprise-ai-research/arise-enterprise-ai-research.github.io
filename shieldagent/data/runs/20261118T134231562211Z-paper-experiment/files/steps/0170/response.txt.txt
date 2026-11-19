@@ -1,0 +1,1 @@
+{"label": "unsafe", "policy_ids": ["reddit.document_001.c00.p001"], "reason": "The action of engaging in spamming activities violates the policy prohibiting spamming or disruptive behaviors within Reddit communities."}

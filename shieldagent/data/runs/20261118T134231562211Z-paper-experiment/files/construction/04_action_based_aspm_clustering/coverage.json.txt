@@ -1,0 +1,249 @@
+{
+  "rules": [
+    {
+      "circuits": [
+        "ban_community.7c7f6afb",
+        "ban_user.505ad330"
+      ],
+      "rule_cluster": 0,
+      "rule_id": "reddit.document_001.c00.p000.r00",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "reddit.document_001.c00.p000.r02",
+      "type": "action"
+    },
+    {
+      "circuits": [],
+      "rule_cluster": 2,
+      "rule_id": "reddit.document_001.c00.p000.r03",
+      "type": "physical"
+    },
+    {
+      "circuits": [
+        "engage_in_spam.59fb1b9d",
+        "engage_in_disruptive_behavior.f570183f",
+        "engage_in_content_manipulation.f4db380f"
+      ],
+      "rule_cluster": null,
+      "rule_id": "vr.de9b80046b04",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "instigate_harassment.c43b50f2"
+      ],
+      "rule_cluster": null,
+      "rule_id": "vr.70acd6282e39",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "reveal_personal_info.e1661515",
+        "instigate_harassment.c43b50f2"
+      ],
+      "rule_cluster": null,
+      "rule_id": "vr.35c0e81e9193",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "reddit.document_001.c00.p002.r02",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "reddit.document_001.c00.p002.r03",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "rp.503aa518887a",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "rp.826d0ce98300",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "engage_predatory_behavior.16bd686a"
+      ],
+      "rule_cluster": null,
+      "rule_id": "reddit.document_001.c00.p003.r01",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "intentionally_mislead.d1fc1a98",
+        "impersonate_entity.1246f277"
+      ],
+      "rule_cluster": null,
+      "rule_id": "reddit.document_001.c00.p004.r00",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "vr.915db2edcc50",
+      "type": "action"
+    },
+    {
+      "circuits": [],
+      "rule_cluster": 3,
+      "rule_id": "vr.c6ab43cbacc6",
+      "type": "physical"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "vr.7bd434f42dda",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "reddit.document_001.c00.p006.r01",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "report_harassment.40aa2577",
+        "take_action_against_harassment.abe19749",
+        "post_intimate_media.003415a6",
+        "threaten_to_post_media.98c3c806",
+        "share_content.0582158e",
+        "label_content.1ab5bcfc",
+        "post_content.5d43f06f",
+        "solicit_transaction.f60efb4e",
+        "facilitate_transaction.07d054e6",
+        "label_community.edfa82ad"
+      ],
+      "rule_cluster": 1,
+      "rule_id": "reddit.document_001.c00.p006.r02",
+      "type": "action"
+    },
+    {
+      "circuits": [
+        "user_action.2aa9f62c",
+        "interfere_accessibility.f98d5ade"
+      ],
+      "rule_cluster": null,
+      "rule_id": "vr.d5c4ed671137",
+      "type": "action"
+    }
+  ],
+  "rules_attached_directly": [
+    "vr.de9b80046b04",
+    "vr.70acd6282e39",
+    "vr.35c0e81e9193",
+    "reddit.document_001.c00.p003.r01",
+    "reddit.document_001.c00.p004.r00",
+    "vr.d5c4ed671137"
+  ],
+  "rules_in_no_circuit": [
+    {
+      "reason": "physical rule whose rule cluster holds no action rule",
+      "rule_id": "reddit.document_001.c00.p000.r03"
+    },
+    {
+      "reason": "physical rule whose rule cluster holds no action rule",
+      "rule_id": "vr.c6ab43cbacc6"
+    }
+  ]
+}

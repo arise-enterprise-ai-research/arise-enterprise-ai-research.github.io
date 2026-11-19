@@ -1,0 +1,23 @@
+{
+  "characters": 3530,
+  "chunks": [
+    {
+      "definitions_context_characters": 0,
+      "definitions_context_omitted": false,
+      "end": 3530,
+      "hard_split": false,
+      "index": 0,
+      "section_path": [],
+      "start": 0
+    }
+  ],
+  "configuration": {
+    "allow_none_literal": false,
+    "max_chunk_characters": 24000,
+    "on_validation_failure": "record"
+  },
+  "document_id": "document_001",
+  "organization": "Reddit",
+  "reassembly": "The chunk texts in index order concatenate to the document text.",
+  "source": "https://redditinc.com/policies/reddit-rules | Current page, retrieved 2026-11-17. Not established as the paper's snapshot. | preserved copy retrieved 2026-11-17"
+}

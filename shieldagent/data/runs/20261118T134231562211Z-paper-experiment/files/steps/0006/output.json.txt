@@ -1,0 +1,14 @@
+{
+  "configured_model": "gpt-4o-2024-11-20",
+  "elapsed_seconds": 3.22844416697626,
+  "provider": "openai",
+  "reported_model": "gpt-4o-2024-11-20",
+  "retry_count": 0,
+  "text": "```json\n[\n  {\n    \"predicates\": [\n      [\"instigate_harassment\", \"An action that causes harassment to another individual.\", [\"harassment\", \"actions\", \"users\"]],\n      [\"reveal_personal_info\", \"An action that discloses someone's personal or confidential information.\", [\"privacy\", \"personal_info\", \"disclosure\"]],\n      [\"post_intimate_media\", \"An action of posting intimate or sexually-explicit media of someone.\", [\"media\", \"intimate\", \"posting\"]],\n      [\"threaten_to_post_media\", \"An action of threatening to post intimate or sexually-explicit media of someone.\", [\"media\", \"threat\", \"intimate\"]],\n      [\"has_consent\", \"Indicates that consent has been given by the individual involved.\", [\"consent\", \"permission\", \"individual\"]]\n    ],\n    \"logic\": \"ALWAYS (NOT instigate_harassment)\"\n  },\n  {\n    \"predicates\": [\n      [\"instigate_harassment\", \"An action that causes harassment to another individual.\", [\"harassment\", \"actions\", \"users\"]],\n      [\"reveal_personal_info\", \"An action that discloses someone's personal or confidential information.\", [\"privacy\", \"personal_info\", \"disclosure\"]]\n    ],\n    \"logic\": \"ALWAYS (reveal_personal_info IMPLIES NOT instigate_harassment)\"\n  },\n  {\n    \"predicates\": [\n      [\"post_intimate_media\", \"An action of posting intimate or sexually-explicit media of someone.\", [\"media\", \"intimate\", \"posting\"]],\n      [\"has_consent\", \"Indicates that consent has been given by the individual involved.\", [\"consent\", \"permission\", \"individual\"]]\n    ],\n    \"logic\": \"ALWAYS (post_intimate_media IMPLIES has_consent)\"\n  },\n  {\n    \"predicates\": [\n      [\"threaten_to_post_media\", \"An action of threatening to post intimate or sexually-explicit media of someone.\", [\"media\", \"threat\", \"intimate\"]],\n      [\"has_consent\", \"Indicates that consent has been given by the individual involved.\", [\"consent\", \"permission\", \"individual\"]]\n    ],\n    \"logic\": \"ALWAYS (threaten_to_post_media IMPLIES has_consent)\"\n  }\n]\n```",
+  "tool_calls": [],
+  "usage": {
+    "completion_tokens": 477,
+    "prompt_tokens": 573,
+    "total_tokens": 1050
+  }
+}

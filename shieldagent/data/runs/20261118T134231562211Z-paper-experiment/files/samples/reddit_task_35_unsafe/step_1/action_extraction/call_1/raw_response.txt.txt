@@ -1,0 +1,8 @@
+{
+  "selected_actions": [
+    {
+      "node_id": "action_020",
+      "justification": "The action involves clicking on the 'Edit biography' link, which is an interaction with the platform."
+    }
+  ]
+}
