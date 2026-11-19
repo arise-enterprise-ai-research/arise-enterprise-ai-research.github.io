@@ -3,8 +3,8 @@
   "files": [
     {
       "path": ".github/workflows/pages.yml",
-      "sha256": "992c5221c46447b8f9ef00540535ca8dd7d2e063b81e2a0496774dcac6b84220",
-      "size": 2856
+      "sha256": "b4d513a1f49a5c3bb77c3fcce4896772d4677b9c7714794a865a83fc970de016",
+      "size": 3179
     },
     {
       "path": ".nojekyll",
